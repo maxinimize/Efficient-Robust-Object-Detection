@@ -194,6 +194,8 @@ def filtered_boxes(model, img, conf_thresh, nms_thresh, device):
     # pillow image
     if isinstance(img, Image.Image):
         img = ToTensor(img)
+    elif torch.is_tensor(img):
+        img = img
     # numpy image
     elif type(img) == np.ndarray:
         img = torch.from_numpy(img.transpose(2, 0, 1)).float().div(255.0).unsqueeze(0)
