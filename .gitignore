@@ -1,2 +1,3 @@
-/content/
-/__pycache__/
+data/
+content/
+__pycache__/
