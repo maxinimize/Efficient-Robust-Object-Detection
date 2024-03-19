@@ -1,0 +1,6 @@
+python3.8 -m venv env or python -m venv env
+env\Scripts\activate
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
+ipython kernel install --user --name=env                to use jupyter notebook with env, from https://anbasile.github.io/posts/2017-06-25-jupyter-venv/
+deactivate
