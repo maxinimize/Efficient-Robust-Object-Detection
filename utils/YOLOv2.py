@@ -6,8 +6,15 @@ from PIL.ImageDraw import Draw
 import torch
 from torch import nn
 from torchvision import transforms as T
+from models.YOLOv2 import TinyYoloV2
 
-
+def load_model_v2(weights=None):
+    """ loading pretrainde weights to built model"""
+    model = TinyYoloV2()
+    if weights:
+       model.load_weights(weights)
+       #model.load_state_dict (torch.load (weights))
+    return model
 
 def ToTensor(img):
     """ convert img to tensor and normalize to [0, 1] & ready to input to the model """
@@ -257,8 +264,8 @@ def plot_boxes(img, boxes, savename=None, class_names=None):
         rgb = (255, 0, 0)
         if len(box) >= 7 and class_names:
             cls_conf = box[5]
-            cls_id   = box[6]
-            detections += [(cls_conf, class_names[cls_id])]
+            cls_id   = int(box[6])
+            detections += [(cls_conf, class_names[int(cls_id)])]
             classes = len(class_names)
             offset = cls_id * 123457 % classes
             red   = get_color(2, offset, classes)

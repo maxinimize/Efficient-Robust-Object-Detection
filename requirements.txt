@@ -9,3 +9,6 @@ matplotlib
 scikit-image
 opencv-python
 ipykernel
+pandas
+tqdm
+poetry

@@ -2,3 +2,5 @@ data/
 content/
 __pycache__/
 env/
+weights/
+output/
