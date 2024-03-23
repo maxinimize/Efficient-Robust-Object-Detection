@@ -8,7 +8,7 @@ from imgaug.augmentables.bbs import BoundingBox, BoundingBoxesOnImage
 from .utils import xywh2xyxy_np
 import torchvision.transforms as transforms
 
-
+#* modified transforms
 class ImgAug(object):
     def __init__(self, augmentations=[]):
         self.augmentations = augmentations
@@ -126,6 +126,7 @@ class Resize(object):
         return img, boxes
 
 
+#* original transforms
 class ImgAugEval(object):
     def __init__(self, augmentations=[]):
         self.augmentations = augmentations
@@ -168,7 +169,6 @@ class ImgAugEval(object):
             boxes[box_idx, 4] = (y2 - y1)
 
         return img, boxes
-
     
 class ResizeEval(object):
     def __init__(self, size):
