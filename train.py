@@ -87,9 +87,9 @@ def run():
     os.makedirs("checkpoints", exist_ok=True)
 
     # Get data configuration
-    data_config = parse_data_config(args.data)
-    train_path = data_config["train"]
-    valid_path = data_config["valid"]
+    data_config = parse_data_config(args.data) # config/coco.data
+    train_path = data_config["train"] # data/COCO2017/trainvalno5k.txt, contains list of paths to images
+    valid_path = data_config["valid"] # data/COCO2017/5k.txt
     class_names = load_classes(data_config["names"])
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -162,7 +162,7 @@ def run():
 
             outputs = model(imgs)
 
-            loss, loss_components = compute_loss(outputs, targets, model)
+            loss, loss_components = compute_loss(outputs, targets, model) # output is y_pred, target is y
 
             loss.backward()
 

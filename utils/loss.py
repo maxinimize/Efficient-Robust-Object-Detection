@@ -127,22 +127,24 @@ def compute_loss(predictions, targets, model):
 
 def build_targets(p, targets, model):
     # Build targets for compute_loss(), input targets(image,class,x,y,w,h)
-    na, nt = 3, targets.shape[0]  # number of anchors, targets #TODO
+    na, nt = 3, targets.shape[0]  # number of anchors (3), targets #TODO
     tcls, tbox, indices, anch = [], [], [], []
     gain = torch.ones(7, device=targets.device)  # normalized to gridspace gain
     # Make a tensor that iterates 0-2 for 3 anchors and repeat that as many times as we have target boxes
-    ai = torch.arange(na, device=targets.device).float().view(na, 1).repeat(1, nt)
+    ai = torch.arange(na, device=targets.device).float().view(na, 1).repeat(1, nt) # anchor id
     # Copy target boxes anchor size times and append an anchor index to each copy the anchor index is also expressed by the new first dimension
     targets = torch.cat((targets.repeat(na, 1, 1), ai[:, :, None]), 2)
 
     for i, yolo_layer in enumerate(model.yolo_layers):
+        # * COCO to yolo size
         # Scale anchors by the yolo grid cell size so that an anchor with the size of the cell would result in 1
         anchors = yolo_layer.anchors / yolo_layer.stride
         # Add the number of yolo cells in this layer the gain tensor
-        # The gain tensor matches the collums of our targets (img id, class, x, y, w, h, anchor id)
+        # The gain tensor matches the columns of our targets (img id, class, x, y, w, h, anchor id)
         gain[2:6] = torch.tensor(p[i].shape)[[3, 2, 3, 2]]  # xyxy gain
         # Scale targets by the number of yolo layer cells, they are now in the yolo cell coordinate system
-        t = targets * gain
+        t = targets * gain # t is targets in yolo coordinates (img id, class, x, y, w, h, anchor id)
+        
         # Check if we have targets
         if nt:
             # Calculate ration between anchor and target box for both width and height
@@ -180,3 +182,12 @@ def build_targets(p, targets, model):
         tcls.append(c)
 
     return tcls, tbox, indices, anch
+"""
+what we know
+130: targets is a np array
+129: targets(image,class,x,y,w,h) (identify image id, class id, coco? xywh)
+tcls: target class, straight from input
+tbox: target bbox, 
+indices: 
+anch: anchor points, generated with the code
+"""

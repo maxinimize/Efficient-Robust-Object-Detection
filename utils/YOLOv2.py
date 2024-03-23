@@ -240,7 +240,7 @@ def filtered_boxes(model, img, conf_thresh, nms_thresh, device):
     return boxes
 
 
-def plot_boxes(img, boxes, savename=None, class_names=None):
+def plot_boxes(img, boxes, savename=None, class_names=None): # boxes: x_center, y_center, w, h, conf, cls
     colors = torch.FloatTensor ([[1, 0, 1], [0, 0, 1], [0, 1, 1], [0, 1, 0], [1, 1, 0], [1, 0, 0]]);
     def get_color(c, x, max_val):
         """ choose unique color for each class """
@@ -262,9 +262,9 @@ def plot_boxes(img, boxes, savename=None, class_names=None):
         x2 = (box[0] + box[2] / 2.0) * width
         y2 = (box[1] + box[3] / 2.0) * height
         rgb = (255, 0, 0)
-        if len(box) >= 7 and class_names:
-            cls_conf = box[5]
-            cls_id   = int(box[6])
+        if len(box) >= 6 and class_names:
+            cls_conf = box[4]
+            cls_id   = int(box[5])
             detections += [(cls_conf, class_names[int(cls_id)])]
             classes = len(class_names)
             offset = cls_id * 123457 % classes
@@ -273,7 +273,7 @@ def plot_boxes(img, boxes, savename=None, class_names=None):
             blue  = get_color(0, offset, classes)
             rgb = (red, green, blue)
             draw.rectangle([x1, y1 - 15, x1 + 6.5 * len(class_names[cls_id]), y1], fill=rgb)
-            draw.text((x1 + 2, y1 - 13), class_names[cls_id], fill=(0, 0, 0))
+            draw.text((x1 + 2, y1 - 13), class_names[cls_id], fill=(0, 0, 0)) # f"{class_names[cls_id]} {cls_conf}"
         draw.rectangle([x1, y1, x2, y2], outline=rgb, width=3)
         
     if savename:
