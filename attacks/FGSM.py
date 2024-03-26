@@ -4,9 +4,10 @@ from attacks.attacker import Attacker
 from utils.loss import compute_loss
 
 class FGSM(Attacker):
-    def __init__(self, model, config=None, target=None, epsilon=2):
+    def __init__(self, model, config=None, target=None, epsilon=0.2):
         super(FGSM, self).__init__(model, config, epsilon)
         self.target = target # target class
+        self.epsilon = epsilon
 
     def forward(self, x, y):
         """
@@ -15,21 +16,10 @@ class FGSM(Attacker):
         :param target : Target label 
         :return adversarial image
         """
-        # self.model.eval()
         self.model.train() # has to be in train, or the model output dims change
-        # if self.config['random_init']:
-        #     x = self._random_init(x)
-
         x.requires_grad=True
-        logit = self.model(x)
-        loss, loss_components = compute_loss(logit, y, self.model)
-        
-        # if self.target is None:
-        #     #
-        #     cost = -F.cross_entropy(logit, y)
-        # else:
-        #     cost = F.cross_entropy(logit, self.target)
-        
+        logits = self.model(x)
+        loss, loss_components = compute_loss(logits, y, self.model)
         if x.grad is not None:
             x.grad.data.fill_(0)
 
