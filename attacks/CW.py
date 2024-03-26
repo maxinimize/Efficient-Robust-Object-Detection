@@ -3,9 +3,9 @@ import torch.nn.functional as F
 from attacks.attacker import Attacker
 from utils.loss import compute_loss
 
-class CnW(Attacker):
+class CW(Attacker):
     def __init__(self, model, config=None, target=None, epsilon=0.2, lr=0.01, epoch=10, confidence=0, c=1e-4):
-        super(CnW, self).__init__(model, config, epsilon)
+        super(CW, self).__init__(model, config, epsilon)
         self.target = target
         self.epsilon = epsilon  # total update limit
         self.lr = lr  # amount of update in each step
@@ -23,21 +23,23 @@ class CnW(Attacker):
 
         self.model.train()
         x_adv = x.detach().clone()
-        y[:, 1] = 1 # change target labels to class 1
-        x_adv = x.detach().clone()
-        x_adv.requires_grad = True
+        y[:, 1] = self.target # change target labels to another class, since c&w need target
 
         for _ in range(self.epoch):
+            x_adv.requires_grad = True
             self.model.zero_grad()
             logits = self.model(x_adv)
             target_loss, loss_components = compute_loss(logits, y, self.model) # loss
             l2_norm = torch.sum(torch.square(x_adv - x))  # Perturbation  L2 norm
             loss = target_loss + self.c * l2_norm # C&W loss function
             loss.backward()
-            grad = x_adv.grad.detach().sign()
+            grad = x_adv.grad.detach()
+            grad = grad.sign()
             x_adv = x_adv + self.lr * grad
+            
             # Projection
             x_adv = x + torch.clamp(x_adv - x, min=-self.epsilon, max=self.epsilon)
+            x_adv = x_adv.detach()
             x_adv = torch.clamp(x_adv, 0, 1)
             
         return x_adv
