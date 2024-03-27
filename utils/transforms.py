@@ -30,43 +30,43 @@ class ImgAug(object):
             
             # Convert xywh to xyxy
             boxes = np.array(boxes)
-            # image_ids = boxes[:, 0]
-            boxes[:, 2:] = xywh2xyxy_np(boxes[:, 2:])
+            image_size = boxes[:, 6:]
+            boxes[:, 2:6] = xywh2xyxy_np(boxes[:, 2:6])
             # print("1", boxes.shape)
         
-        # Convert bounding boxes to imgaug
-        bounding_boxes = BoundingBoxesOnImage(
-            [BoundingBox(*box[2:], label=box[0:1]) for box in boxes],
-            shape=img.shape)
+            # Convert bounding boxes to imgaug
+            bounding_boxes = BoundingBoxesOnImage(
+                [BoundingBox(*box[2:6], label=box[0:1]) for box in boxes],
+                shape=img.shape)
 
-        # Apply augmentations
-        img, bounding_boxes = self.augmentations(
-            image=img,
-            bounding_boxes=bounding_boxes)
+            # Apply augmentations
+            img, bounding_boxes = self.augmentations(
+                image=img,
+                bounding_boxes=bounding_boxes)
 
-        # Clip out of image boxes
-        bounding_boxes = bounding_boxes.clip_out_of_image()
-        
-
-        # Convert bounding boxes back to numpy
-        boxes = np.zeros((len(bounding_boxes), 6))
-        for box_idx, box in enumerate(bounding_boxes):
-            # Extract coordinates for unpadded + unscaled image
-            x1 = box.x1
-            y1 = box.y1
-            x2 = box.x2
-            y2 = box.y2
-
-            # Returns (x, y, w, h)
-            boxes[box_idx, 0:1] = box.label
-            boxes[box_idx, 2] = ((x1 + x2) / 2)
-            boxes[box_idx, 3] = ((y1 + y2) / 2)
-            boxes[box_idx, 4] = (x2 - x1)
-            boxes[box_idx, 5] = (y2 - y1)
+            # Clip out of image boxes
+            bounding_boxes = bounding_boxes.clip_out_of_image()
             
-        # print(image_ids.shape, boxes.shape)    
-        # boxes = np.hstack((image_ids[:, np.newaxis], boxes))
-        if boxes.shape[0] == 0: boxes = boxes[:, 0]
+
+            # Convert bounding boxes back to numpy
+            boxes = np.zeros((len(bounding_boxes), 6))
+            for box_idx, box in enumerate(bounding_boxes):
+                # Extract coordinates for unpadded + unscaled image
+                x1 = box.x1
+                y1 = box.y1
+                x2 = box.x2
+                y2 = box.y2
+
+                # Returns (x, y, w, h)
+                boxes[box_idx, 0:1] = box.label
+                boxes[box_idx, 2] = ((x1 + x2) / 2)
+                boxes[box_idx, 3] = ((y1 + y2) / 2)
+                boxes[box_idx, 4] = (x2 - x1)
+                boxes[box_idx, 5] = (y2 - y1)
+                
+            # print(image_ids.shape, boxes.shape)    
+            boxes = np.hstack((boxes, image_size)) # append the image size back on
+            if boxes.shape[0] == 0: boxes = boxes[:, 0]
         return img, boxes
 
 
@@ -229,12 +229,15 @@ class ConvertToArrays():
     
     def __call__(self, img, boxes):
         transformed_samples = []
+        width, height = img.size
         for box in boxes:
             # Extract the required fields and create the array
             transformed_sample = np.array([
                 box['image_id'],
                 box['category_id'],
-                *box['bbox']
+                *box['bbox'],
+                height, # put original image shape in the right columns of target (h,w)
+                width,
             ])
             transformed_samples.append(transformed_sample)
         # np.set_printoptions(suppress=True)
