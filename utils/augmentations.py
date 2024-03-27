@@ -52,7 +52,7 @@ TRANSFORM_TRAIN = MyCompose([
 
 TRANSFORM_VAL = MyCompose([
     ConvertToArrays(),
-    DefaultAug(),
+    # DefaultAug(), # this is probably not needed
     PadSquare(),
     ToTensor(),
     RelativeLabels(),
