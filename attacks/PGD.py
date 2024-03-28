@@ -22,8 +22,8 @@ class PGD(Attacker):
         
         with torch.enable_grad():
             self.model.train()
-            # x_adv = x.detach().clone()
-            x_adv = torch.tensor(x, requires_grad=True, device=x.device)
+            x_adv = x.clone().detach()
+            # x_adv = torch.tensor(x, requires_grad=True, device=x.device)
             for _ in range(self.epoch):
                 self.model.zero_grad()
                 x_adv.requires_grad = True
