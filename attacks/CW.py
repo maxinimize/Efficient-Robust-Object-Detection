@@ -20,26 +20,27 @@ class CW(Attacker):
         :param target: Target label
         :return adversarial image
         """
-
-        self.model.train()
-        x_adv = x.detach().clone()
-        y[:, 1] = self.target # change target labels to another class, since c&w need target
-
-        for _ in range(self.epoch):
-            x_adv.requires_grad = True
-            self.model.zero_grad()
-            logits = self.model(x_adv)
-            target_loss, loss_components = compute_loss(logits, y, self.model) # loss
-            l2_norm = torch.sum(torch.square(x_adv - x))  # Perturbation  L2 norm
-            loss = target_loss + self.c * l2_norm # C&W loss function
-            loss.backward()
-            grad = x_adv.grad.detach()
-            grad = grad.sign()
-            x_adv = x_adv + self.lr * grad
+        
+        with torch.enable_grad():
+            self.model.train()
+            x_adv = x.clone().detach()
+            for _ in range(self.epoch):
+                self.model.zero_grad()
+                x_adv.requires_grad = True
+                logits = self.model(x_adv)
+                target_loss, loss_components = compute_loss(logits, y, self.model) # loss
+                l2_norm = torch.sum(torch.square(x_adv - x))  # Perturbation  L2 norm
+                loss = target_loss + self.c * l2_norm # C&W loss function
+                loss.backward()
+                
+                grad = x_adv.grad.detach()
+                grad = grad.sign()
+                x_adv = x_adv + self.lr * grad
+                
+                # Projection
+                x_adv = x + torch.clamp(x_adv - x, min=-self.epsilon, max=self.epsilon)
+                x_adv = x_adv.detach()
+                x_adv = torch.clamp(x_adv, 0, 1)
+                self.model.zero_grad()
             
-            # Projection
-            x_adv = x + torch.clamp(x_adv - x, min=-self.epsilon, max=self.epsilon)
-            x_adv = x_adv.detach()
-            x_adv = torch.clamp(x_adv, 0, 1)
-            
-        return x_adv
+            return x_adv

@@ -23,13 +23,13 @@ class PGD(Attacker):
         with torch.enable_grad():
             self.model.train()
             x_adv = x.clone().detach()
-            # x_adv = torch.tensor(x, requires_grad=True, device=x.device)
             for _ in range(self.epoch):
                 self.model.zero_grad()
                 x_adv.requires_grad = True
                 logits = self.model(x_adv) #f(T((x))
                 loss, loss_components = compute_loss(logits, y, self.model)
-                loss.backward()                      
+                loss.backward()   
+                                   
                 grad = x_adv.grad.detach()
                 grad = grad.sign()
                 x_adv = x_adv + self.lr * grad

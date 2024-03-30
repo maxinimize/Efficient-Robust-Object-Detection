@@ -16,19 +16,21 @@ class FGSM(Attacker):
         :param target : Target label 
         :return adversarial image
         """
-        self.model.train() # has to be in train, or the model output dims change
-        x.requires_grad=True
-        logits = self.model(x)
-        loss, loss_components = compute_loss(logits, y, self.model)
-        if x.grad is not None:
-            x.grad.data.fill_(0)
+        with torch.enable_grad():
+            self.model.train()
+            x_adv = x.clone().detach()
+            self.model.zero_grad()
+            x_adv.requires_grad = True
+            logits = self.model(x_adv) #f(T((x))
+            loss, loss_components = compute_loss(logits, y, self.model)
+            loss.backward()                      
+            grad = x_adv.grad.detach()
+            grad = grad.sign()
+            x_adv = x_adv + self.epsilon * grad
 
-        self.model.zero_grad()
-        loss.backward()
-        
-        with torch.no_grad():
-            gradients_sign = x.grad.sign() # Collect the sign of the gradients
-            x_adv = x + self.epsilon * gradients_sign # Generate perturbed image
-            x_adv = torch.clamp(x_adv, 0, 1) # Clip the perturbed image to ensure it stays within valid pixel range
-
+            # Projection
+            x_adv = x + torch.clamp(x_adv - x, min=-self.epsilon, max=self.epsilon)
+            x_adv = x_adv.detach()
+            x_adv = torch.clamp(x_adv, 0, 1)
+            self.model.zero_grad()
         return x_adv
