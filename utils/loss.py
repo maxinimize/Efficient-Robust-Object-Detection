@@ -182,12 +182,3 @@ def build_targets(p, targets, model):
         tcls.append(c)
 
     return tcls, tbox, indices, anch
-"""
-what we know
-130: targets is a np array
-129: targets(image,class,x,y,w,h) (identify image id, class id, coco? xywh)
-tcls: target class, straight from input
-tbox: target bbox, 
-indices: 
-anch: anchor points, generated with the code
-"""
