@@ -6,6 +6,10 @@ ipython kernel install --user --name=env                to use jupyter notebook 
 deactivate
 
 
+
+
+
+
 useless:
 install cocoapi: pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
 C:\Users\anton\anaconda3\Lib\site-packages\pycocotools\cocoeval.py
