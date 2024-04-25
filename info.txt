@@ -2,7 +2,7 @@ python3.8 -m venv env or python -m venv env
 env\Scripts\activate
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
-ipython kernel install --user --name=env                to use jupyter notebook with env, from https://anbasile.github.io/posts/2017-06-25-jupyter-venv/
+
 deactivate
 
 
@@ -18,3 +18,5 @@ fix: https://github.com/cocodataset/cocoapi/issues/356 at line 507,508, 518, 519
 https://github.com/cocodataset/cocoapi/pull/354/commits/6c3b394c07aed33fd83784a8bf8798059a1e9ae4#diff-b13be02996507277fdef1503fc74ab7ac7679a15450b60982222f8ca051bc8ee
 issue #2: module 'numpy' has no attribute 'float'
 fix: changed x.astype(float) in line 379,380 of cocoeval.py to np.float64(x)
+
+ipython kernel install --user --name=env                to use jupyter notebook with env, from https://anbasile.github.io/posts/2017-06-25-jupyter-venv/
