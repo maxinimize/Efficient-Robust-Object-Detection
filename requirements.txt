@@ -11,4 +11,4 @@ opencv-python
 ipykernel
 pandas
 tqdm
-poetry
+imgaug
