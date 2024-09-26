@@ -31,6 +31,7 @@ class ImgAug(object):
             # Convert xywh to xyxy
             boxes = np.array(boxes)
             image_size = boxes[:, 6:]
+            category_labels = boxes[:, 1:2]
             boxes[:, 2:6] = xywh2xyxy_np(boxes[:, 2:6])
             # print("1", boxes.shape)
         
@@ -66,6 +67,7 @@ class ImgAug(object):
                 
             # print(image_ids.shape, boxes.shape)    
             boxes = np.hstack((boxes, image_size)) # append the image size back on
+            boxes[:, 1:2] = category_labels
             if boxes.shape[0] == 0: boxes = boxes[:, 0]
         return img, boxes
 
@@ -76,7 +78,7 @@ class RelativeLabels(object):
 
     def __call__(self, img, boxes):
         if boxes.shape[0] == 0: return img, boxes
-        h, w, _ = img.shape
+        _, h, w = img.shape # torch.Size([3, 640, 640])
         if boxes.ndim > 2: 
             boxes = boxes.squeeze()
         if boxes.ndim < 2:
@@ -92,9 +94,9 @@ class AbsoluteLabels(object):
 
     def __call__(self, data):
         img, boxes = data
-        h, w, _ = img.shape
-        boxes[:, [1, 3]] *= w
-        boxes[:, [2, 4]] *= h
+        _, h, w = img.shape
+        boxes[:, [2, 4]] *= w
+        boxes[:, [3, 5]] *= h
         return img, boxes
 
 
@@ -126,7 +128,7 @@ class Resize(object):
         return img, boxes
 
 
-#* original transforms
+#* original transforms, not in use
 class ImgAugEval(object):
     def __init__(self, augmentations=[]):
         self.augmentations = augmentations
