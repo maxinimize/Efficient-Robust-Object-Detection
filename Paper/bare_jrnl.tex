@@ -1,4 +1,4 @@
-              
+      
                 %% bare_jrnl.tex
 %% V1.4b
 %% 2015/08/26
@@ -51,7 +51,7 @@
 
 % Please refer to your journal's instructions for other
 % options that should be set.
-\documentclass[journal,onecolumn]{IEEEtran}
+\documentclass[journal,onecolumn,12pt]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -348,8 +348,12 @@
 
 
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\setlength{\parskip}{\baselineskip}%
+\addbibresource{bibliography.bib}
 
 \begin{document}
 %
@@ -359,7 +363,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+\title{Efficient and Adversarially Robust Object Detection} % \\ for IEEE Journals
 %
 %
 % author names and IEEE memberships
@@ -370,38 +374,24 @@
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
-
-\author{Anton~Liu,
-        John~Doe% <-this % stops a space
-\thanks{M. Shell was with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
-
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
-
+\author{
+\IEEEauthorblockN{Anton Liu} \\
+\IEEEauthorblockA{\textit{Dept. of Computer Science, Western University}\\
+aliu467@uwo.ca}
+}
+% \author{Anton~Liu,
+%         John~Doe% <-this % stops a space
+% \thanks{M. Shell was with the Department
+% of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+% GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+% \thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+% \thanks{Manuscript received April 19, 2005; revised August 26, 2015.}
+% }
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+% \markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+% {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -409,23 +399,6 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
 
 % make the title area
 \maketitle
@@ -436,81 +409,116 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 The abstract goes here.
 \end{abstract}
 
-% Note that keywords are not normally used for peerreview papers.
-\begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
-\end{IEEEkeywords}
-
-
-\IEEEpeerreviewmaketitle
-
-
 
 \section{Introduction}
 
+Object detection, one of the fundamental tasks in computer vision, is used in numerous real-world applications by enabling machines to identify and locate objects within images or videos. Object detection algorithms aim to address the two challenges of recognizing objects of interest within complex scenes by identifying their spatial extent with bounding boxes, and assigning corresponding class labels. This capability is crucial for a wide range of tasks, including pedestrian detection for autonomous driving, object tracking in video surveillance, and product recognition for inventory management. Moreover, object detection serves as a foundational building block for higher-level computer vision tasks such as scene understanding, semantic segmentation, and action recognition, facilitating deeper insights and decision-making capabilities in intelligent systems.
 
-\subsection{Object Detection}
-Subsection text here.
+The emergence of deep learning revolutionized object detection, leading to significant advancements in accuracy and efficiency. Convolutional Neural Networks (CNNs) have demonstrated remarkable potential and have been the main research direction in recent years \cite{zou2023object}. While the performance of deep learning-based object detection models has significantly improved, their vulnerability to adversarial attacks poses a significant challenge to their reliability and security \cite{costa2023deep}. Adversarial attacks involve maliciously crafted perturbations to input data, which can cause deep neural networks to make incorrect predictions or fail to detect objects altogether  \cite{li2019rosa}. In safety-critical applications like autonomous driving, the susceptibility of object detection systems to adversarial attacks can have severe consequences, jeopardizing human safety and privacy \cite{zhang2019adversarially}. Adversarial defence is a critical area of research focused on enhancing the robustness of deep learning models against adversarial attacks. While deep learning models are typically optimized to maximize performance metrics on clean images, adversarial training aims to increase performance in adversarial scenarios  \cite{costa2023deep}. Despite the importance of adversarial defence techniques, there is a noticeable discrepancy in the number of papers focusing on adversarial attacks compared to defences in the context of object detection. This asymmetry highlights the need for more research efforts dedicated to adversarial defence in object detection, to mitigate the growing threat posed by adversarial attacks and enhance the robustness of deep learning models in practical settings \cite{bai2021recent}.
 
-\subsection{Adversarial Robustness}
-Subsection text here.
+Despite the recent success, deep learning methods are computationally intensive during training due to the need to process large volumes of data through multiple layers, while simultaneously updating millions of parameters through backpropagation \cite{objDetect}. Therefore, as the models get larger and more complex, efficiency becomes an increasing conern. Efficiency can be measured as any type of reduction of computational resources, such as through memory, processing power, and energy consumption. In this work, the efficiency of the model will be measured in inference time, which is advantageous because it directly reflects the model’s performance in real-world applications, particularly those requiring real-time or low-latency processing. Inference time indicates how quickly a trained model can make predictions, which is critical for tasks like autonomous driving, video-based object detection, or any time-sensitive application. A model with shorter inference time can handle more data in a given period, improving overall throughput and user experience.
 
-\subsection{Efficiency}
-Subsection text here.
-
-\subsubsection{Pruning}
-Structured
-
-Unstructured
-
-\subsubsection{Quantization}
-Subsubsection text here.
-
+Various methods can be employed to enhance CNN efficiency, such as transfer learning, quantization, weight sharing, and pruning. Pruning is a key technique for improving efficiency and comes in two forms: unstructured pruning and structured pruning. Unstructured pruning removes individual weights that contribute little to the network's performance, leading to sparser weight matrices. While effective in reducing the number of parameters, unstructured pruning can result in irregular memory access patterns, making it harder to optimize on certain hardware. In contrast, structured pruning removes entire filters, channels, or layers, resulting in a more compact architecture. This type of pruning not only reduces the parameter count but also decreases the computational load, making it more suitable for real-time deployment on hardware like GPUs or mobile devices. Structured pruning maintains the integrity of the network structure, allowing for faster inference times while maintaining accuracy. 
 
 \section{Background}
 \subsection{Object Detection}
+To train a CNN model for object detection, a large labeled dataset is required, where each image contains annotations for the objects present, including their class labels and bounding box coordinates. The model is trained by passing input images through a network that extracts features and learns patterns, with the help of techniques like backpropagation and gradient descent to minimize the error between the predicted and true labels. During training, the CNN learns to detect objects by adjusting its weights to improve both classification accuracy and localization precision, ultimately producing a model capable of accurately identifying and locating objects in unseen images.
+
 \subsubsection{Model}
-Subsubsection text here.
+CNN models for object detection generally consist of a feature extraction backbone and a detection head. The backbone, often a pre-trained deep CNN such as ResNet or VGG, extracts high-level features from images, which are then fed into the detection head to perform localization and classification tasks. Some models, like Faster R-CNN, use a region proposal mechanism, while others like SSD (Single Shot Multibox Detector) predict bounding boxes and class labels in a single pass. YOLO (You Only Look Once) models take a unique approach by dividing the image into a grid and predicting bounding boxes and class probabilities simultaneously, making them highly efficient for real-time applications. YOLOv3, in particular, improves upon earlier versions with better detection at multiple scales, making it an excellent model for balancing speed and accuracy in object detection tasks.
 
 \subsubsection{Dataset}
-Subsubsection text here.
+Datasets play a pivotal role in advancing the field of object detection by providing annotated images for model training and evaluation. Many openly available datasets exist online, such as Pascal VOC, ImageNet, and Open Images \cite{zaidi2021survey}. Among these datasets, the Microsoft Common Objects in Context (MS COCO) dataset stands out as one of the most comprehensive and widely used benchmarks \cite{lin2015microsoft}. Its superiority stems from several factors. Firstly, COCO has a diverse range of object categories, encompassing common everyday objects across 80 distinct classes, including people, animals, vehicles, and household items. This diversity ensures that models trained on COCO generalize well to a wide array of real-world scenarios. Secondly, each image in the dataset is annotated with instance-level bounding box coordinates, and class labels for precise training and evaluation of detection algorithms. Additionally, COCO provides a large-scale dataset comprising over 200,000 images split into training, validation, and test sets, facilitating robust model training and unbiased evaluation \cite{lin2015microsoft}. 
 
 \subsection{Efficient Adversarial Robustness}
-\subsubsection{HYDRA}
-Subsubsection text here.
+Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, but also making them more efficient in the process. 
 
-\subsubsection{Other paper previous to hydra}
-Subsubsection text here.
+\subsubsection{Towards Compact and Robust Deep Neural Networks}
+Introduced by Sehwag et al. in 2019, the work "Towards Compact and Robust Deep Neural Networks" evaluated the robustness of CNNs under both structured and unstructured pruning. The authors provide a formal definition of the pruning procedure, encompassing pre-training, weight pruning, and fine-tuning, which clarifies the methodology's effectiveness in achieving compact networks without compromising performance. Empirical results demonstrate that the proposed method can maintain, on average, 93\% benign accuracy, 92.5\% empirical robust accuracy, and 85\% verifiable robust accuracy while achieving a compression ratio of 10×.Their experimental data showed that their proposed method is effective for both pruning methods, but especially for unstructured pruning.
+
+\subsubsection{HYDRA}
+In a follow up paper, HYDRA: Pruning Adversarially Robust Neural Networks, is a seminal work that has taken another step to improving the performance of machine learning models. Sehwag et al. developed a pruning method that is aware of the robust training objective. This is achieved by formulating the pruning process as an empirical risk minimization (ERM) problem combined with a robust training objective, which is solved efficiently using Stochastic Gradient Descent (SGD). The authors also introduced importance score based optimization, with every weight being initialized with a importance value that is proportional to pre-trained network weights. This change has shown to help with the final performance and speed of SGD convergence over random initialization. Extensive experiments were performed by testing with CIFAR-10, SVHN, and ImageNet datasets, and with four robust training techniques: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP. HYDRA achieves state-of-the-art performance in both benign and robust accuracy, even at high pruning ratios (up to 99\%). The method shows significant gains in robust accuracy while also improving benign accuracy compared to previous works. 
+
+The flow of HYDRA can be described in three steps:
+\begin{enumerate}
+    \item Pre-training (train with adversarial, without pruning)
+    \item Pruning (freeze weights and only update importance score, generate pruning mask)
+    \item Fine-tuning (update non pruned weights but freeze importance scores)
+\end{enumerate}
+
+The paper was chosen as the foundation of this work, from its excellent performance and extensive documentation. The performance of the pruning algorithm was strong enough to earn second place in the auto-attack robustness benchmark near the time the paper was published, and the paper has been cited 100+ time since the time of publication.
+
+
+
 
 \section{Method}
-\subsection{adapting hydra to object detection}
+
+\subsection{Adapting hydra to object detection}
+The HYDRA method is developed for the task of image classification, where only the type of object in the image is recoganized. Often it is useful to learn the location of the objects inside the images as well, which leads to the task of object detection. Therefore, the CNN model was replaced by YOLOv3, and the dataset was replaced by COCO.
+
+\subsection{Implementing unstructured and structured pruning}
 Subsection text here.
 
-\subsection{implementing all three efficiency methods}
-Subsection text here.
-
-\subsection{new initialization technique}
-Subsection text here.
+\subsection{New initialization technique}
+DeepLIFT
 
 \section{Experiments}
-\subsection{mAP graph}
-\subsubsection{compare unstructured vs structured}
-Subsubsection text here.
+In the context of object detection using the COCO dataset, mAP serves as a fundamental metric for evaluating the performance of detection models. mAP quantifies the precision-recall trade-off by calculating the average precision across different object categories. COCO dataset's mAP is typically computed at various Intersection over Union (IoU) thresholds such as 0.5, which is the threshold used in all experiments in the work. Also, a subset of 50,000 images from MS COCO is used to reduce training time.
 
-\subsubsection{compare different initialization methods}
-Subsubsection text here.
+\subsection{Training time penalty}
 
-\subsubsection{ANOVA test for significance?}
-Subsubsection text here.
+\subsection{Inference performance}
+Figure \ref{fig:result1}
 
-\subsection{time graph}
-Subsection text here.
+\begin{figure}
+    \centering
+    \captionsetup{justification=centering,margin=1cm}
+    \begin{subfigure}[b]{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{figures/mAP1.PNG}
+    %   \caption{mAP}
+      \label{fig:mAP1}
+    \end{subfigure}%
+    \begin{subfigure}[b]{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{figures/time1.PNG}
+    %   \caption{A subfigure}
+      \label{fig:time1}
+    \end{subfigure}
+    \caption{Comparison of proposed approach versus HYDRA, through both unstructured and structured pruning. The mAP performance is shown on the left, and time on the right}
+    \label{fig:result1}
+\end{figure}
+
+insert ANOVA test results
+\subsection{unstructured vs structured}
+Figure \ref{fig:result1}
+\subsection{effect of greyscale on performance}
+Figure \ref{fig:result2}
+
+\begin{figure}
+    \centering
+    \captionsetup{justification=centering,margin=1cm}
+    \begin{subfigure}[b]{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{figures/mAP2.PNG}
+    %   \caption{mAP}
+      \label{fig:mAP2}
+    \end{subfigure}%
+    \begin{subfigure}[b]{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{figures/time2.PNG}
+    %   \caption{A subfigure}
+      \label{fig:time2}
+    \end{subfigure}
+    \caption{Comparison of performance between color and greyscale images on the proposed method. The mAP performance is shown on the left, and time on the right}
+    \label{fig:result2}
+\end{figure}
 
 \subsection{example pictures}
 Subsection text here.
 
 \section{Conclusion}
-combine all three methods like that one paper
+Conclusion here.
 
 
 
@@ -571,60 +579,20 @@ The authors would like to thank...
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
+% \bibliography{IEEEabrv,../bib/paper}
+\printbibliography
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
+% \begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+% \bibitem{IEEEhowto:kopka}
+% H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 
-\end{thebibliography}
-
-% biography section
-% 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
+% \end{thebibliography}
 
 
 
