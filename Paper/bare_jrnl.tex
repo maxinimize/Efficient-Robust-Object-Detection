@@ -377,7 +377,8 @@
 \author{
 \IEEEauthorblockN{Anton Liu} \\
 \IEEEauthorblockA{\textit{Dept. of Computer Science, Western University}\\
-aliu467@uwo.ca}
+aliu467@uwo.ca\\
+Supervisor: Professor Roberto Solis-Oba}
 }
 % \author{Anton~Liu,
 %         John~Doe% <-this % stops a space
@@ -418,7 +419,7 @@ The emergence of deep learning revolutionized object detection, leading to signi
 
 Despite the recent success, deep learning methods are computationally intensive during training due to the need to process large volumes of data through multiple layers, while simultaneously updating millions of parameters through backpropagation \cite{objDetect}. Therefore, as the models get larger and more complex, efficiency becomes an increasing conern. Efficiency can be measured as any type of reduction of computational resources, such as through memory, processing power, and energy consumption. In this work, the efficiency of the model will be measured in inference time, which is advantageous because it directly reflects the model’s performance in real-world applications, particularly those requiring real-time or low-latency processing. Inference time indicates how quickly a trained model can make predictions, which is critical for tasks like autonomous driving, video-based object detection, or any time-sensitive application. A model with shorter inference time can handle more data in a given period, improving overall throughput and user experience.
 
-Various methods can be employed to enhance CNN efficiency, such as transfer learning, quantization, weight sharing, and pruning. Pruning is a key technique for improving efficiency and comes in two forms: unstructured pruning and structured pruning. Unstructured pruning removes individual weights that contribute little to the network's performance, leading to sparser weight matrices. While effective in reducing the number of parameters, unstructured pruning can result in irregular memory access patterns, making it harder to optimize on certain hardware. In contrast, structured pruning removes entire filters, channels, or layers, resulting in a more compact architecture. This type of pruning not only reduces the parameter count but also decreases the computational load, making it more suitable for real-time deployment on hardware like GPUs or mobile devices. Structured pruning maintains the integrity of the network structure, allowing for faster inference times while maintaining accuracy. 
+Various methods can be employed to enhance CNN efficiency, such as transfer learning, quantization, weight sharing, and pruning. Pruning is a key technique for improving efficiency and comes in two forms: unstructured pruning and structured pruning. Unstructured pruning removes individual weights that contribute little to the network's performance, leading to sparser weight matrices. While effective in reducing the number of parameters, unstructured pruning can result in irregular memory access patterns, making it harder to optimize on certain hardware. In contrast, structured pruning removes entire filters/kernels, channels, or layers, resulting in a more compact architecture. This type of pruning not only reduces the parameter count but also decreases the computational load, making it more suitable for real-time deployment on hardware like GPUs or mobile devices. Structured pruning maintains the integrity of the network structure, allowing for faster inference times while maintaining accuracy. 
 
 \section{Background}
 \subsection{Object Detection}
@@ -430,20 +431,25 @@ CNN models for object detection generally consist of a feature extraction backbo
 \subsubsection{Dataset}
 Datasets play a pivotal role in advancing the field of object detection by providing annotated images for model training and evaluation. Many openly available datasets exist online, such as Pascal VOC, ImageNet, and Open Images \cite{zaidi2021survey}. Among these datasets, the Microsoft Common Objects in Context (MS COCO) dataset stands out as one of the most comprehensive and widely used benchmarks \cite{lin2015microsoft}. Its superiority stems from several factors. Firstly, COCO has a diverse range of object categories, encompassing common everyday objects across 80 distinct classes, including people, animals, vehicles, and household items. This diversity ensures that models trained on COCO generalize well to a wide array of real-world scenarios. Secondly, each image in the dataset is annotated with instance-level bounding box coordinates, and class labels for precise training and evaluation of detection algorithms. Additionally, COCO provides a large-scale dataset comprising over 200,000 images split into training, validation, and test sets, facilitating robust model training and unbiased evaluation \cite{lin2015microsoft}. 
 
+\subsection{Adversarial attack}
+Adversarial attacks are techniques used to manipulate machine learning models, especially neural networks, by introducing small, often imperceptible perturbations to inputs that cause the model to make incorrect predictions. These attacks reveal vulnerabilities in applications from autonomous driving to facial recognition and medical diagnosis. Several methods exist for generating adversarial attacks, each varying in complexity and impact. Fast Gradient Sign Method (FGSM) is a straightforward single-step attack that adjusts the input in the direction of the gradient, making it a fast way to create adversarial examples. The Carlini \& Wagner (C\&W) attack is a more complex, optimization-based method known for creating highly effective but subtle perturbations. Projected Gradient Descent (PGD), an iterative and robust approach, refines the FGSM method by taking multiple, bounded steps in the direction of the gradient, projecting each step to remain within a specified range of the original input. This makes PGD particularly powerful for generating stable adversarial examples, making it the chosen attack method for this work. 
+
 \subsection{Efficient Adversarial Robustness}
 Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, but also making them more efficient in the process. 
 
 \subsubsection{Towards Compact and Robust Deep Neural Networks}
-Introduced by Sehwag et al. in 2019, the work "Towards Compact and Robust Deep Neural Networks" evaluated the robustness of CNNs under both structured and unstructured pruning. The authors provide a formal definition of the pruning procedure, encompassing pre-training, weight pruning, and fine-tuning, which clarifies the methodology's effectiveness in achieving compact networks without compromising performance. Empirical results demonstrate that the proposed method can maintain, on average, 93\% benign accuracy, 92.5\% empirical robust accuracy, and 85\% verifiable robust accuracy while achieving a compression ratio of 10×.Their experimental data showed that their proposed method is effective for both pruning methods, but especially for unstructured pruning.
+Introduced by Sehwag et al. in 2019, the work "Towards Compact and Robust Deep Neural Networks" evaluated the robustness of CNNs under both structured and unstructured pruning. The authors provide a formal definition of the pruning procedure, encompassing pre-training, weight pruning, and fine-tuning, which clarifies the methodology's effectiveness in achieving compact networks without compromising performance. Empirical results demonstrate that the proposed method can maintain, on average, 93\% benign accuracy (percentage of correctly classified non-modified images), 92.5\% empirical robust accuracy (percentage of correctly classified adversarial examples), and 85\% verifiable robust accuracy (accuracy from verifiable robust training objectives) while achieving a compression ratio of 10×.Their experimental data showed that their proposed method is effective for both pruning methods, but especially for unstructured pruning.
 
 \subsubsection{HYDRA}
 In a follow up paper, HYDRA: Pruning Adversarially Robust Neural Networks, is a seminal work that has taken another step to improving the performance of machine learning models. Sehwag et al. developed a pruning method that is aware of the robust training objective. This is achieved by formulating the pruning process as an empirical risk minimization (ERM) problem combined with a robust training objective, which is solved efficiently using Stochastic Gradient Descent (SGD). The authors also introduced importance score based optimization, with every weight being initialized with a importance value that is proportional to pre-trained network weights. This change has shown to help with the final performance and speed of SGD convergence over random initialization. Extensive experiments were performed by testing with CIFAR-10, SVHN, and ImageNet datasets, and with four robust training techniques: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP. HYDRA achieves state-of-the-art performance in both benign and robust accuracy, even at high pruning ratios (up to 99\%). The method shows significant gains in robust accuracy while also improving benign accuracy compared to previous works. 
 
-The flow of HYDRA can be described in three steps:
+The HYDRA pipeline can be described in five steps:
 \begin{enumerate}
-    \item Pre-training (train with adversarial, without pruning)
-    \item Pruning (freeze weights and only update importance score, generate pruning mask)
-    \item Fine-tuning (update non pruned weights but freeze importance scores)
+    \item Pre-train the network: the CNN is trained on a dataset to minimize a specified loss objective, which is the ERM problem integrated with a robust training objective.
+    \item Initialize scores: a floating point importance score is assigned to each weight, using the scaled initialization technique.
+    \item Minimizing loss: weights of the CNN are frozen, but the corresponding importance scores are updated as the loss is minimized. If k weights are to be kept in the end, only top k importance weights will be used in predictions. However, all scores are updated in the backwards pass.
+    \item Pruning: using the obtained importance scores that are now frozen, weights that are found to be less important are pruned away. If the desired pruning ratio is 90\%, a binary pruning mask is created to only keep weights with top 10\% score. 
+    \item Fine-tuning: the pruned network has its parameters updated by training again with the dataset and the robust training objective. This step partially recovers the performance loss incurred during the pruning phase, and outputs the compressed network.
 \end{enumerate}
 
 The paper was chosen as the foundation of this work, from its excellent performance and extensive documentation. The performance of the pruning algorithm was strong enough to earn second place in the auto-attack robustness benchmark near the time the paper was published, and the paper has been cited 100+ time since the time of publication.
@@ -454,20 +460,59 @@ The paper was chosen as the foundation of this work, from its excellent performa
 \section{Method}
 
 \subsection{Adapting hydra to object detection}
-The HYDRA method is developed for the task of image classification, where only the type of object in the image is recoganized. Often it is useful to learn the location of the objects inside the images as well, which leads to the task of object detection. Therefore, the CNN model was replaced by YOLOv3, and the dataset was replaced by COCO.
+The HYDRA method was originally developed for the task of image classification, where the primary objective is to recognize and categorize the type of object present in an image. While this task is fundamental in many applications, there are scenarios where understanding the spatial arrangement of objects within an image is equally important. This need gives rise to the task of object detection, which not only identifies the objects but also localizes them by drawing bounding boxes around each detected object.
+
+To adapt the HYDRA method for object detection, the original CNN models were replaced with YOLOv3. Weights for the model that are pre-trained on the COCO dataset are used, because the original datasets have been transitioned to COCO to include crucial localization information. To adapt a CNN model from object classification to object detection with YOLOv3, several critical modifications were implemented to accommodate the object detection framework. 
+
+First, the dataloader was restructured to read and process the COCO dataset, which contains bounding box annotations and multiple object classes within a single image, unlike classification where only a single label per image is needed. Each image’s annotations were parsed to include coordinates, width, height, and class labels, with data augmentation applied to enhance robustness. The images are then each padded into a square and resized into 416x416 pixels.
+
+Next, some output processing was added. Unlike classification, which produces a single prediction per image, YOLOv3 outputs a 2D matrix of bounding boxes, confidence scores, and class probabilities for each grid cell. This output was parsed to filter out low-confidence predictions using a confidence threshold of 0.5, followed by Non-Max Suppression (NMS) to remove redundant bounding boxes for the same object. This post-processing step ensures that the final output contains only the most probable predictions.
+
+Following inference, detection outputs were saved in CSV format to allow for a structured evaluation. Each entry in the CSV file contained the image identifier, predicted bounding box coordinates, confidence score, and predicted class label. Finally, mAP (mean Average Precision) was calculated using the pycocotools library, an evaluation toolset that provides metrics specifically for object detection. Pycocotools compares the model’s predicted bounding boxes against ground truth annotations across multiple IoU thresholds (from 0.5 to 0.95, in increments of 0.05) and averages the precision over these thresholds. This approach captures the model’s performance in detecting objects of varying sizes and levels of overlap, providing a robust measure of detection accuracy for YOLOv3 in this adapted setting.
+
+\subsection{PGD attack}
+Implementing the PGD (Projected Gradient Descent) attack for YOLOv3 object detection involves generating adversarial perturbations that lead the model to misdetect or fail to detect objects. PGD, an iterative attack method, aims to maximize the YOLOv3 model’s prediction error by making small, carefully calculated perturbations to the input image. To apply PGD to YOLOv3, we start by calculating the gradient of the loss with respect to the input image. At each iteration, a small step is taken in the direction of this gradient, adding a bounded perturbation to the input image. The step size and the overall perturbation limit ($\varepsilon$) are hyperparameters that control the severity of the attack, with each step projected back to ensure the perturbation stays within this $\varepsilon$-bound. The process repeats for a fixed number of iterations or until the adversarial effect is achieved. Specifically for this work, when each pixel value is from 0 - 1, 5 steps are taken at 0.02 each, with the $\varepsilon$-bound as 0.05. This is a small enough perturbation that is not obvious to the human eye, but strong enough to decrease the model accuracy.
 
 \subsection{Implementing unstructured and structured pruning}
-Subsection text here.
+In addition to the unstructured pruning techniques utilized in the original HYDRA method, structured pruning was implemented for a comparative analysis between the two approaches. As it can lead to more substantial reductions in model size and computational complexity while preserving the overall architecture of the network. This was inspired by the authors' previous work "Towards Compact and Robust Deep Neural Networks" where they demonstrated the effectiveness of employing both structured and unstructured pruning strategies. This comparison allows for a deeper understanding of the trade-offs associated with each pruning strategy, particularly in terms of model accuracy, robustness, and efficiency.
+
+The structured pruning technique is implemented by focusing on reducing entire kernels/filters, as opposed to individual neurons in unstructured pruning. Specifically, for convolutional layers, structured pruning targets kernels by evaluating the importance of each kernel. The importance of the kernels are calculated by averaging the importance of all the weights inside the kernel. This means that with the five-step HYDRA pipeline, changes had to be made in the pruning step where the binary pruning mask is applied at the level of kernels. An additional computation step is added to process the kernels, importance, and ensures that all the weights inside have the same value in the binary mask.
 
 \subsection{New initialization technique}
-DeepLIFT
+The scaled initialization method was developed for HYDRA as a better alternative to random initialization for determining the importance of weights in a CNN. However, there are many different methods that can approximate how much each weight contributes to the final output. DeepLIFT (Deep Learning Important FeaTures) is a method that explains neural network outputs by attributing differences in output to changes in input features relative to a defined reference input. It calculates contribution scores for each feature by measuring their impact on the output difference from the reference state, using specific rules like the RevealCancel rule to enhance accuracy. This approach offers a more efficient and interpretable means of understanding neural network predictions compared to traditional gradient-based methods, providing valuable insights into feature importance and model behavior. Therefore, DeepLIFT was used to initialize the weights' importance in this work. 
+
+The DeepLIFT implementation uses the Captum library, a model interpretability and understanding library for PyTorch. The library supports a variety of methods including DeepLIFT, and 
 
 \section{Experiments}
 In the context of object detection using the COCO dataset, mAP serves as a fundamental metric for evaluating the performance of detection models. mAP quantifies the precision-recall trade-off by calculating the average precision across different object categories. COCO dataset's mAP is typically computed at various Intersection over Union (IoU) thresholds such as 0.5, which is the threshold used in all experiments in the work. Also, a subset of 50,000 images from MS COCO is used to reduce training time.
 
 \subsection{Training time penalty}
+There is about 30 second time penalty using this initialization method over scaled initialization...
+\subsection{DeepLIFT vs Scaled initialization}
+Compare DeepLIFT to HYDRA initialization, mAP and time
 
-\subsection{Inference performance}
+Bring up ANOVA results for both mAP and time
+
+min max std avg
+describe why curve shape
+why can hydra compress to 99\%
+
+
+\begin{table}[htbp]
+    \caption{p-value from ANOVA test between DeepLIFT and Scaled initialization}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     Unstructured   & 1.03e-01& 9.53e-02& 1.71e-03& 3.60e-04& 1.57e-06& 1.64e-04& 2.43e-02& 3.54e-02& 1.86e-01 \\
+     Structured     & 1.48e-02& 3.60e-02& 1.18e-05& 1.24e-05& 6.91e-04& 1.17e-02& 8.99e-02& 8.87e-03& 5.80e-02\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:map}
+\end{table}
+
 Figure \ref{fig:result1}
 
 \begin{figure}
@@ -489,11 +534,16 @@ Figure \ref{fig:result1}
     \label{fig:result1}
 \end{figure}
 
-insert ANOVA test results
 \subsection{unstructured vs structured}
+Compare unstructured to structured pruning, mAP and time
+
+Bring up ANOVA results
+
 Figure \ref{fig:result1}
 \subsection{effect of greyscale on performance}
 Figure \ref{fig:result2}
+
+Bring up ANOVA results
 
 \begin{figure}
     \centering

@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber bare_jrnl"] 0 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1729723321.45576 -1
-  "bare_jrnl.bcf" 1729723321 108632 f6f6209da836b2f7e7d5bcd7ea251f0b "pdflatex"
+["biber bare_jrnl"] 0 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1730337938.34006 -1
+  "bare_jrnl.bcf" 1730337938 108632 f6f6209da836b2f7e7d5bcd7ea251f0b "pdflatex"
   "bibliography.bib" 1729300907 6970 843c40bda534e207ce7dc1c583a5211a ""
   (generated)
   "bare_jrnl.bbl"
   "bare_jrnl.blg"
   (rewritten before read)
-["pdflatex"] 1729723319.94002 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1729723321.45647 0
-  "bare_jrnl.aux" 1729723321 5124 4dd292517b73b5654827051182624808 "pdflatex"
-  "bare_jrnl.bbl" 1729556307 16087 6a6259ec60943b3eedcf0d0d48a0f1de "biber bare_jrnl"
-  "bare_jrnl.run.xml" 1729723321 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
-  "bare_jrnl.tex" 1729723319 32071 6acd9faf9649282febf2adb17a175744 ""
+["pdflatex"] 1730337936.73417 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1730337938.3409 0
+  "bare_jrnl.aux" 1730337938 5572 0bf085f1ea3f2cc05e98b7471b85e62e "pdflatex"
+  "bare_jrnl.bbl" 1730087261 16087 6a6259ec60943b3eedcf0d0d48a0f1de "biber bare_jrnl"
+  "bare_jrnl.run.xml" 1730337938 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
+  "bare_jrnl.tex" 1730337935 41509 63ca7a586b28c4643ba9f41eb977bef4 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1728012155 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728012567 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1728011854 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -27,12 +27,16 @@
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1728011667 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1728011667 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1728011667 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm" 1728011667 1524 d89e2d087a9828407a196f428428ef4a ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1728011667 1288 655e228510b4c2a1abe905c368440826 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1728011667 1300 b62933e007d01cfd073f79b963c01526 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1728011667 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1728011667 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1728011667 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1728011667 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1728011667 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1728011667 1116 25a7bf822c58caf309a702ef79f4afbb ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1728010936 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1728011854 45758 19968a0990191524e34e1994d4a31cb6 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1728015692 44729 fea0975e20ec51c992338362f05f1146 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1728015692 46026 687528a208fbfc1f00832bb96cccebbb ""
@@ -90,7 +94,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728016353 5520490 7d379628d5de7a14652a9db62d1e107c ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728016593 3326035 2e8b838c882755c99b544344ced5b25b ""
   "c:/texlive/2024/texmf.cnf" 1728016329 713 e69b156964470283e0530f5060668171 ""
-  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1729723319 32071 6acd9faf9649282febf2adb17a175744 ""
+  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1730337935 41509 63ca7a586b28c4643ba9f41eb977bef4 ""
   "figures/mAP1.png" 1729556030 48358 1abee66d9580415862693caefa0ecb38 ""
   "figures/mAP2.png" 1729556042 32855 e10e8655b10cf0727a57bcaeb05f83e0 ""
   "figures/time1.png" 1729556057 42200 2f9146fecfa822d38e7573439af7bac3 ""
