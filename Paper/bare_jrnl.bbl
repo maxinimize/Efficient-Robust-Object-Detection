@@ -67,47 +67,37 @@
       \verb 1905.05055
       \endverb
     \endentry
-    \entry{costa2023deep}{misc}{}{}
-      \name{author}{4}{}{%
-        {{hash=5bf23539ee09a582745c62429ad45430}{%
-           family={Costa},
-           familyi={C\bibinitperiod},
-           given={Joana\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=182452590f73b1f2f19213b373e5b44a}{%
-           family={Roxo},
-           familyi={R\bibinitperiod},
-           given={Tiago},
-           giveni={T\bibinitperiod}}}%
-        {{hash=19f598d31a3aab81ad8262c2bac15d12}{%
-           family={Proença},
-           familyi={P\bibinitperiod},
-           given={Hugo},
+    \entry{zhang2019adversarially}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=0b700ede8c64b558ca32569fc772ee11}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Haichao},
            giveni={H\bibinitperiod}}}%
-        {{hash=26ff0b6c0ded0e37b9535f2960653d76}{%
-           family={Inácio},
-           familyi={I\bibinitperiod},
-           given={Pedro\bibnamedelimb R.\bibnamedelimi M.},
-           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4caa00d2857d55ab78353e0ecffb5cb6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianyu},
+           giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{c30692427c5dd57cc341390d5104ce96}
-      \strng{fullhash}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \strng{fullhashraw}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \strng{bibnamehash}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \strng{authorbibnamehash}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \strng{authornamehash}{c30692427c5dd57cc341390d5104ce96}
-      \strng{authorfullhash}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \strng{authorfullhashraw}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{namehash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{fullhash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{fullhashraw}{a230d04e4ca12da48e897bf90d048375}
+      \strng{bibnamehash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{authorbibnamehash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{authornamehash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{authorfullhash}{a230d04e4ca12da48e897bf90d048375}
+      \strng{authorfullhashraw}{a230d04e4ca12da48e897bf90d048375}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
       \field{eprinttype}{arXiv}
-      \field{title}{How Deep Learning Sees the World: A Survey on Adversarial Attacks \& Defenses}
-      \field{year}{2023}
+      \field{title}{Towards Adversarially Robust Object Detection}
+      \field{year}{2019}
       \verb{eprint}
-      \verb 2305.10862
+      \verb 1907.10310
       \endverb
     \endentry
     \entry{li2019rosa}{misc}{}{}
@@ -148,37 +138,47 @@
       \verb 1905.03434
       \endverb
     \endentry
-    \entry{zhang2019adversarially}{misc}{}{}
-      \name{author}{2}{}{%
-        {{hash=0b700ede8c64b558ca32569fc772ee11}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Haichao},
+    \entry{costa2023deep}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=5bf23539ee09a582745c62429ad45430}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Joana\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=182452590f73b1f2f19213b373e5b44a}{%
+           family={Roxo},
+           familyi={R\bibinitperiod},
+           given={Tiago},
+           giveni={T\bibinitperiod}}}%
+        {{hash=19f598d31a3aab81ad8262c2bac15d12}{%
+           family={Proença},
+           familyi={P\bibinitperiod},
+           given={Hugo},
            giveni={H\bibinitperiod}}}%
-        {{hash=4caa00d2857d55ab78353e0ecffb5cb6}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Jianyu},
-           giveni={J\bibinitperiod}}}%
+        {{hash=26ff0b6c0ded0e37b9535f2960653d76}{%
+           family={Inácio},
+           familyi={I\bibinitperiod},
+           given={Pedro\bibnamedelimb R.\bibnamedelimi M.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \strng{namehash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{fullhash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{fullhashraw}{a230d04e4ca12da48e897bf90d048375}
-      \strng{bibnamehash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{authorbibnamehash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{authornamehash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{authorfullhash}{a230d04e4ca12da48e897bf90d048375}
-      \strng{authorfullhashraw}{a230d04e4ca12da48e897bf90d048375}
+      \strng{namehash}{c30692427c5dd57cc341390d5104ce96}
+      \strng{fullhash}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{fullhashraw}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{bibnamehash}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{authorbibnamehash}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{authornamehash}{c30692427c5dd57cc341390d5104ce96}
+      \strng{authorfullhash}{e236690d956c9a5fa8dcb8468c7a68c7}
+      \strng{authorfullhashraw}{e236690d956c9a5fa8dcb8468c7a68c7}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
       \field{eprinttype}{arXiv}
-      \field{title}{Towards Adversarially Robust Object Detection}
-      \field{year}{2019}
+      \field{title}{How Deep Learning Sees the World: A Survey on Adversarial Attacks \& Defenses}
+      \field{year}{2023}
       \verb{eprint}
-      \verb 1907.10310
+      \verb 2305.10862
       \endverb
     \endentry
     \entry{bai2021recent}{misc}{}{}
@@ -217,8 +217,8 @@
       \strng{authornamehash}{b8016fbdd4c60272277ad75da49ec7f0}
       \strng{authorfullhash}{5384b6524e031f309eb3733d49edfdc5}
       \strng{authorfullhashraw}{5384b6524e031f309eb3733d49edfdc5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -255,8 +255,8 @@
       \strng{authornamehash}{63cd472bf0122cab13bdd24a4b2607c0}
       \strng{authorfullhash}{937d1ebd0ec55f51a0d887e887799ff0}
       \strng{authorfullhashraw}{937d1ebd0ec55f51a0d887e887799ff0}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{07}
@@ -309,8 +309,8 @@
       \strng{authornamehash}{94202dd71c133923a96b35cdded82788}
       \strng{authorfullhash}{6641b7612403199826f6266fb25e9f36}
       \strng{authorfullhashraw}{6641b7612403199826f6266fb25e9f36}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -382,8 +382,8 @@
       \strng{authornamehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
       \strng{authorfullhashraw}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
