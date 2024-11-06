@@ -413,35 +413,35 @@ The abstract goes here.
 
 \section{Introduction}
 
-Object detection, one of the fundamental tasks in computer vision, is used in numerous real-world applications by enabling machines to identify and locate objects within images or videos. Object detection algorithms aim to address two challenges in recognizing objects of interest within complex scenes: where (identifying their spatial extent with bounding boxes) and what (assigning corresponding class labels). This capability is crucial for a wide range of tasks, including pedestrian detection for autonomous driving, object tracking in video surveillance, and product recognition for inventory management. Moreover, object detection serves as a foundational building block for higher-level computer vision tasks such as scene understanding, semantic segmentation, and action recognition, facilitating deeper insights and decision-making capabilities in intelligent systems.
+Object detection, one of the fundamental tasks in computer vision, is used in numerous real-world applications by enabling machines to identify and locate objects within images or videos. Object detection algorithms aim to address two challenges in recognizing objects of interest within complex scenes: where (identifying their spatial extent with bounding boxes) an object is and what (assigning corresponding class labels) an object is. Having this capability is crucial for a wide range of tasks, including pedestrian detection for autonomous driving, object tracking in video surveillance, and product recognition for inventory management. Moreover, object detection serves as a foundational building block for higher-level computer vision tasks such as scene understanding, semantic segmentation, and action recognition, facilitating deeper insights and decision-making capabilities in intelligent systems.
 
-The emergence of deep learning revolutionized object detection, leading to significant advancements in accuracy and efficiency. Convolutional Neural Networks (CNNs) have demonstrated remarkable potential and have been the main research direction in recent years \cite{zou2023object}. In safety-critical applications like autonomous driving, the performance of object detection systems can have severe consequences, jeopardizing human safety and privacy. The fatal accident involving an Uber self-driving car in 2018 illustrates the severe consequences that failures in object detection systems can have. While the performance of deep learning-based object detection models has significantly improved, their vulnerability to adversarial attacks poses a significant challenge to their reliability and security \cite{zhang2019adversarially}. Adversarial attacks involve maliciously crafted perturbations to input data, which can cause deep neural networks to make incorrect predictions or fail to detect objects altogether \cite{li2019rosa}. The counter the attacks, adversarial defence is a critical area of research focused on enhancing the robustness of deep learning models against adversarial attacks. While deep learning models are typically optimized to maximize performance metrics on clean images, adversarial training aims to increase performance in adversarial scenarios  \cite{costa2023deep}. Despite the importance of adversarial defence techniques, there is a noticeable discrepancy in the number of papers focusing on adversarial attacks compared to defences in the context of object detection \cite{bai2021recent}. This asymmetry highlights the need for more research efforts dedicated to adversarial defence in object detection, to mitigate the growing threat posed by adversarial attacks and enhance the robustness of deep learning models in practical settings.
+The emergence of deep learning revolutionized object detection, leading to significant advancements in accuracy and efficiency. Convolutional Neural Networks (CNNs) have demonstrated remarkable potential and have been the main research direction in recent years \cite{zou2023object}. In safety-critical applications like autonomous driving, the performance of object detection systems can have severe consequences, jeopardizing human safety and privacy. The fatal accident involving an Uber self-driving car in 2018 illustrates the severe consequences that failures in object detection systems can have. While the performance of deep learning-based object detection models has significantly improved, their vulnerability to adversarial attacks poses a significant challenge to their reliability and security \cite{zhang2019adversarially}. Adversarial attacks involve maliciously crafted perturbations to input data, which can cause deep neural networks to make incorrect predictions or fail to detect objects altogether \cite{li2019rosa}. To counter the attacks, adversarial defence is a critical area of research focused on enhancing the robustness of deep learning models against adversarial attacks. While deep learning models are typically optimized to maximize performance on clean images, adversarial training aims to increase performance in adversarial scenarios  \cite{costa2023deep}. Despite the importance of adversarial defence techniques, there are a lot less papers compared to adversarial attack \cite{bai2021recent}. This asymmetry highlights the need for more research efforts dedicated to adversarial defence in object detection, to mitigate the growing threat posed by adversarial attacks and enhance the robustness of deep learning models in practical settings.
 
 % https://link.springer.com/chapter/10.1007/978-3-030-12388-8_19 uber thing
 
-Despite their recent success, deep learning methods are computationally intensive during both training and inference due to the need to process large volumes of data through multiple layers. Training requires updating millions of parameters through backpropagation, while inference demands rapid calculations to generate predictions \cite{objDetect}. To handle their Full Self-Driving (FSD) processing, Tesla install high-performance computing platforms capable of 50 trillion operations per second (TOPS) in their vehicles. This custom chip enables complex CNN models to execute while maintaining the low latency necessary for safe autonomous driving. Therefore, as the models get larger and more complex, efficiency becomes an increasing concern. Efficiency can be measured in terms of reductions in computational resources, such as memory usage, processing power, and energy consumption. In this work, the efficiency of the model will be measured in inference time, which is advantageous because it directly reflects the model’s performance in real-world applications, particularly those requiring real-time or low-latency processing. Inference time indicates how quickly a trained model can make predictions, which is critical for tasks like autonomous driving, video-based object detection, or any time-sensitive application. A model with shorter inference time can handle more data in a given period, improving overall throughput and user experience.
+Despite their recent success, deep learning methods are computationally intensive during both training and inference due to the need to process large volumes of data through multiple layers. Training requires updating millions of parameters through backpropagation, while inference demands rapid calculations to generate predictions \cite{objDetect}. To handle their Full Self-Driving (FSD) processing, Tesla install high-performance computing platforms capable of 50 trillion operations per second (TOPS) in their vehicles. This custom chip enables complex CNN models to run while maintaining the low latency necessary for safe autonomous driving. Therefore, as the models get larger and more complex, efficiency becomes an increasing concern. Efficiency can be measured in terms of reductions in computational resources, such as memory usage, processing power, and energy consumption. 
+
+In this work, the efficiency of an object detection model is measured by the inference time, because it directly reflects the model’s performance in real-world applications, particularly those requiring real-time or low-latency processing. Inference time indicates how quickly a trained model can make predictions, which is critical for tasks like autonomous driving, video-based object detection, or any time-sensitive application. A model with short inference time can handle more data in a given time period, improving overall throughput and user experience.
 
 % https://ieeexplore.ieee.org/abstract/document/10588595 tesla
 
-Various methods can be employed to enhance CNN efficiency, such as transfer learning, quantization, weight sharing, and pruning. Pruning is a key technique for improving efficiency and comes in two forms: unstructured pruning and structured pruning. Unstructured pruning removes individual weights that contribute little to the network's performance, leading to sparser weight matrices. While effective in reducing the number of parameters, unstructured pruning can result in irregular memory access patterns, making it harder to optimize on certain hardware. In contrast, structured pruning removes entire filters/kernels, channels, or layers, resulting in a more compact architecture. This type of pruning not only reduces the parameter count but also decreases the computational load, making it more suitable for real-time deployment on hardware like GPUs or mobile devices. Structured pruning maintains the integrity of the network structure, allowing for faster inference times while maintaining accuracy. 
+Various methods can be employed to enhance CNN efficiency, such as transfer learning, quantization, weight sharing, and pruning. Pruning is a key technique for improving efficiency and comes in two forms: unstructured pruning and structured pruning. Unstructured pruning removes individual weights that contribute little to the network's performance, leading to sparser weight matrices. While effective in reducing the number of parameters, unstructured pruning can result in irregular memory access patterns, making it hard to optimize on certain hardware. In contrast, structured pruning removes entire filters/kernels, resulting in a more compact architecture. This type of pruning not only reduces the number of parameters but also decreases the computational load, making it more suitable for real-time deployment on hardware like GPUs or mobile devices. Structured pruning maintains the integrity of the network structure, allowing for faster inference times while maintaining accuracy. 
 
 While adversarial robustness and efficiency have individually been explored in CNNs, limited research combines these two areas in object detection. This work aims to bridge this gap by adapting adversarial robustness techniques to efficient object detection frameworks.
 
 \section{Background}
 \subsection{Object Detection}
-To train a CNN model for object detection, a large labeled dataset is required, where each image contains annotations for the objects present, including their class labels and bounding box coordinates. The model is trained by passing input images through a network that extracts features and learns patterns, with the help of techniques like backpropagation and gradient descent to minimize the error between the predicted and true labels. During training, the CNN learns to detect objects by adjusting its weights to improve both classification accuracy and localization precision, ultimately producing a model capable of accurately identifying and locating objects in unseen images.
+To train a CNN model for object detection, a large labeled dataset is required, where each image contains annotations about the objects in the image, including class labels and bounding box coordinates. An object detection model is trained by passing input images through a network that extracts features and learns patterns, with the help of techniques like backpropagation and gradient descent to minimize the error between predicted and true labels. During training, the CNN learns to detect objects by adjusting its weights to improve both classification accuracy and localization precision, ultimately producing a model capable of accurately identifying and locating objects in unseen images.
 
-\subsubsection{Model}
 CNN models for object detection generally consist of a feature extraction backbone and a detection head. The backbone, often a pre-trained deep CNN such as ResNet or VGG, extracts high-level features from images, which are then fed into the detection head to perform localization and classification tasks. Some models, like Faster R-CNN, use a region proposal mechanism, while others like SSD (Single Shot Multibox Detector) predict bounding boxes and class labels in a single pass. YOLO (You Only Look Once) models take a unique approach by dividing the image into a grid and predicting bounding boxes and class probabilities simultaneously, making them highly efficient for real-time applications. YOLOv3, in particular, improves upon earlier versions with better detection at multiple scales, making it an excellent model for balancing speed and accuracy in object detection tasks.
 
-\subsubsection{Dataset}
 Datasets play a pivotal role in advancing the field of object detection by providing annotated images for model training and evaluation. Many openly available datasets exist online, such as Pascal VOC, ImageNet, and Open Images \cite{zaidi2021survey}. Among these datasets, the Microsoft Common Objects in Context (MS COCO) dataset stands out as one of the most comprehensive and widely used benchmarks \cite{lin2015microsoft}. Its superiority stems from several factors. Firstly, COCO has a diverse range of object categories, encompassing common everyday objects across 80 distinct classes, including people, animals, vehicles, and household items. This diversity ensures that models trained on COCO generalize well to a wide array of real-world scenarios. Secondly, each image in the dataset is annotated with instance-level bounding box coordinates, and class labels for precise training and evaluation of detection algorithms. Additionally, COCO provides a large-scale dataset comprising over 200,000 images split into training, validation, and test sets, facilitating robust model training and unbiased evaluation \cite{lin2015microsoft}. 
 
 \subsection{Adversarial attack}
-Adversarial attacks are techniques used to manipulate machine learning models, especially neural networks, by introducing small, often imperceptible perturbations to inputs that cause the model to make incorrect predictions. These attacks reveal vulnerabilities in applications from autonomous driving to facial recognition and medical diagnosis. Several methods exist for generating adversarial attacks, each varying in complexity and impact. Fast Gradient Sign Method (FGSM) is a straightforward single-step attack that adjusts the input in the direction of the gradient, making it a fast way to create adversarial examples. The Carlini \& Wagner (C\&W) attack is a more complex, optimization-based method known for creating highly effective but subtle perturbations. Projected Gradient Descent (PGD), an iterative and robust approach, refines the FGSM method by taking multiple, bounded steps in the direction of the gradient, projecting each step to remain within a specified range of the original input. This makes PGD particularly powerful for generating stable adversarial examples, making it the chosen attack method for this work. 
+Adversarial attacks are techniques used to try to manipulate machine learning models, especially neural networks, by introducing small, often imperceptible perturbations to inputs that cause a model to make incorrect predictions. These attacks reveal vulnerabilities in applications from autonomous driving to facial recognition and medical diagnosis. Several methods exist for generating adversarial attacks, each varying in complexity and impact. Fast Gradient Sign Method (FGSM) is a straightforward single-step attack that adjusts the input in the direction of the gradient, making it a fast way to create adversarial examples. The Carlini \& Wagner (C\&W) attack is a more complex, optimization-based method known for creating highly effective but subtle perturbations. Projected Gradient Descent (PGD), an iterative and robust approach, refines the FGSM method by taking multiple, bounded steps in the direction of the gradient, projecting each step to remain within a specified range of the original input. This makes PGD particularly powerful for generating stable adversarial examples, making it the chosen attack method for this work. 
 
 \subsection{Efficient Adversarial Robustness}
-Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, and many others focused on making CNNs more efficient. However, not many combined the two important topics and developed CNNs that are both efficient and adversarially robust. Vaddadi et al. showcased an efficient CNN model optimized for adversarial robustness, achieving high classification accuracy and effective resistance to adversarial samples. Another work from Wijayanto et al. explored the vulnerability of CNNs, particularly compressed models used in mobile devices, and investigated methods to enhance their robustness without sacrificing accuracy. Ye et al. presented a framework that combines adversarial training with weight pruning to achieve model compression without sacrificing robustness, addressing the challenge of maintaining both properties simultaneously. Furthermore, Gui et al. introduced an Adversarially Trained Model Compression (ATMC) framework, integrating pruning, factorization, and quantization within a unified optimization structure to achieve compact, adversarially robust models without significant accuracy loss. 
+Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, and many others focus on making CNNs more efficient. However, not many combined these two important topics to develop CNNs that are both efficient and adversarially robust. Vaddadi et al. showcased an efficient CNN model optimized for adversarial robustness, achieving high classification accuracy and effective resistance to adversarial samples. Another work from Wijayanto et al. explored the vulnerability of CNNs, particularly compressed models used in mobile devices, and investigated methods to enhance their robustness without sacrificing accuracy. Ye et al. presented a framework that combines adversarial training with weight pruning to achieve model compression without sacrificing robustness, addressing the challenge of maintaining both properties simultaneously. Furthermore, Gui et al. introduced an Adversarially Trained Model Compression (ATMC) framework, integrating pruning, factorization, and quantization within a unified optimization structure to achieve compact, adversarially robust models without significant accuracy loss. 
 
 % https://www.researchgate.net/publication/384864094_An_efficient_convolutional_neural_network_for_adversarial_training_against_adversarial_attack
 
@@ -451,38 +451,36 @@ Many papers have attempted to tackle the problem of making CNNs robust to advers
 
 % https://arxiv.org/pdf/1902.03538
 
-\subsubsection{Towards Compact and Robust Deep Neural Networks}
-Introduced by Sehwag et al. in 2019, the work "Towards Compact and Robust Deep Neural Networks" evaluated the robustness of CNNs under both structured and unstructured pruning. The authors provide a formal definition of the pruning procedure, encompassing pre-training, weight pruning, and fine-tuning, which clarifies the methodology's effectiveness in achieving compact networks without compromising performance. Empirical results demonstrate that the proposed method can maintain, on average, 93\% benign accuracy (percentage of correctly classified non-modified images), 92.5\% empirical robust accuracy (percentage of correctly classified adversarial examples), and 85\% verifiable robust accuracy (accuracy from verifiable robust training objectives) while achieving a compression ratio of 10×.Their experimental data showed that their proposed method is effective for both pruning methods, but especially for unstructured pruning.
+Sehwag et al. evaluated the robustness of CNNs under both structured and unstructured pruning. The authors provide a formal definition of the pruning procedure, encompassing pre-training, weight pruning, and fine-tuning, which clarifies the methodology's effectiveness in achieving compact networks without compromising performance. Empirical results demonstrate that the proposed method can maintain, on average, 93\% benign accuracy (percentage of correctly classified non-modified images), 92.5\% empirical robust accuracy (percentage of correctly classified adversarial examples), and 85\% verifiable robust accuracy (accuracy from verifiable robust training objectives) while achieving a compression ratio of 10×.Their experimental data showed that their proposed method is effective for both pruning methods, but especially for unstructured pruning.
 
-\subsubsection{HYDRA}
-In a follow-up paper, HYDRA: Pruning Adversarially Robust Neural Networks, is a seminal work that has taken another step towards improving the performance of machine learning models. Sehwag et al. developed a pruning method that is aware of the robust training objective. This is achieved by formulating the pruning process as an empirical risk minimization (ERM) problem combined with a robust training objective, which is solved efficiently using Stochastic Gradient Descent (SGD). The authors also introduced importance score-based optimization, with every weight being initialized with an importance value that is proportional to pre-trained network weights. This change has been shown to help with the final performance and speed of SGD convergence over random initialization. Extensive experiments were performed by testing with CIFAR-10, SVHN, and ImageNet datasets, and with four robust training techniques: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP. HYDRA achieves state-of-the-art performance in both benign and robust accuracy, even at high pruning ratios (up to 99\%). The method shows significant gains in robust accuracy while also improving benign accuracy compared to previous works. 
+HYDRA is a seminal work aimed towards improving the performance of machine learning models. Sehwag et al. developed a pruning method that is aware of the robust training objective. This is achieved by formulating the pruning process as an empirical risk minimization (ERM) problem combined with a robust training objective, which is solved efficiently using Stochastic Gradient Descent (SGD). The authors also introduced importance score-based optimization, with every weight being initialized with an importance value that is proportional to pre-trained network weights. This change has been shown to help with the final performance and speed of SGD convergence over random initialization. Extensive experiments were performed by testing with CIFAR-10, SVHN, and ImageNet datasets, and with four robust training techniques: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP. HYDRA achieves state-of-the-art performance in both benign and robust accuracy, even at high pruning ratios (up to 99\%). The method shows significant gains in robust accuracy while also improving benign accuracy compared to previous works. 
 
 The HYDRA pipeline can be described in five steps:
 \begin{enumerate}
     \item Pre-train the network: the CNN is trained on a dataset to minimize a specified loss objective, which is the ERM problem integrated with a robust training objective.
     \item Initialize scores: a floating point importance score is assigned to each weight, using the scaled initialization technique.
-    \item Minimizing loss: weights of the CNN are frozen, but the corresponding importance scores are updated as the loss is minimized. If k weights are to be kept in the end, only top k importance weights will be used in predictions. However, all scores are updated in the backward pass.
-    \item Pruning: using the obtained importance scores that are now frozen, weights that are found to be less important are pruned away. If the desired pruning ratio is 90\%, a binary pruning mask is created to only keep weights with top 10\% score. 
+    \item Minimizing loss: the weights of the CNN are frozen, but the corresponding importance scores are updated as the loss is minimized. If k weights are to be kept in the end, only top k importance weights will be used for predictions. However, all scores are updated in the backward pass.
+    \item Pruning: using the obtained importance scores that are now frozen, the weights that are found to be less important are pruned away. If the desired pruning ratio is x\%, a binary pruning mask is created to only keep weights with top (100-x)\% score. 
     \item Fine-tuning: the pruned network has its parameters updated by training again with the dataset and the robust training objective. This step partially recovers the performance loss incurred during the pruning phase, and outputs the compressed network.
 \end{enumerate}
 
-The paper was chosen as the foundation of this work, because of its excellent performance and extensive documentation. The performance of the pruning algorithm was strong enough to earn second place in the auto-attack robustness benchmark near the time the paper was published, and the paper has been cited 100+ time since the time of publication.
+HYDRA was chosen as the foundation of our work, because of the excellent performance and extensive existent documentation. The performance of HYDRA's initialization and pruning algorithm was strong enough to earn second place in the auto-attack robustness benchmark, and HYDRA's paper has been cited over 100 times since its publication.
 
-Current research on methods for obtaining efficient and adversarially robust CNNs often uses image classification as a proof of concept. Image classification is a simpler task compared to object detection, which makes classification models less complex and faster to train, test, and evaluate. This is advantageous for prototyping new techniques or testing optimization methods, however it leaves a gap in assessing the effectiveness of these methods on more complex tasks such as object detection. It presents additional challenges with multi-object recognition, localization, and increased model architecture complexity. No current research paper has fully tested these methods on object detection, limiting our understanding of their performance and robustness in real-world applications.
+Current research on methods for obtaining efficient and adversarially robust CNNs often use image classification as a proof of concept. Image classification is a simpler task compared to object detection, which makes classification models less complex and faster to train, test, and evaluate. This is advantageous for prototyping new techniques or testing optimization methods, however it leaves a gap in assessing the effectiveness of these methods on more complex tasks such as object detection. It presents additional challenges with multi-object recognition, localization, and increased model architecture complexity. No current research paper has fully tested these methods on object detection, limiting our understanding of their performance and robustness in real-world applications.
 
 
 \section{Method}
 
 \subsection{Adapting HYDRA to object detection}
-The HYDRA method was originally developed for the task of image classification, where the primary objective is to recognize and categorize the type of object present in an image. While this task is fundamental in many applications, there are scenarios where understanding the spatial arrangement of objects within an image is equally important. This need gives rise to the task of object detection, which not only identifies the objects but also localizes them by drawing bounding boxes around each detected object.
+HYDRA was originally developed for the task of image classification, where the primary objective is to recognize and categorize the types of objects present in an image. While this task is fundamental in many applications, there are scenarios where understanding the spatial arrangement of objects within an image is equally important. This need gives rise to the task of object detection, which not only identifies objects but also localizes them by drawing bounding boxes around each detected object.
 
-To adapt the HYDRA method for object detection, the original CNN models were replaced with YOLOv3. Weights for the model that are pre-trained on the COCO dataset are used, because the original datasets have been transitioned to COCO to include crucial localization information. To adapt a CNN model from object classification to object detection with YOLOv3, several critical modifications were implemented to accommodate the object detection framework. 
+To adapt the HYDRA algorithms for object detection, the CNN models used in HYDRA were replaced with YOLOv3. Weights for the parameters of the model that are pre-trained on the COCO dataset are used because the original datasets have been transitioned to COCO to include crucial localization information. To modify the pruning pipeline from object classification to object detection with YOLOv3, several critical modifications were implemented to accommodate the object detection framework. 
 
-First, the dataloader was restructured to read and process the COCO dataset, which contains bounding box annotations and multiple object classes within a single image, unlike classification where only a single label per image is needed. Each image’s annotations were parsed to include coordinates, width, height, and class labels, with data augmentation applied to enhance robustness. The images are then each padded into a square and resized into 416x416 pixels.
+First, the dataloader of HYDRA was restructured to read and process the COCO dataset, which contains bounding box annotations and multiple object classes within a single image, unlike classification where only a single label per image is needed. Each image’s annotations were parsed to include coordinates, width, height, and class labels, with data augmentation applied to enhance robustness. The images are then each padded into a square and resized into 416x416 pixels.
 
 Next, some output processing was added. Unlike classification, which produces a single prediction per image, YOLOv3 outputs a 2D matrix of bounding boxes, confidence scores, and class probabilities for each grid cell. This output was parsed to filter out low-confidence predictions using a confidence threshold of 0.5, followed by Non-Max Suppression (NMS) to remove redundant bounding boxes for the same object. This post-processing step ensures that the final output contains only the most probable predictions.
 
-Following inference, detection outputs were saved in CSV format to allow for a structured evaluation. Each entry in the CSV file contained the image identifier, predicted bounding box coordinates, confidence score, and predicted class label. Finally, mAP (mean Average Precision) was calculated using the pycocotools library, an evaluation toolset that provides metrics specifically for object detection. Pycocotools compares the model’s predicted bounding boxes against ground truth annotations across multiple IoU thresholds (from 0.5 to 0.95, in increments of 0.05) and averages the precision over these thresholds. This approach captures the model’s performance in detecting objects of varying sizes and levels of overlap, providing a robust measure of detection accuracy for YOLOv3 in this adapted setting.
+Detection outputs are saved in CSV format to allow for a structured evaluation. Each entry in the CSV file contains the image identifier, predicted bounding box coordinates, confidence score, and predicted class label. Finally, mAP (mean Average Precision) is calculated using the pycocotools library, an evaluation toolset that provides metrics specifically for object detection. Pycocotools compares the model’s predicted bounding boxes against ground truth annotations across multiple IoU thresholds (from 0.5 to 0.95, in increments of 0.05) and averages the precision over these thresholds. This approach captures the model’s performance in detecting objects of varying sizes and levels of overlap, providing a robust measure of detection accuracy for YOLOv3 in this adapted setting.
 
 \subsection{PGD attack}
 Implementing the PGD (Projected Gradient Descent) attack for YOLOv3 object detection involves generating adversarial perturbations that lead the model to misdetect or fail to detect objects. PGD, an iterative attack method, aims to maximize the YOLOv3 model’s prediction error by making small, carefully calculated perturbations to the input image. To apply PGD to YOLOv3, we start by calculating the gradient of the loss with respect to the input image. At each iteration, a small step is taken in the direction of this gradient, adding a bounded perturbation to the input image. The step size and the overall perturbation limit ($\varepsilon$) are hyperparameters that control the severity of the attack, with each step projected back to ensure the perturbation stays within this $\varepsilon$-bound. The process repeats for a fixed number of iterations or until the adversarial effect is achieved. Specifically for this work, when each pixel value is from 0 - 1, 5 steps are taken at 0.02 each, with the $\varepsilon$-bound as 0.05. This is a small enough perturbation that is not obvious to the human eye, but strong enough to decrease the model accuracy.
@@ -493,7 +491,7 @@ In addition to the unstructured pruning techniques utilized in the original HYDR
 The structured pruning technique is implemented by focusing on reducing entire kernels/filters, as opposed to individual neurons in unstructured pruning. Specifically, for convolutional layers, structured pruning targets kernels by evaluating the importance of each kernel. The kernel importances are each calculated by averaging the importance of all the weights inside the kernel. This means that with the five-step HYDRA pipeline, changes had to be made in the pruning step where the binary pruning mask is applied at the level of kernels. An additional computation step is added to process the kernels' importance, and ensures that all the weights inside have the same value in the binary mask.
 
 \subsection{New initialization technique}
-The scaled initialization method was developed for HYDRA as a better alternative to random initialization for determining the importance of weights in a CNN. However, there are many different methods that can approximate how much each weight contributes to the final output. DeepLIFT (Deep Learning Important FeaTures) is a method that explains neural network outputs by attributing differences in output to changes in input features relative to a defined reference input. It calculates contribution scores for each feature by measuring their impact on the output difference from the reference state, using specific rules like the RevealCancel rule to enhance accuracy. This approach offers a more efficient and interpretable means of understanding neural network predictions compared to traditional gradient-based methods, providing valuable insights into feature importance and model behaviour. Therefore, DeepLIFT was used to initialize the weights' importance in this work. 
+The scaled initialization method was developed for HYDRA as a better alternative to random initialization for determining the importance of parameter weights in a CNN. However, there are many different methods that can estimate how much each parameter weight contributes to the final output. DeepLIFT (Deep Learning Important FeaTures) is a method that explains neural network outputs by attributing differences in output to changes in input features relative to a defined reference input. It calculates contribution scores for each feature by measuring their impact on the output difference from the reference state, using specific rules like the RevealCancel rule to enhance accuracy. This approach offers a more efficient and interpretable means of understanding neural network predictions compared to traditional gradient-based methods, providing valuable insights into feature importance and model behaviour. Therefore, DeepLIFT was used to initialize the weights' importance in this work. 
 
 The DeepLIFT implementation leverages the Captum library, a model interpretability and understanding library for PyTorch. Captum supports a variety of attribution methods, including DeepLIFT, which simplifies the integration of interpretability techniques into deep learning models. Here, DeepLIFT is used to replace steps 2 and 3 in the original HYDRA pipeline by calculating importance scores instead of minimizing a loss function directly. With DeepLIFT, each weight in the network receives an attribution score that indicates its contribution to the model's output, bypassing the limitations of gradient-based approaches, such as issues with saturation (where gradients may vanish) or thresholding artifacts. The DeepLIFT scores are then used directly to generate the binary mask to prune weights or kernels, eliminating the need for traditional weight initialization and loss-based minimization.
 
@@ -685,9 +683,260 @@ Conclusion here.
      \hline
     \end{tabular}
     \end{center}
-    \label{tab:p3}
+    \label{tab:a1}
 \end{table}
 
+\begin{table}[htbp]
+    \caption{Unstructured HYDRA mAP}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+        run 1&0.411&0.379&0.342&0.334&0.279&0.187&0.175&0.101&0.062\\
+        run 2&0.407&0.366&0.328&0.310&0.266&0.218&0.192&0.114&0.055\\
+        run 3&0.410&0.382&0.323&0.327&0.258&0.235&0.190&0.122&0.047\\
+        run 4&0.409&0.390&0.335&0.300&0.256&0.197&0.150&0.120&0.029\\
+        run 5&0.411&0.379&0.356&0.313&0.267&0.214&0.158&0.098&0.052\\
+        run 6&0.408&0.382&0.342&0.290&0.237&0.228&0.157&0.096&0.041\\
+        run 7&0.407&0.380&0.328&0.294&0.275&0.220&0.172&0.136&0.030\\
+        run 8&0.409&0.374&0.360&0.317&0.274&0.182&0.188&0.099&0.016\\
+        run 9&0.413&0.391&0.355&0.307&0.274&0.195&0.161&0.110&0.073\\
+        run 10&0.407&0.387&0.351&0.314&0.266&0.221&0.156&0.091&0.063\\
+     \hline
+        max     &0.413&0.391&0.360&0.334&0.279&0.235&0.192&0.136&0.073\\
+        min     &0.407&0.366&0.323&0.290&0.237&0.182&0.150&0.091&0.016\\
+        avg     &0.409&0.381&0.342&0.311&0.265&0.210&0.170&0.109&0.047\\
+        std dev &1.9e-03&7.1e-03&1.3e-02&1.3e-02&1.2e-02&1.7e-02&1.5e-02&1.3e-02&1.7e-02\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a2}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Structured DeepLIFT mAP}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&0.409&0.375&0.311&0.269&0.220&0.199&0.139&0.098&0.048\\
+     run 2&0.411&0.369&0.312&0.268&0.218&0.182&0.126&0.103&0.040\\
+     run 3&0.407&0.353&0.313&0.275&0.232&0.150&0.139&0.081&0.062\\
+     run 4&0.410&0.360&0.318&0.269&0.214&0.167&0.149&0.102&0.039\\
+     run 5&0.411&0.361&0.303&0.278&0.230&0.177&0.142&0.108&0.052\\
+     run 6&0.411&0.363&0.304&0.275&0.211&0.165&0.141&0.101&0.011\\
+     run 7&0.406&0.376&0.323&0.273&0.204&0.180&0.152&0.119&0.024\\
+     run 8&0.408&0.381&0.322&0.274&0.228&0.168&0.142&0.110&0.053\\
+     run 9&0.418&0.361&0.321&0.264&0.239&0.190&0.159&0.121&0.058\\
+     run 10&0.408&0.365&0.308&0.278&0.260&0.187&0.122&0.090&0.041\\
+     \hline
+        max     &0.418&0.381&0.323&0.278&0.260&0.199&0.159&0.121&0.062\\
+        min     &0.406&0.353&0.303&0.264&0.204&0.150&0.122&0.081&0.011\\
+        avg     &0.410&0.366&0.314&0.272&0.226&0.176&0.141&0.103&0.043\\
+        std dev &3.2e-03&8.2e-03&6.9e-03&4.4e-03&1.5e-02&1.4e-02&1.1e-02&1.2e-02&1.5e-02\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a3}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Structured HYDRA mAP}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&0.413&0.352&0.271&0.264&0.204&0.163&0.120&0.102&0.054\\
+     run 2&0.410&0.364&0.309&0.223&0.194&0.160&0.115&0.079&0.058\\
+     run 3&0.413&0.367&0.291&0.239&0.195&0.155&0.147&0.081&0.065\\
+     run 4&0.411&0.348&0.297&0.243&0.186&0.168&0.142&0.087&0.057\\
+     run 5&0.411&0.349&0.280&0.260&0.188&0.160&0.129&0.091&0.061\\
+     run 6&0.415&0.368&0.282&0.238&0.225&0.172&0.143&0.085&0.053\\
+     run 7&0.420&0.339&0.287&0.246&0.191&0.176&0.129&0.084&0.036\\
+     run 8&0.413&0.370&0.300&0.255&0.209&0.147&0.137&0.079&0.040\\
+     run 9&0.416&0.359&0.285&0.232&0.199&0.164&0.102&0.105&0.059\\
+     run 10&0.415&0.351&0.282&0.258&0.207&0.148&0.143&0.097&0.062\\
+     \hline
+        max     &0.420&0.370&0.309&0.264&0.225&0.176&0.147&0.105&0.065\\
+        min     &0.410&0.339&0.271&0.223&0.186&0.147&0.102&0.079&0.036\\
+        avg     &0.414&0.357&0.288&0.246&0.200&0.161&0.131&0.089&0.054\\
+        std dev &2.8e-03&9.9e-03&1.1e-02&1.3e-02&1.1e-02&9.0e-03&1.4e-02&9.0e-03&9.0e-03\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a4}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Unstructured DeepLIFT Greyscale mAP}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&0.329&0.312&0.281&0.236&0.201&0.194&0.175&0.087&0.034\\
+     run 2&0.328&0.318&0.287&0.247&0.192&0.158&0.127&0.096&0.049\\
+     run 3&0.331&0.321&0.272&0.228&0.218&0.161&0.138&0.110&0.050\\
+     run 4&0.326&0.317&0.256&0.254&0.225&0.157&0.131&0.101&0.026\\
+     run 5&0.331&0.313&0.267&0.233&0.218&0.181&0.180&0.105&0.044\\
+     run 6&0.337&0.326&0.283&0.264&0.205&0.186&0.133&0.106&0.055\\
+     run 7&0.330&0.319&0.265&0.224&0.224&0.184&0.155&0.111&0.038\\
+     run 8&0.334&0.312&0.290&0.248&0.197&0.183&0.140&0.141&0.046\\
+     run 9&0.330&0.316&0.284&0.262&0.214&0.169&0.133&0.116&0.042\\
+     run 10&0.335&0.312&0.268&0.235&0.225&0.167&0.127&0.081&0.024\\
+     \hline
+        max     &0.337&0.326&0.290&0.264&0.225&0.194&0.180&0.141&0.055\\
+        min     &0.326&0.312&0.256&0.224&0.192&0.157&0.127&0.081&0.024\\
+        avg     &0.331&0.317&0.275&0.243&0.212&0.174&0.144&0.105&0.041\\
+        std dev &3.2e-03&4.4e-03&1.1e-02&1.3e-02&1.2e-02&1.2e-02&1.8e-02&1.6e-02&9.7e-03\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a5}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Unstructured DeepLIFT Time}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+        run 1&118.8&113.6&98.4&87.6&73.3&55.9&49.5&44.8&45.4\\
+        run 2&119.4&113.6&100.2&88.3&73.7&55.8&49.0&44.7&41.4\\
+        run 3&119.1&113.3&99.2&87.4&74.5&56.9&50.7&45.0&39.3\\
+        run 4&118.9&113.3&98.2&89.8&75.2&57.1&49.7&44.6&42.9\\
+        run 5&118.7&113.4&100.2&87.1&73.8&57.3&51.7&44.4&46.8\\
+        run 6&118.7&113.3&99.8&87.0&75.2&56.5&50.4&44.6&43.3\\
+        run 7&119.2&114.3&97.8&87.3&74.7&58.6&51.8&45.9&44.5\\
+        run 8&119.1&113.1&99.0&88.3&73.7&58.4&50.9&46.6&43.2\\
+        run 9&119.1&113.3&99.5&88.3&75.0&57.4&51.7&43.3&41.3\\
+        run 10&118.8&113.6&97.8&86.1&72.9&58.4&48.5&46.0&44.3\\
+     \hline
+        max     &119.4&114.3&100.2&89.8&75.2&58.6&51.8&46.6&46.8\\
+        min     &118.7&113.1&97.8&86.1&72.9&55.8&48.5&43.3&39.3\\
+        avg     &119.0&113.5&99.0&87.7&74.2&57.2&50.4&45.0&43.2\\
+        std dev &2.2e-01&3.2e-01&8.8e-01&9.6e-01&7.8e-01&9.6e-01&1.1e+00&9.0e-01&2.1e+00\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a6}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Unstructured HYDRA Time}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&119.5&113.1&100.8&88.1&75.0&59.8&50.0&45.7&44.1\\
+     run 2&119.4&113.7&99.9&87.2&75.4&59.2&52.1&44.4&44.9\\
+     run 3&119.4&113.1&99.8&88.1&74.4&57.7&52.5&44.4&41.9\\
+     run 4&119.3&113.8&100.1&88.4&75.0&59.1&53.1&45.8&43.9\\
+     run 5&119.5&112.8&100.2&88.8&73.1&56.9&52.2&44.4&42.0\\
+     run 6&119.4&112.9&101.2&88.2&73.4&57.3&51.9&44.3&42.2\\
+     run 7&119.4&112.9&100.3&88.7&74.8&57.9&51.8&43.0&42.0\\
+     run 8&119.5&113.4&101.1&88.6&73.7&55.9&51.9&43.0&42.3\\
+     run 9&119.5&113.2&98.5&90.0&76.9&58.4&52.2&43.4&42.3\\
+     run 10&119.5&112.1&99.8&87.3&74.1&59.9&51.1&45.6&43.4\\
+     \hline
+        max     &119.5&113.8&101.2&90.0&76.9&59.9&53.1&45.8&44.9\\
+        min     &119.3&112.1&98.5&87.2&73.1&55.9&50.0&43.0&41.9\\
+        avg     &119.4&113.1&100.2&88.3&74.6&58.2&51.9&44.4&42.9\\
+        std dev &6.6e-02&4.6e-01&7.4e-01&7.5e-01&1.1e+00&1.2e+00&7.9e-01&1.0e+00&1.0e+00\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a7}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Structured DeepLIFT Time}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&119.4&108.2&81.2&54.4&35.1&26.7&24.9&24.1&20.1\\
+     run 2&119.3&108.0&80.9&53.0&37.1&28.0&25.5&20.4&20.5\\
+     run 3&119.3&107.9&81.3&52.3&38.0&29.2&24.5&25.9&23.9\\
+     run 4&119.2&108.1&81.9&53.1&37.2&30.0&24.1&27.6&19.7\\
+     run 5&119.7&107.4&80.1&52.1&36.6&26.2&25.6&25.3&23.2\\
+     run 6&119.3&107.8&81.7&52.2&37.4&28.3&24.6&23.4&24.7\\
+     run 7&119.3&108.1&81.4&52.7&37.5&27.6&24.9&23.6&24.7\\
+     run 8&119.4&107.8&81.1&53.0&36.4&27.9&25.0&21.4&22.9\\
+     run 9&119.5&107.4&81.8&54.4&37.0&27.7&27.8&23.0&21.2\\
+     run 10&119.6&108.1&81.8&52.1&37.6&28.5&25.3&25.0&19.2\\
+     \hline
+        max     &119.7&108.2&81.9&54.4&38.0&30.0&27.8&27.6&24.7\\
+        min     &119.2&107.4&80.1&52.1&35.1&26.2&24.1&20.4&19.2\\
+        avg     &119.4&107.9&81.3&52.9&37.0&28.0&25.2&24.0&22.0\\
+        std dev &1.5e-01&2.7e-01&5.2e-01&8.2e-01&7.7e-01&1.0e+00&9.6e-01&2.0e+00&2.0e+00\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a8}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Structured HYDRA Time}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&119.5&107.2&84.3&53.9&39.1&28.3&23.8&24.1&23.2\\
+     run 2&119.7&106.4&83.1&54.7&37.9&30.1&27.0&23.7&23.9\\
+     run 3&119.3&106.5&83.0&53.7&37.0&27.3&26.1&23.0&22.8\\
+     run 4&119.4&107.2&82.9&53.0&37.9&29.9&27.0&24.2&21.8\\
+     run 5&119.3&106.6&82.6&53.5&37.4&29.9&26.0&25.0&23.6\\
+     run 6&119.2&106.2&83.0&54.2&37.6&29.5&24.5&22.9&24.7\\
+     run 7&119.6&107.4&82.9&54.9&38.7&28.3&28.3&25.3&23.4\\
+     run 8&119.3&106.9&82.5&53.9&37.1&28.9&25.2&24.7&21.6\\
+     run 9&119.7&106.8&82.2&55.2&36.9&27.6&26.0&25.1&21.8\\
+     run 10&119.5&107.0&83.3&52.6&37.8&29.7&25.2&24.2&22.8\\
+     \hline
+        max     &119.7&107.4&84.3&55.2&39.1&30.1&28.3&25.3&24.7\\
+        min     &119.2&106.2&82.2&52.6&36.9&27.3&23.8&22.9&21.6\\
+        avg     &119.5&106.8&83.0&54.0&37.7&28.9&25.9&24.2&23.0\\
+        std dev &1.7e-01&3.7e-01&5.3e-01&7.8e-01&6.8e-01&9.7e-01&1.2e+00&7.9e-01&9.6e-01\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a9}
+\end{table}
+
+\begin{table}[htbp]
+    \caption{Unstructured DeepLIFT Greyscale Time}
+    \begin{center}
+    \begin{tabular}{ |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|  }
+     \hline
+     Pruning ratio  & 0\% & 25\%& 50\%& 65\%& 75\%& 85\%& 90\%& 95\%& 99\%\\
+     \hline
+     run 1&117.8&112.5&95.8&86.0&73.6&57.8&50.2&42.4&44.5\\
+     run 2&118.1&112.0&97.7&86.0&74.6&56.1&48.7&45.1&46.5\\
+     run 3&117.9&112.1&97.0&86.6&73.8&55.0&51.1&42.3&42.2\\
+     run 4&118.1&111.4&96.4&86.1&72.8&57.9&51.7&45.2&44.6\\
+     run 5&117.8&111.8&96.8&85.8&73.4&56.4&48.8&42.1&41.6\\
+     run 6&118.2&112.4&97.3&86.4&73.5&57.2&50.6&42.8&42.5\\
+     run 7&118.1&112.5&96.0&86.5&73.7&56.8&49.6&45.4&36.6\\
+     run 8&118.3&111.5&96.9&87.0&73.6&58.1&49.9&43.9&40.9\\
+     run 9&118.1&112.2&97.8&86.4&73.4&57.3&49.8&44.7&41.2\\
+     run 10&118.1&112.6&96.9&85.6&75.2&57.1&46.9&44.6&43.9\\
+     \hline
+        max     &118.3&112.6&97.8&87.0&75.2&58.1&51.7&45.4&46.5\\
+        min     &117.8&111.4&95.8&85.6&72.8&55.0&46.9&42.1&36.6\\
+        avg     &118.0&112.1&96.9&86.2&73.8&57.0&49.7&43.9&42.4\\
+        std dev &1.6e-01&4.0e-01&6.2e-01&4.0e-01&6.4e-01&8.9e-01&1.3e+00&1.3e+00&2.6e+00\\
+     \hline
+    \end{tabular}
+    \end{center}
+    \label{tab:a10}
+\end{table}
 
 % you can choose not to have a title for an appendix
 % if you want by leaving the argument blank
