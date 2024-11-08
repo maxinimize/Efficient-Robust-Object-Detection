@@ -412,7 +412,7 @@ One-way ANOVA (Analysis of Variance) tests are used to compare the means of the 
 
 A random subset of 50,000 images from COCO dataset is used for the pruning pipeline to reduce training time, and the other 150,000+ images are used as testing to evaluate the performance of the pruned model. Each experiment run elapses approximately 8 hours for pruning, and 40 minutes for inference on the models. All experiments are conducted on a NVIDIA 2070 super GPU.
 
-\subsection{DeepLIFT vs Scaled initialization}
+\subsection{Initial Observations}
 % describe graph
 To compare the two importance score initialization methods, the mAP performance of the four different pruning scenarios using normal colored COCO images are plotted in Fig. \ref{fig:mAP1}. Each curve represents a different scenario and connects the average mAP of different pruning ratios. The mAP averages are calculated by taking the mean of 10 independent experiment runs conducted for each pruning ratio in the different scenarios, and are plotted as dots in the same figure. The standard deviations of each of the 10 runs are represented as well, in the form of error bars. The variability in results observed when running the pruning algorithm can be attributed to inherent randomness within the model training and pruning processes. SGD updates the model and importance scores using random selection of mini-batches of images, which will lead to different outcomes in the model's structure and pruning results.
 
@@ -422,12 +422,13 @@ It is obvious from Fig. \ref{fig:mAP1} that the mAP performance of the pruned mo
 % object detection harder than classification
 In the HYDRA paper, the authors focused more on the models' pruned performance at pruning rates of 90\%, 95\%, and 99\%. However, in adapting the HYDRA pruning method from image classification to object detection, the performance drop at higher pruning rates (beyond 60\%) is more pronounced because object detection is inherently a more complex task. Specifically, the higher pruning rates severely limit the model's capacity to retain the fine-grained spatial and contextual information needed to accurately detect and localize multiple objects within an image. This sensitivity to pruning stems from the fact that object detection models rely on detailed feature extraction to differentiate and locate objects across varied scales and positions, a demand that image classification models do not face to the same extent. 
 
-When comparing the mAP performance between models pruned using DeepLIFT initialization and scaled initialization, the former performs better in the 50\%-85\% pruning ratio range for both pruning methods. The one-way ANOVA tests confirm the conclusion with all p-values in the range under the 0.05 threshold. 
+\subsection{DeepLIFT vs Scaled initialization}
 
-why is DeepLIFT better
+% deeplift better
+When comparing the mAP performance between models pruned using DeepLIFT initialization and scaled initialization, the former performs better in the 50\%-85\% pruning ratio range for both pruning methods. The one-way ANOVA tests confirm the conclusion with all p-values in the range under the 0.05 threshold, as shown in Table \ref{tab:p-mAP}. Using DeepLIFT to set importance scores for pruning can be more effective than scaled initialization because DeepLIFT directly calculates the contribution of each weight or neuron to the final output, rather than relying solely on the magnitude of the weights. In scaled initialization, importance is often inferred from the size or magnitude of weights, assuming larger weights contribute more to the model’s performance. However, this approach doesn’t account for the complex, non-linear relationships between weights and the model's predictions. Large weights might not always be crucial to the output, especially if they are part of redundant or less influential paths in the network. DeepLIFT, on the other hand, provides an attribution score for each weight by measuring its actual impact on the model’s output relative to a reference state. This attribution-based approach is more precise, as it captures how each weight contributes to the final prediction, rather than just its size. By focusing on weights that genuinely affect the model’s decisions, DeepLIFT can help retain the most functionally important components of the network during pruning, leading to a more efficient model that maintains higher performance even with fewer parameters. This tailored pruning is particularly valuable in complex tasks like object detection, where specific features and spatial relationships are critical for accurate predictions.
 
 % compare time
-When comparing the inference time between pruned models using the two different initialization methods in Fig. \ref{fig:time1}, there is not a clear difference between the methods with both unstructured and structured pruning. Regardless of the initial scoring method, the pruning algorithm aims to reduce the network to a target pruning rate, resulting in a final model whose inference efficiency depends primarily on its size and structure rather than on the specific initial importance scores. The p-values from ANOVA tests in Table \ref{tab:a2} mostly support the observation, with most of them above 0.05. However, DeepLift initialization does show small improvements over scaled initialization at 50\% pruning ratio for both pruning methods. 
+When comparing the inference time between pruned models using the two different initialization methods in Fig. \ref{fig:time1}, there is not a clear difference between the methods with both unstructured and structured pruning. Regardless of the initial scoring method, the pruning algorithm aims to reduce the network to a target pruning rate, resulting in a final model whose inference efficiency depends primarily on its size and structure rather than on the specific initial importance scores. The p-values from ANOVA tests in Table \ref{tab:p-time} mostly support the observation, with most of them above 0.05. However, DeepLift initialization does show small improvements over scaled initialization at 50\% pruning ratio for both pruning methods. 
 
 Interestingly, the curve that connects different pruning ratios shows an "S" shape. The curve starts with a gentle decline, followed by a steeper drop in the middle stages, and then a plateau or slower reduction at high pruning rates. In the early stages of pruning, inference time may decrease relatively slowly. This is because removing a few parameters doesn't significantly reduce the computation time or memory usage. As pruning increases, the network becomes smaller, and inference time tends to decrease more significantly, especially when a substantial portion of the network is pruned. Beyond a certain threshold, aggressive pruning can introduce sparsity that makes it harder to compute efficiently. At this stage, the inference time may be mostly from hardware bottlenecks such as memory access.
 
@@ -452,8 +453,6 @@ Lastly, when using the DeepLIFT initialization method over HYDRA's scaled initia
     \caption{Comparison of proposed approach versus HYDRA with both unstructured and structured pruning, through different pruning ratios}
     \label{fig:result1}
 \end{figure}
-
-Table \ref{tab:p-mAP}
 
 \begin{table}[htbp]
     \caption{p-values from ANOVA tests on mAP}
@@ -497,32 +496,39 @@ Table \ref{tab:p-mAP}
 
 
 \subsection{unstructured vs structured}
-Compare unstructured to structured pruning, mAP and time
+Examining the performance difference between unstructured and structured pruning, Fig. \ref{fig:mAP1} shows that unstructured pruning consistently has higher mAP than structured pruning for both initialization methods, for the pruning ratio between 25\%-90\%. This is supported by p-values from ANOVA tests in Table \ref{tab:p-mAP}. Structured pruning generally results in lower mAP compared to unstructured pruning because it removes entire filters, channels, or even layers, which directly impacts the model’s architecture and reduces its ability to capture fine-grained information. By removing whole structures, such as convolutional filters, structured pruning creates gaps in the model’s feature extraction capabilities, leading to a less detailed representation of the input. This is particularly detrimental to object detection tasks that rely on capturing diverse features across multiple scales and locations. As a result, structured pruning often has a more pronounced negative effect on mAP, as the model’s capacity to accurately locate and classify objects diminishes.
 
-Bring up ANOVA results
+While the initialization method did not have a significant effect on the inference time performance, Fig. \ref{fig:time1} shows a significant difference between the two pruning methods. As the pruning rate increases, there is an increasing gap in the time needed for the pruned models to evaluate an image. Starting from 65\% pruning ratio, structured pruned models require only approximately half the time compared to a unstructured pruned model at the same pruning ratio. The one-way ANOVA tests confirm these observations in Table \ref{tab:p-time}. Structured pruning excels in improving inference time because it results in a more regularized and optimized network architecture. Unlike unstructured pruning, which removes individual weights sparsely throughout the network, structured pruning produces a model with fewer filters or layers but with a consistent structure that is easier for hardware like GPUs to process. This regularity allows for better memory access patterns and more efficient use of processing resources, leading to faster computations during inference. Consequently, while structured pruning may sacrifice some accuracy in mAP, it provides a significant boost in inference speed, making it a practical choice for applications requiring real-time performance.
 
-Figure \ref{fig:result1}
 \subsection{effect of greyscale on performance}
-Figure \ref{fig:result2}
 
-Bring up ANOVA results
+Next, the performance of the pruning pipeline is evaluated with greyscale images. The training images are the same ones used in previous parts, but converted to greyscale using the Rec. 601 Standard. The algorithm uses a weighted average with standardized weights on the red (0.299), green (0.587), and blue (0.114) channels to balance human eye sensitivity. The greyscale image is then duplicated into all three channels so that it conforms to the shape of data accepted by the YOLOv3 model. In this experiment, the unstructured DeepLIFT variation of the pruning pipeline is used, since it yields the best mAP performance.
 
+In the mAP performance shown in Fig. \ref{fig:mAP2}, the models trained with greyscale images perform much worse  
+than one trained with colored images. The discrepency between models are the largest at the lower pruning ratios, from 0\% to 65\%, and the two models start converging as the pruning ratio increases. At 95\% and 99\% pruning ratio, the color (or absense of color) has no effect on the model performance. These observations are confirmed with the ANOVA test p-values in Table \ref{tab:p2-mAP}.
+
+The observed performance gap between models trained on greyscale versus colored images can be explained by the reduced information available in greyscale images. Object detection models, particularly those like YOLOv3, leverage color information to help distinguish objects from the background and from each other, as well as to capture subtle variations in texture, lighting, and shading that contribute to accurate object localization and classification. In colored images, the model can use the distinct red, green, and blue channels to capture these variations, which aids in creating a more detailed and nuanced feature representation of each object. In contrast, greyscale images provide only intensity information, limiting the model's ability to distinguish certain objects based on color-related features, and this can negatively impact mAP performance, particularly at lower pruning ratios where the network retains more parameters and thus has greater capacity to process detailed information. For example, without color information, it becomes challenging for the model to distinguish between objects like lemons and limes, as both share similar shapes and textures; the absence of yellow or green color cues can lead to confusion in classification.
+
+At lower pruning ratios (0\% to 65\%), where more network parameters are retained, the color information plays a significant role in enhancing model performance, as the model can make full use of color-based features. The lack of color in greyscale images leads to a noticeable drop in mAP at these pruning rates because the model has fewer cues to differentiate objects and backgrounds, resulting in less precise detection. As the pruning ratio increases, however, the network becomes increasingly constrained, losing a substantial amount of capacity to capture and process intricate features, including those related to color. At higher pruning rates (95\% and 99\%), both greyscale and color-based models are similarly limited in their feature extraction abilities due to the severe reduction in parameters. This means that even in the color-based model, the remaining network capacity is not sufficient to utilize the color information effectively, leading to a convergence in performance between the greyscale and color models. Essentially, at extreme pruning levels, the model's ability to leverage additional color information diminishes, resulting in similar mAP performance for both greyscale and color inputs.
+
+% time
+When considering the inference time performance, it can be observed from Fig. \ref{fig:time2} that the greyscale-trained models are slightly faster at evaluting images at smaller pruning ratios until 65\% pruning ratio. This slight improvement in inference speed can be attributed to the simpler feature extraction process involved when working with greyscale images. Since greyscale images lack color information, the model processes fewer distinct features per image, requiring less computation to analyze intensity-only patterns compared to the more complex, multi-channel color features. In color images, the model needs to process three channels, each containing unique information that must be integrated to capture subtle differences in texture, color gradients, and object boundaries. As the pruning ratio increases, the network's capacity to process any detailed information—whether from color or greyscale—declines sharply. This reduction in complexity due to aggressive pruning diminishes the initial speed advantage observed with greyscale inputs. By the time the pruning ratio exceeds 65\%, both greyscale and color-trained models are similarly limited in their feature extraction abilities, leading to convergence in inference time performance.
 \begin{figure}
     \centering
-    \captionsetup{justification=centering,margin=1cm}
+    \captionsetup{justification=centering}
     \begin{subfigure}[b]{.5\textwidth}
       \centering
       \includegraphics[width=1\linewidth]{figures/mAP2.PNG}
-    %   \caption{mAP}
+      \caption{mAP}
       \label{fig:mAP2}
     \end{subfigure}%
     \begin{subfigure}[b]{.5\textwidth}
       \centering
       \includegraphics[width=1\linewidth]{figures/time2.PNG}
-    %   \caption{A subfigure}
+      \caption{Inference time}
       \label{fig:time2}
     \end{subfigure}
-    \caption{Comparison of performance between color and greyscale images on the proposed method. The mAP performance is shown on the left, and time on the right}
+    \caption{Comparison of performance between color and greyscale images on the proposed method}
     \label{fig:result2}
 \end{figure}
 
@@ -553,9 +559,6 @@ Bring up ANOVA results
     \end{center}
     \label{tab:p2-time}
 \end{table}
-
-\subsection{example pictures}
-Subsection text here.
 
 \section{Conclusion}
 Conclusion here.

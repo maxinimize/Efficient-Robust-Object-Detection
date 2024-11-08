@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber bare_jrnl"] 1730941239.53736 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1730944270.91816 0
-  "bare_jrnl.bcf" 1730944270 108563 8199210b755fe27c3015f6dc6692c734 "pdflatex"
+["biber bare_jrnl"] 1730941239.53736 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1731108802.2184 0
+  "bare_jrnl.bcf" 1731108802 108563 8199210b755fe27c3015f6dc6692c734 "pdflatex"
   "bibliography.bib" 1729300907 6970 843c40bda534e207ce7dc1c583a5211a ""
   (generated)
   "bare_jrnl.bbl"
   "bare_jrnl.blg"
   (rewritten before read)
-["pdflatex"] 1730944269.27786 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1730944270.91888 0
-  "bare_jrnl.aux" 1730944270 6971 a5be410250f20e4fade46e220d44c6eb "pdflatex"
+["pdflatex"] 1731108800.58027 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1731108802.21911 0
+  "bare_jrnl.aux" 1731108802 6830 8e6eb3c3d3485a1edf386d6dc5edf0ab "pdflatex"
   "bare_jrnl.bbl" 1730941244 16087 86b34c107a4fa65e31650122d545cbdd "biber bare_jrnl"
-  "bare_jrnl.run.xml" 1730944270 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
-  "bare_jrnl.tex" 1730944268 64733 27bcbf3420a1237f5ccd0a1d9e755b38 ""
+  "bare_jrnl.run.xml" 1731108802 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
+  "bare_jrnl.tex" 1731108798 73193 92e293587c3c0b499334478e641a671d ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1728012155 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728012567 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1728011854 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -94,7 +94,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728016353 5520490 7d379628d5de7a14652a9db62d1e107c ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728016593 3326035 2e8b838c882755c99b544344ced5b25b ""
   "c:/texlive/2024/texmf.cnf" 1728016329 713 e69b156964470283e0530f5060668171 ""
-  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1730944268 64733 27bcbf3420a1237f5ccd0a1d9e755b38 ""
+  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1731108798 73193 92e293587c3c0b499334478e641a671d ""
   "figures/mAP1.png" 1730759273 74397 c43b5c51dd59eeac4eca0973b72915e8 ""
   "figures/mAP2.png" 1730759283 50722 fdbadeac4e1e4b50c941bd887fe94a72 ""
   "figures/time1.png" 1730759296 58743 293c2d417d8c529b997a3ced1d3581ea ""
