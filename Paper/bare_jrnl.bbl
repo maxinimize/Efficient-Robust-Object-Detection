@@ -268,6 +268,41 @@
       \verb 10.5121/csit.2020.100918
       \endverb
     \endentry
+    \entry{10099639}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=0054723574ca96baa45106825342539e}{%
+           family={Solunke},
+           familyi={S\bibinitperiod},
+           given={Babruvan\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=de1d29f63274c19cea3b45d94490728b}{%
+           family={Gengaje},
+           familyi={G\bibinitperiod},
+           given={Sachin\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{fullhash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{fullhashraw}{7239dcbea429b422f3c471eefb063a94}
+      \strng{bibnamehash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{authorbibnamehash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{authornamehash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{authorfullhash}{7239dcbea429b422f3c471eefb063a94}
+      \strng{authorfullhashraw}{7239dcbea429b422f3c471eefb063a94}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 International Conference on Emerging Smart Computing and Informatics (ESCI)}
+      \field{title}{A Review on Traditional and Deep Learning based Object Detection Methods}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ESCI56872.2023.10099639
+      \endverb
+      \keyw{Deep learning;Training;Technological innovation;Military computing;Object detection;Video surveillance;Security;Object detection;classification;Machine learning;Deep learning;CNN;Datasets;Training;Testing;Evaluation}
+    \endentry
     \entry{zaidi2021survey}{misc}{}{}
       \name{author}{6}{}{%
         {{hash=4045730260249994fc17ac8b4762d2a5}{%
@@ -309,8 +344,8 @@
       \strng{authornamehash}{94202dd71c133923a96b35cdded82788}
       \strng{authorfullhash}{6641b7612403199826f6266fb25e9f36}
       \strng{authorfullhashraw}{6641b7612403199826f6266fb25e9f36}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -382,8 +417,8 @@
       \strng{authornamehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
       \strng{authorfullhashraw}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}

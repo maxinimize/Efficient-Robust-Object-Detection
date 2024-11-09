@@ -2382,9 +2382,11 @@
     <bcf:citekey order="4" intorder="1">costa2023deep</bcf:citekey>
     <bcf:citekey order="5" intorder="1">bai2021recent</bcf:citekey>
     <bcf:citekey order="6" intorder="1">objDetect</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">zaidi2021survey</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">lin2015microsoft</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">lin2015microsoft</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">zou2023object</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">10099639</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">zaidi2021survey</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">lin2015microsoft</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">lin2015microsoft</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
