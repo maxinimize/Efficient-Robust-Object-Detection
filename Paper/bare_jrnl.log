@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  10 NOV 2024 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  11 NOV 2024 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -510,136 +510,139 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <figures/mAP1.PNG, id=35, 416.2752pt x 435.0654pt>
 File: figures/mAP1.PNG Graphic file (type png)
 <use figures/mAP1.PNG>
-Package pdftex.def Info: figures/mAP1.PNG  used on input line 450.
+Package pdftex.def Info: figures/mAP1.PNG  used on input line 455.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time1.PNG, id=37, 412.6617pt x 435.0654pt>
 File: figures/time1.PNG Graphic file (type png)
 <use figures/time1.PNG>
-Package pdftex.def Info: figures/time1.PNG  used on input line 456.
+Package pdftex.def Info: figures/time1.PNG  used on input line 461.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
+
+
+[10]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 467.
+(Font)              <9> on input line 472.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 467.
+(Font)              <5> on input line 472.
 
 
-[10 <./figures/mAP1.png> <./figures/time1.png>]
-
-[11]
+[11 <./figures/mAP1.png> <./figures/time1.png>]
 
 [12]
 <figures/mAP2.PNG, id=49, 416.2752pt x 435.0654pt>
 File: figures/mAP2.PNG Graphic file (type png)
 <use figures/mAP2.PNG>
-Package pdftex.def Info: figures/mAP2.PNG  used on input line 530.
+Package pdftex.def Info: figures/mAP2.PNG  used on input line 533.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time2.PNG, id=50, 412.6617pt x 435.0654pt>
 File: figures/time2.PNG Graphic file (type png)
 <use figures/time2.PNG>
-Package pdftex.def Info: figures/time2.PNG  used on input line 536.
+Package pdftex.def Info: figures/time2.PNG  used on input line 539.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 547--554
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 550--557
  [] 
  []
 
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 561--568
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 564--571
  [] 
  []
 
 
 
 [13 <./figures/mAP2.png> <./figures/time2.png>]
-<figures/attack_after_22192.jpg, id=57, 417.56pt x 417.56pt>
+
+[14]
+<figures/attack_after_22192.jpg, id=60, 417.56pt x 417.56pt>
 File: figures/attack_after_22192.jpg Graphic file (type jpg)
 <use figures/attack_after_22192.jpg>
-Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 590.
+Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 592.
 (pdftex.def)             Requested size: 309.60315pt x 309.62032pt.
 
 
-[14]
-
 [15 <./figures/attack_after_22192.jpg>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 617.
+
+[16]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 620.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-[16]
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 785--785
+[17]
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 788--788
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 785--786
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 788--789
 []\OT1/ptm/m/n/9 2.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 816--816
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 816--816
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 816--816
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--814
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 816--817
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 844--844
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 844--844
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--842
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 844--845
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 869--869
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 872--872
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--897
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 900--900
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--897
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 900--900
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--898
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 900--901
 []\OT1/ptm/m/n/9 2.6e+00| 
  []
 
 
 
-[17]
-
 [18]
 
 [19]
 
-[20] (./bare_jrnl.aux)
+[20]
+
+[21] (./bare_jrnl.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
@@ -651,16 +654,16 @@ Package logreq Info: Writing requests to 'bare_jrnl.run.xml'.
 Here is how much of TeX's memory you used:
  11991 strings out of 473578
  232777 string characters out of 5732236
- 1244218 words of memory out of 5000000
+ 1243218 words of memory out of 5000000
  34795 multiletter control sequences out of 15000+600000
  593080 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,10n,81p,1852b,1227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,10n,81p,1945b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (20 pages, 322462 bytes).
+Output written on bare_jrnl.pdf (21 pages, 328042 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
