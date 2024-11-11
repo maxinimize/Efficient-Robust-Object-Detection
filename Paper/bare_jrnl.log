@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  10 NOV 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  10 NOV 2024 23:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -495,11 +495,11 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 [6]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 411.
+(Font)              <12> on input line 407.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 411.
+(Font)              <8> on input line 407.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 411.
+(Font)              <6> on input line 407.
 
 
 [7]
@@ -510,41 +510,41 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <figures/mAP1.PNG, id=35, 416.2752pt x 435.0654pt>
 File: figures/mAP1.PNG Graphic file (type png)
 <use figures/mAP1.PNG>
-Package pdftex.def Info: figures/mAP1.PNG  used on input line 452.
+Package pdftex.def Info: figures/mAP1.PNG  used on input line 450.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time1.PNG, id=37, 412.6617pt x 435.0654pt>
 File: figures/time1.PNG Graphic file (type png)
 <use figures/time1.PNG>
-Package pdftex.def Info: figures/time1.PNG  used on input line 458.
+Package pdftex.def Info: figures/time1.PNG  used on input line 456.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 469.
+(Font)              <9> on input line 467.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 469.
+(Font)              <5> on input line 467.
 
 
-[10]
+[10 <./figures/mAP1.png> <./figures/time1.png>]
 
-[11 <./figures/mAP1.png> <./figures/time1.png>]
+[11]
 
 [12]
 <figures/mAP2.PNG, id=49, 416.2752pt x 435.0654pt>
 File: figures/mAP2.PNG Graphic file (type png)
 <use figures/mAP2.PNG>
-Package pdftex.def Info: figures/mAP2.PNG  used on input line 532.
+Package pdftex.def Info: figures/mAP2.PNG  used on input line 530.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time2.PNG, id=50, 412.6617pt x 435.0654pt>
 File: figures/time2.PNG Graphic file (type png)
 <use figures/time2.PNG>
-Package pdftex.def Info: figures/time2.PNG  used on input line 538.
+Package pdftex.def Info: figures/time2.PNG  used on input line 536.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 549--556
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 547--554
  [] 
  []
 
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 563--570
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 561--568
  [] 
  []
 
@@ -554,89 +554,92 @@ Overfull \hbox (5.18315pt too wide) in paragraph at lines 563--570
 <figures/attack_after_22192.jpg, id=57, 417.56pt x 417.56pt>
 File: figures/attack_after_22192.jpg Graphic file (type jpg)
 <use figures/attack_after_22192.jpg>
-Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 592.
+Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 590.
 (pdftex.def)             Requested size: 309.60315pt x 309.62032pt.
 
 
 [14]
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 784--784
+
+[15 <./figures/attack_after_22192.jpg>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 617.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+[16]
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 785--785
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 784--785
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 785--786
 []\OT1/ptm/m/n/9 2.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 812--812
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 812--812
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 812--812
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 812--813
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--814
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 840--840
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 840--840
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 840--841
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--842
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 868--868
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 869--869
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 896--896
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--897
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 896--896
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--897
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 896--897
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--898
 []\OT1/ptm/m/n/9 2.6e+00| 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 941.
-(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
 
-[15 <./figures/attack_after_22192.jpg>]
-
-[16]
 
 [17]
 
 [18]
 
-[19] (./bare_jrnl.aux)
+[19]
+
+[20] (./bare_jrnl.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
@@ -648,16 +651,16 @@ Package logreq Info: Writing requests to 'bare_jrnl.run.xml'.
 Here is how much of TeX's memory you used:
  11991 strings out of 473578
  232777 string characters out of 5732236
- 1259218 words of memory out of 5000000
+ 1244218 words of memory out of 5000000
  34795 multiletter control sequences out of 15000+600000
  593080 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,10n,81p,1852b,1227s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (19 pages, 323525 bytes).
+Output written on bare_jrnl.pdf (20 pages, 322462 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
