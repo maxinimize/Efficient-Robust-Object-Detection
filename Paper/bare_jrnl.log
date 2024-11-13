@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  11 NOV 2024 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  12 NOV 2024 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -425,20 +425,20 @@ Package caption Info: New subtype `subtable' on input line 238.
  (./bare_jrnl.aux)
 \openout1 = `bare_jrnl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 301.
-LaTeX Font Info:    ... okay on input line 301.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 302.
+LaTeX Font Info:    ... okay on input line 302.
 
 -- Lines per column: 50 (exact).
 Package biblatex Info: Trying to load language 'english'...
@@ -454,8 +454,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bare_jrnl.bbl' found.
  (./bare_jrnl.bbl)
-Package biblatex Info: Reference section=0 on input line 301.
-Package biblatex Info: Reference segment=0 on input line 301.
+Package biblatex Info: Reference section=0 on input line 302.
+Package biblatex Info: Reference segment=0 on input line 302.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count413
@@ -486,7 +486,7 @@ Package caption Info: End \AtBeginDocument code.
 [3]
 
 [4]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 364.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 367.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -495,11 +495,11 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 [6]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 395.
+(Font)              <12> on input line 398.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 395.
+(Font)              <8> on input line 398.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 395.
+(Font)              <6> on input line 398.
 
 
 [7]
@@ -512,17 +512,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <figures/mAP1.PNG, id=38, 416.2752pt x 435.0654pt>
 File: figures/mAP1.PNG Graphic file (type png)
 <use figures/mAP1.PNG>
-Package pdftex.def Info: figures/mAP1.PNG  used on input line 442.
+Package pdftex.def Info: figures/mAP1.PNG  used on input line 445.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time1.PNG, id=40, 412.6617pt x 435.0654pt>
 File: figures/time1.PNG Graphic file (type png)
 <use figures/time1.PNG>
-Package pdftex.def Info: figures/time1.PNG  used on input line 448.
+Package pdftex.def Info: figures/time1.PNG  used on input line 451.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 459.
+(Font)              <9> on input line 462.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 459.
+(Font)              <5> on input line 462.
 
 
 [11 <./figures/mAP1.png> <./figures/time1.png>]
@@ -531,20 +531,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <figures/mAP2.PNG, id=49, 416.2752pt x 435.0654pt>
 File: figures/mAP2.PNG Graphic file (type png)
 <use figures/mAP2.PNG>
-Package pdftex.def Info: figures/mAP2.PNG  used on input line 520.
+Package pdftex.def Info: figures/mAP2.PNG  used on input line 527.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
 <figures/time2.PNG, id=50, 412.6617pt x 435.0654pt>
 File: figures/time2.PNG Graphic file (type png)
 <use figures/time2.PNG>
-Package pdftex.def Info: figures/time2.PNG  used on input line 526.
+Package pdftex.def Info: figures/time2.PNG  used on input line 533.
 (pdftex.def)             Requested size: 258.0pt x 272.00813pt.
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 537--544
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 544--551
  [] 
  []
 
 
-Overfull \hbox (5.18315pt too wide) in paragraph at lines 551--558
+Overfull \hbox (5.18315pt too wide) in paragraph at lines 558--565
  [] 
  []
 
@@ -556,30 +556,30 @@ Overfull \hbox (5.18315pt too wide) in paragraph at lines 551--558
 <figures/attack_after_22192.jpg, id=60, 417.56pt x 417.56pt>
 File: figures/attack_after_22192.jpg Graphic file (type jpg)
 <use figures/attack_after_22192.jpg>
-Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 579.
+Package pdftex.def Info: figures/attack_after_22192.jpg  used on input line 590.
 (pdftex.def)             Requested size: 309.60315pt x 309.62032pt.
 
 
-[15 <./figures/attack_after_22192.jpg>]
+[15]
 
-[16]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 607.
+[16 <./figures/attack_after_22192.jpg>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 618.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (6.07649pt too wide) in paragraph at lines 608--608
+Overfull \hbox (6.07649pt too wide) in paragraph at lines 619--619
 \OT1/ptm/m/n/12 fu-ture scope,'' \OT1/ptm/m/it/12 Elec-tron-ics\OT1/ptm/m/n/12 , vol. 10, no. 20, 2021, \OT1/ptm/m/sc/12 issn\OT1/ptm/m/n/12 : 2079-9292. \OT1/ptm/m/sc/12 doi\OT1/ptm/m/n/12 : $10 . 3390 / electronics10202470$.
  []
 
 
-Overfull \hbox (25.26398pt too wide) in paragraph at lines 608--608
+Overfull \hbox (25.26398pt too wide) in paragraph at lines 619--619
 \OT1/ptm/m/n/12 ware ac-cel-er-a-tion,'' \OT1/ptm/m/it/12 Elec-tron-ics\OT1/ptm/m/n/12 , vol. 11, no. 6, 2022, \OT1/ptm/m/sc/12 issn\OT1/ptm/m/n/12 : 2079-9292. \OT1/ptm/m/sc/12 doi\OT1/ptm/m/n/12 : $10 . 3390 / electronics11060945$.
  []
 
 
 
 [17]
-Overfull \hbox (5.0201pt too wide) in paragraph at lines 608--608
+Overfull \hbox (5.0201pt too wide) in paragraph at lines 619--619
 []\OT1/ptm/m/n/12 J. Red-mon and A. Farhadi, \OT1/ptm/m/it/12 Yolov3: An in-cre-men-tal im-prove-ment\OT1/ptm/m/n/12 , 2018. arXiv: $1804 . 02767$ \OT1/pcr/m/n/12 [cs.CV]\OT1/ptm/m/n/12 .
  []
 
@@ -588,67 +588,67 @@ Overfull \hbox (5.0201pt too wide) in paragraph at lines 608--608
 [18]
 
 [19]
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 775--775
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 786--786
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 775--776
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 786--787
 []\OT1/ptm/m/n/9 2.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 803--803
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 814--814
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 803--803
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 814--814
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 803--803
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 814--814
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 803--804
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 814--815
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 831--831
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 842--842
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 831--831
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 842--842
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 831--832
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 842--843
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 859--859
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 870--870
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 887--887
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 898--898
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 887--887
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 898--898
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 887--888
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 898--899
 []\OT1/ptm/m/n/9 2.6e+00| 
  []
 
@@ -670,15 +670,15 @@ Package logreq Info: Writing requests to 'bare_jrnl.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12130 strings out of 473578
- 239919 string characters out of 5732236
- 1246796 words of memory out of 5000000
- 34934 multiletter control sequences out of 15000+600000
+ 12134 strings out of 473578
+ 239945 string characters out of 5732236
+ 1246879 words of memory out of 5000000
+ 34938 multiletter control sequences out of 15000+600000
  593080 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,10n,81p,1945b,1249s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,10n,81p,1637b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (23 pages, 338889 bytes).
+Output written on bare_jrnl.pdf (23 pages, 339020 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
