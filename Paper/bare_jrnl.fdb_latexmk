@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber bare_jrnl"] 1731454583.30548 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1731456022.1668 0
-  "bare_jrnl.bcf" 1731456022 112055 d73d3c76222872c2af6279cf2f599240 "pdflatex"
-  "bibliography.bib" 1731376298 22653 890e357e6bf383db7fe2dfe5cc77e52a ""
+["biber bare_jrnl"] 1731461066.8862 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1731461207.6295 0
+  "bare_jrnl.bcf" 1731461207 112191 636f0c7f4f85ef98f20c08ffd94e3efa "pdflatex"
+  "bibliography.bib" 1731461049 22890 75ea847da13b3456cee3361de22c6bce ""
   (generated)
   "bare_jrnl.bbl"
   "bare_jrnl.blg"
   (rewritten before read)
-["pdflatex"] 1731456019.76223 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1731456022.16757 0
-  "bare_jrnl.aux" 1731456022 14040 24dfcfcf480c3f654094411c9e780be5 "pdflatex"
-  "bare_jrnl.bbl" 1731454585 101119 408886b5764f753e86b89158a4085f8c "biber bare_jrnl"
-  "bare_jrnl.run.xml" 1731456022 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
-  "bare_jrnl.tex" 1731456018 88479 30432b59287571a1fb5e298c8621911f ""
+["pdflatex"] 1731461205.14292 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1731461207.63031 0
+  "bare_jrnl.aux" 1731461207 14679 975fdbfd612f20246a6f1d03e39183c8 "pdflatex"
+  "bare_jrnl.bbl" 1731461069 102504 23b99c9f15eaa93f3d7c6769a08eea36 "biber bare_jrnl"
+  "bare_jrnl.run.xml" 1731461207 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
+  "bare_jrnl.tex" 1731461203 89238 561f30ceb5023a2d8d649420a97c3f00 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1728012155 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728012567 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1728011854 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -94,10 +94,12 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728016353 5520490 7d379628d5de7a14652a9db62d1e107c ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728016593 3326035 2e8b838c882755c99b544344ced5b25b ""
   "c:/texlive/2024/texmf.cnf" 1728016329 713 e69b156964470283e0530f5060668171 ""
-  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1731456018 88479 30432b59287571a1fb5e298c8621911f ""
+  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1731461203 89238 561f30ceb5023a2d8d649420a97c3f00 ""
   "figures/attack_after_22192.jpg" 1725993245 33968 9d65866320f2cef0fdeef36dead501fe ""
+  "figures/label.PNG" 1731460252 138577 869d132c5ae37d58c9d936101d1ff76a ""
   "figures/mAP1.png" 1731363895 75238 fed37ff3cb2aa65cd66dca6a443cf3e8 ""
   "figures/mAP2.png" 1731363923 51731 4f91e447ff83d41fced8c70e1e1f447a ""
+  "figures/pruning.png" 1731460937 207936 6bfd2bdb919e718e61e613f325373879 ""
   "figures/time1.png" 1731363993 60412 d462603b029af4b3cc3f2c0c2b743e8b ""
   "figures/time2.png" 1731364003 41576 11dcca138d9c6eec1fde022fd7eecc07 ""
   (generated)

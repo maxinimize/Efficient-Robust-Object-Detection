@@ -685,6 +685,40 @@
       \verb https://arxiv.org/abs/1906.06110
       \endverb
     \endentry
+    \entry{Tessier_2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f65683131517cad80ec0dc468a3fd3ef}{%
+           family={Tessier},
+           familyi={T\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{fullhash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{fullhashraw}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{bibnamehash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{authorbibnamehash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{authornamehash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{authorfullhash}{f65683131517cad80ec0dc468a3fd3ef}
+      \strng{authorfullhashraw}{f65683131517cad80ec0dc468a3fd3ef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{9}
+      \field{title}{Neural network pruning 101}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/neural-network-pruning-101-af816aaea61
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/neural-network-pruning-101-af816aaea61
+      \endverb
+    \endentry
     \entry{8627998}{article}{}{}
       \name{author}{4}{}{%
         {{hash=dd8a99db4576468b122bf3d2c834a631}{%
@@ -841,8 +875,8 @@
       \strng{editornamehash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhashraw}{47417fb0f059134143a5ef79cd2425e5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Computer Vision}
@@ -898,8 +932,8 @@
       \strng{authornamehash}{9c2fb1e31070cf9c09cbf6cd034ad8d2}
       \strng{authorfullhash}{eac980cadbb985285eddfede598530a7}
       \strng{authorfullhashraw}{eac980cadbb985285eddfede598530a7}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -1438,8 +1472,8 @@
       \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authorfullhash}{c8c3e9b8f095d055ce92294b35ff475c}
       \strng{authorfullhashraw}{c8c3e9b8f095d055ce92294b35ff475c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1482,8 +1516,8 @@
       \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authorfullhash}{07b2928cf9addb6cf2d09332e9d7ce18}
       \strng{authorfullhashraw}{07b2928cf9addb6cf2d09332e9d7ce18}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{stat.ML}
@@ -1914,8 +1948,8 @@
       \strng{editornamehash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhashraw}{1d3c0ab4852f55d437c70781fafa6673}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of Thirty Fifth Conference on Learning Theory}
@@ -1967,8 +2001,8 @@
       \strng{authornamehash}{d7650e61ccbe732d2cdbd76cb31989b4}
       \strng{authorfullhash}{0ea90d97ecd7b7f78ac9dba49e984347}
       \strng{authorfullhashraw}{0ea90d97ecd7b7f78ac9dba49e984347}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -2385,8 +2419,8 @@
       \strng{authornamehash}{20ea356a06ba622b1b193b14e5eed729}
       \strng{authorfullhash}{4b297fb17a203bd54964d8dc30722046}
       \strng{authorfullhashraw}{4b297fb17a203bd54964d8dc30722046}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
