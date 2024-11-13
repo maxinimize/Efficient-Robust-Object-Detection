@@ -1,22 +1,22 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'bare_jrnl.blg'
-[113] biber-MSWIN64:340> INFO - === 
-[153] Biber.pm:420> INFO - Reading 'bare_jrnl.bcf'
-[281] Biber.pm:994> INFO - Found 48 citekeys in bib section 0
-[295] Biber.pm:4463> INFO - Processing section 0
-[310] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[380] bibtex.pm:1713> INFO - LaTeX decoding ...
-[453] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[858] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[858] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[858] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[858] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[115] biber-MSWIN64:340> INFO - === 
+[155] Biber.pm:420> INFO - Reading 'bare_jrnl.bcf'
+[282] Biber.pm:994> INFO - Found 47 citekeys in bib section 0
+[297] Biber.pm:4463> INFO - Processing section 0
+[309] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[369] bibtex.pm:1713> INFO - LaTeX decoding ...
+[447] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[857] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[857] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[857] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[857] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
 [894] bbl.pm:676> INFO - Writing 'bare_jrnl.bbl' with encoding 'UTF-8'
-[934] bbl.pm:779> INFO - Output to bare_jrnl.bbl
-[934] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Tessier_2021' is not an integer - this will probably not sort properly.
-[934] Biber.pm:131> WARN - legacy month field '02--05 Jul' in entry 'erm' is not an integer - this will probably not sort properly.
-[934] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_ScdA\f4d088b3f9f145b5c3058da33afd57d4_6384.utf8, line 2, warning: 1 characters of junk seen at toplevel
-[934] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_ScdA\f4d088b3f9f145b5c3058da33afd57d4_6384.utf8, line 12, warning: 1 characters of junk seen at toplevel
-[934] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_ScdA\f4d088b3f9f145b5c3058da33afd57d4_6384.utf8, line 22, warning: 1 characters of junk seen at toplevel
-[935] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_ScdA\f4d088b3f9f145b5c3058da33afd57d4_6384.utf8, line 32, warning: 1 characters of junk seen at toplevel
-[935] Biber.pm:133> INFO - WARNINGS: 6
+[933] bbl.pm:779> INFO - Output to bare_jrnl.bbl
+[933] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Tessier_2021' is not an integer - this will probably not sort properly.
+[933] Biber.pm:131> WARN - legacy month field '02--05 Jul' in entry 'erm' is not an integer - this will probably not sort properly.
+[933] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_M6Z7\f4d088b3f9f145b5c3058da33afd57d4_9540.utf8, line 2, warning: 1 characters of junk seen at toplevel
+[933] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_M6Z7\f4d088b3f9f145b5c3058da33afd57d4_9540.utf8, line 12, warning: 1 characters of junk seen at toplevel
+[933] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_M6Z7\f4d088b3f9f145b5c3058da33afd57d4_9540.utf8, line 22, warning: 1 characters of junk seen at toplevel
+[933] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\anton\AppData\Local\Temp\biber_tmp_M6Z7\f4d088b3f9f145b5c3058da33afd57d4_9540.utf8, line 32, warning: 1 characters of junk seen at toplevel
+[934] Biber.pm:133> INFO - WARNINGS: 6

@@ -69,59 +69,6 @@
       \verb https://arxiv.org/abs/1807.05511
       \endverb
     \endentry
-    \entry{10028728}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=79ecb3ddec80cff3d752091ba8cc0113}{%
-           family={Zou},
-           familyi={Z\bibinitperiod},
-           given={Zhengxia},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=ecebcf9a6683cc1758f997f5063a0c86}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Keyan},
-           giveni={K\bibinitperiod}}}%
-        {{hash=a163a5390bc6150e96c215cfd4d1f35f}{%
-           family={Shi},
-           familyi={S\bibinitperiod},
-           given={Zhenwei},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=65c428484ceb9cc9d8774f6bc3df701c}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={Yuhong},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=45f8892411700a9b1d4fcd3acaeeefd0}{%
-           family={Ye},
-           familyi={Y\bibinitperiod},
-           given={Jieping},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{bf107765cba8a146a1b2d79cf1bf23a5}
-      \strng{fullhash}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \strng{fullhashraw}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \strng{bibnamehash}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \strng{authorbibnamehash}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \strng{authornamehash}{bf107765cba8a146a1b2d79cf1bf23a5}
-      \strng{authorfullhash}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \strng{authorfullhashraw}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the IEEE}
-      \field{number}{3}
-      \field{title}{Object Detection in 20 Years: A Survey}
-      \field{volume}{111}
-      \field{year}{2023}
-      \field{pages}{257\bibrangedash 276}
-      \range{pages}{20}
-      \verb{doi}
-      \verb 10.1109/JPROC.2023.3238524
-      \endverb
-      \keyw{Object detection;Detectors;Computer vision;Feature extraction;Deep learning;Convolutional neural networks;Computer vision;convolutional neural networks (CNNs);deep learning;object detection;technical evolution}
-    \endentry
     \entry{zou2023object}{misc}{}{}
       \name{author}{5}{}{%
         {{hash=79ecb3ddec80cff3d752091ba8cc0113}{%
@@ -158,9 +105,8 @@
       \strng{authornamehash}{bf107765cba8a146a1b2d79cf1bf23a5}
       \strng{authorfullhash}{4f723ec3ed4eda55aa482279dd7b50e0}
       \strng{authorfullhashraw}{4f723ec3ed4eda55aa482279dd7b50e0}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -222,8 +168,8 @@
       \strng{authornamehash}{645fcb5d292128d156d416f3b6de6d98}
       \strng{authorfullhash}{3c95c64a377cc54a420daf201e1a8c1d}
       \strng{authorfullhashraw}{3c95c64a377cc54a420daf201e1a8c1d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2079-9292}
@@ -266,8 +212,8 @@
       \strng{authornamehash}{c4d64dec09d22926b6612ce5d728f177}
       \strng{authorfullhash}{c4d64dec09d22926b6612ce5d728f177}
       \strng{authorfullhashraw}{c4d64dec09d22926b6612ce5d728f177}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Information and Communication}
@@ -309,8 +255,8 @@
       \strng{authornamehash}{a230d04e4ca12da48e897bf90d048375}
       \strng{authorfullhash}{a230d04e4ca12da48e897bf90d048375}
       \strng{authorfullhashraw}{a230d04e4ca12da48e897bf90d048375}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -348,8 +294,8 @@
       \strng{authorfullhash}{34924e02861c4b56eedf1cecb2e319a5}
       \strng{authorfullhashraw}{34924e02861c4b56eedf1cecb2e319a5}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -391,8 +337,8 @@
       \strng{authornamehash}{c30692427c5dd57cc341390d5104ce96}
       \strng{authorfullhash}{e236690d956c9a5fa8dcb8468c7a68c7}
       \strng{authorfullhashraw}{e236690d956c9a5fa8dcb8468c7a68c7}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -439,8 +385,8 @@
       \strng{authornamehash}{b8016fbdd4c60272277ad75da49ec7f0}
       \strng{authorfullhash}{5384b6524e031f309eb3733d49edfdc5}
       \strng{authorfullhashraw}{5384b6524e031f309eb3733d49edfdc5}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -477,8 +423,8 @@
       \strng{authornamehash}{63cd472bf0122cab13bdd24a4b2607c0}
       \strng{authorfullhash}{937d1ebd0ec55f51a0d887e887799ff0}
       \strng{authorfullhashraw}{937d1ebd0ec55f51a0d887e887799ff0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{07}
@@ -875,8 +821,8 @@
       \strng{editornamehash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhashraw}{47417fb0f059134143a5ef79cd2425e5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Computer Vision}
@@ -1472,8 +1418,8 @@
       \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authorfullhash}{c8c3e9b8f095d055ce92294b35ff475c}
       \strng{authorfullhashraw}{c8c3e9b8f095d055ce92294b35ff475c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1948,8 +1894,8 @@
       \strng{editornamehash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhashraw}{1d3c0ab4852f55d437c70781fafa6673}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of Thirty Fifth Conference on Learning Theory}

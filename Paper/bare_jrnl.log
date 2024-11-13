@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  12 NOV 2024 20:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  12 NOV 2024 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -684,15 +684,15 @@ Package logreq Info: Writing requests to 'bare_jrnl.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12153 strings out of 473578
- 240457 string characters out of 5732236
- 1245968 words of memory out of 5000000
- 34957 multiletter control sequences out of 15000+600000
+ 12149 strings out of 473578
+ 240108 string characters out of 5732236
+ 1246915 words of memory out of 5000000
+ 34953 multiletter control sequences out of 15000+600000
  593080 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,10n,81p,1637b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (24 pages, 651635 bytes).
+Output written on bare_jrnl.pdf (24 pages, 651474 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
