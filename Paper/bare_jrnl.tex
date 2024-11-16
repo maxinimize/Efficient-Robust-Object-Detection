@@ -368,6 +368,9 @@ CNN models for object detection generally consist of a feature extraction backbo
     \label{fig:coco}
 \end{figure}
 
+
+
+
 Datasets play a pivotal role in advancing the field of object detection by providing annotated images for model training and evaluation. Many openly available datasets exist online, such as Pascal VOC, ImageNet, and Open Images \cite{zaidi2021survey}. Among these datasets, the Microsoft Common Objects in Context (MS COCO) dataset stands out as one of the most comprehensive and widely used benchmarks \cite{lin2015microsoft}. An example image from the COCO dataset can be seen in Figure \ref{fig:coco}, with two objects' bounding boxes drawn and their corresponding JSON annotation labels. Its superiority stems from several factors. Firstly, COCO has a diverse range of object categories, encompassing common everyday objects across 80 distinct classes, including people, animals, vehicles, and household items. This diversity ensures that models trained on COCO generalize well to a wide array of real-world scenarios. Secondly, each image in the dataset is annotated with instance-level bounding box coordinates, and class labels for precise training and evaluation of detection algorithms. Additionally, COCO provides a large-scale dataset comprising over 200,000 images split into training, validation, and test sets, facilitating robust model training and unbiased evaluation \cite{lin2015microsoft}.
 
 In the context of object detection using the COCO dataset, mean Average Precision (mAP) serves as a robust and reliable metric for evaluating the performance of detection models. To calculate mAP, the process begins by computing the Average Precision (AP) for each object class. AP is derived from the precision-recall curve, which plots the trade-off between precision (the proportion of true positive detections out of all positive detections) and recall (the proportion of true positive detections out of all actual positives) at different confidence thresholds \cite{map}. The AP for each class is the area under its precision-recall curve, effectively summarizing the model's ability to balance precision and recall. To evaluate true positives of detected objects, Intersection over Union (IoU) is used to assess the degree of overlap between bounding boxes, and is calculated as the area of overlap between two bounding boxes divided by the area of their union. An IoU value closer to 1 indicates a high degree of overlap, while a value closer to 0 indicates little to no overlap. In the context of the COCO dataset, mAP is often calculated at multiple IoU thresholds ranging from 0.5 to 0.95 in increments of 0.05, capturing a model's performance under varying conditions. Therefore, mAP as a metric for object detection ensures that the model is evaluated not only on how well it detects objects but also on the accuracy and confidence of those detections.
@@ -375,7 +378,18 @@ In the context of object detection using the COCO dataset, mean Average Precisio
 \subsection{Adversarial Attack}
 Adversarial attacks are techniques used to manipulate machine learning models, especially neural networks, by introducing small, often imperceptible perturbations to inputs that cause the model to make incorrect predictions \cite{Li_2022}. These attacks reveal significant vulnerabilities across various applications, ranging from autonomous driving systems, where an adversarial example might mislead an object detection model into misclassifying traffic signs, to facial recognition, where a slight perturbation can trick a system into misidentifying individuals. In critical domains like medical diagnosis, adversarial attacks pose serious risks by potentially altering predictions for diseases or conditions, leading to incorrect diagnoses or treatment decisions. Several methods exist for generating adversarial attacks, each varying in complexity, impact, and effectiveness. 
 
-Since its introduction in 2013 by Szegedy et al., many techniques have been developed to generate adversarial attacks on CNNs, each varying in complexity, computational cost, and effectiveness at fooling models \cite{szegedy2014intriguingpropertiesneuralnetworks}. The Fast Gradient Sign Method (FGSM) is a straightforward, single-step attack that adjusts the input in the direction of the gradient of the model's loss function, making it a fast and computationally efficient way to create adversarial examples \cite{goodfellow2015explainingharnessingadversarialexamples}. However, its simplicity limits its ability to produce high-quality, robust adversarial examples. In contrast, Projected Gradient Descent (PGD) is an iterative and stronger attack method that applies FGSM repeatedly, with a small step size, projecting each step back within a specified perturbation limit \cite{madry2019deeplearningmodelsresistant}. PGD is often regarded as a universal benchmark for adversarial attacks because it creates more robust and challenging adversarial examples. Additionally, the Carlini \& Wagner (C\&W) attack is a more sophisticated, optimization-based method known for creating highly effective yet subtle perturbations, which are harder to detect by human observers or defense mechanisms \cite{carlini2017evaluatingrobustnessneuralnetworks}. 
+Since its introduction in 2013 by Szegedy et al., many techniques have been developed to generate adversarial attacks on CNNs, each varying in complexity, computational cost, and effectiveness at fooling models \cite{szegedy2014intriguingpropertiesneuralnetworks}. The Fast Gradient Sign Method (FGSM) is a straightforward, single-step attack that adjusts the input in the direction of the gradient of the model's loss function, making it a fast and computationally efficient way to create adversarial examples \cite{goodfellow2015explainingharnessingadversarialexamples}. However, its simplicity limits its ability to produce high-quality, robust adversarial examples. In contrast, Projected Gradient Descent (PGD) is an iterative and stronger attack method that applies FGSM repeatedly, with a small step size, projecting each step back within a specified perturbation limit \cite{madry2019deeplearningmodelsresistant}. PGD is often regarded as a universal benchmark for adversarial attacks because it creates more robust and challenging adversarial examples. Additionally, the Carlini \& Wagner (C\&W) attack is a more sophisticated, optimization-based method known for creating highly effective yet subtle perturbations, which are harder to detect by human observers or defense mechanisms \cite{carlini2017evaluatingrobustnessneuralnetworks}.
+
+
+\begin{figure}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.0\linewidth]{figures/dog1.jpg}
+    \caption{COCO dataset image 22192: Annotated original image (left), original YOLOv3 on original image (middle), original YOLOv3 on adversarial perturbated image (right) }
+    \label{fig:dog1}
+\end{figure}
+
+%! add reference to this image in text
 
 \subsection{Efficient Adversarial Robustness}
 Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, and many others focus on making CNNs more efficient. However, not many combine these two important topics to develop CNNs that are both efficient and adversarially robust. Vaddadi et al. showcased an efficient CNN model optimized for adversarial robustness, achieving high classification accuracy and effective resistance to adversarial samples \cite{EAR1}. Another work from Wijayanto et al. explored the vulnerability of CNNs, particularly compressed models used in mobile devices, and investigated methods to enhance their robustness without sacrificing accuracy \cite{EAR2}. Ye et al. presented a framework that combines adversarial training with weight pruning to achieve model compression without sacrificing robustness, addressing the challenge of maintaining both properties simultaneously \cite{EAR3}. Furthermore, Gui et al. introduced an Adversarially Trained Model Compression (ATMC) framework, integrating pruning, factorization, and quantization within a unified optimization structure to achieve compact, adversarially robust models without significant accuracy loss \cite{EAR4}. 
@@ -600,12 +614,15 @@ When considering the inference time performance, it can be observed from Fig. \r
 
 \subsection{Sample Images}
 
+Taking the same image from Fig. \ref{fig:dog1}, 
+
 \begin{figure}
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=0.6\linewidth]{figures/attack_after_22192.jpg}
-    \caption{COCO image 22192 results from models pruned with different initialization, structure, and ratio}
-    \label{fig:temp}
+    \includegraphics[width=1.0\linewidth]{figures/attackALLcrop.jpg}
+    \caption*{\scalebox{0.8}{ Unstructured DeepLIFT $\vert$ Unstructured HYDRA $\vert$ Structured DeepLIFT $\vert$ Structured HYDRA $\vert$ Grey Unstructured DeepLIFT}}
+    \caption{Differences between inference performance on the same COCO image: pruning ratio increases from 0\% to 99\% from top to bottom; experiment configuration changes from left to right}
+    \label{fig:attackAll}
 \end{figure}
 
 \section{Conclusion}
