@@ -131,6 +131,8 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
 INPUT ./bare_jrnl.aux
 INPUT ./bare_jrnl.aux
 INPUT bare_jrnl.aux
@@ -182,11 +184,6 @@ INPUT ./figures/label.PNG
 INPUT ./figures/label.PNG
 INPUT ./figures/label.PNG
 INPUT ./figures/label.PNG
-INPUT ./figures/dog1.jpg
-INPUT ./figures/dog1.jpg
-INPUT ./figures/dog1.jpg
-INPUT ./figures/dog1.jpg
-INPUT ./figures/dog1.jpg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -201,6 +198,11 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT ./figures/dog1.jpg
+INPUT ./figures/dog1.jpg
+INPUT ./figures/dog1.jpg
+INPUT ./figures/dog1.jpg
+INPUT ./figures/dog1.jpg
 INPUT ./figures/mAP1.png
 INPUT ./figures/mAP1.png
 INPUT ./figures/mAP1.png
@@ -237,6 +239,11 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT ./figures/mAP1zoom.png
+INPUT ./figures/mAP1zoom.png
+INPUT ./figures/mAP1zoom.png
+INPUT ./figures/mAP1zoom.png
+INPUT ./figures/mAP1zoom.png
 INPUT bare_jrnl.aux
 INPUT bare_jrnl.run.xml
 OUTPUT bare_jrnl.run.xml

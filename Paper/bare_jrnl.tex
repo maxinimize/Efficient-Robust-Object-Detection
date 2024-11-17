@@ -295,6 +295,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{float}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{\baselineskip}%
 \addbibresource{bibliography.bib}
@@ -381,15 +382,6 @@ Adversarial attacks are techniques used to manipulate machine learning models, e
 Since its introduction in 2013 by Szegedy et al., many techniques have been developed to generate adversarial attacks on CNNs, each varying in complexity, computational cost, and effectiveness at fooling models \cite{szegedy2014intriguingpropertiesneuralnetworks}. The Fast Gradient Sign Method (FGSM) is a straightforward, single-step attack that adjusts the input in the direction of the gradient of the model's loss function, making it a fast and computationally efficient way to create adversarial examples \cite{goodfellow2015explainingharnessingadversarialexamples}. However, its simplicity limits its ability to produce high-quality, robust adversarial examples. In contrast, Projected Gradient Descent (PGD) is an iterative and stronger attack method that applies FGSM repeatedly, with a small step size, projecting each step back within a specified perturbation limit \cite{madry2019deeplearningmodelsresistant}. PGD is often regarded as a universal benchmark for adversarial attacks because it creates more robust and challenging adversarial examples. Additionally, the Carlini \& Wagner (C\&W) attack is a more sophisticated, optimization-based method known for creating highly effective yet subtle perturbations, which are harder to detect by human observers or defense mechanisms \cite{carlini2017evaluatingrobustnessneuralnetworks}.
 
 
-\begin{figure}
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=1.0\linewidth]{figures/dog1.jpg}
-    \caption{COCO dataset image 22192: Annotated original image (left), original YOLOv3 on original image (middle), original YOLOv3 on adversarial perturbated image (right) }
-    \label{fig:dog1}
-\end{figure}
-
-%! add reference to this image in text
 
 \subsection{Efficient Adversarial Robustness}
 Many papers have attempted to tackle the problem of making CNNs robust to adversarial attacks, and many others focus on making CNNs more efficient. However, not many combine these two important topics to develop CNNs that are both efficient and adversarially robust. Vaddadi et al. showcased an efficient CNN model optimized for adversarial robustness, achieving high classification accuracy and effective resistance to adversarial samples \cite{EAR1}. Another work from Wijayanto et al. explored the vulnerability of CNNs, particularly compressed models used in mobile devices, and investigated methods to enhance their robustness without sacrificing accuracy \cite{EAR2}. Ye et al. presented a framework that combines adversarial training with weight pruning to achieve model compression without sacrificing robustness, addressing the challenge of maintaining both properties simultaneously \cite{EAR3}. Furthermore, Gui et al. introduced an Adversarially Trained Model Compression (ATMC) framework, integrating pruning, factorization, and quantization within a unified optimization structure to achieve compact, adversarially robust models without significant accuracy loss \cite{EAR4}. 
@@ -427,7 +419,18 @@ Detection outputs are saved in CSV format, and each entry contains image identif
 \subsection{PGD Attack}
 The Projected Gradient Descent (PGD) attack is an iterative and robust refinement of the FGSM method, which takes multiple, bounded perturbation steps in the direction of the gradient. After each step, the perturbation is projected back to ensure it remains within a specified range ($\varepsilon$) of the original input, thus preserving perceptual similarity \cite{madry2019deeplearningmodelsresistant}. The step size and overall perturbation limit are hyperparameters controlling the severity of the attack, with each step carefully constrained within the $\varepsilon$-bound. PGD’s iterative nature and its ability to bypass defenses, such as adversarial training, make it particularly effective at generating stable adversarial examples that consistently deceive models across various test conditions and architectures. Consequently, PGD is widely regarded as the benchmark for evaluating the robustness of machine learning models, making it the attack method of choice for this work.
 
-Implementing the PGD attack on YOLOv3 object detection involves generating adversarial perturbations that cause the model to misdetect or entirely miss objects within an image. To apply PGD to YOLOv3, we begin by computing the gradient of the loss function with respect to the input image. In each iteration, a small perturbation step is applied in the direction of this gradient to maximize the attack's effectiveness, specifically by adding a scaled fraction of the gradient to the original input. This iterative process continues for a predetermined number of steps or until the desired adversarial effect is achieved. In our experiments, with pixel values normalized between 0 and 1, we perform five perturbation steps, each with a step size of 0.02, while maintaining an overall $\varepsilon$-bound of 0.05. This approach ensures that the perturbations remain imperceptible to the human eye while sufficiently degrading the model's accuracy.
+Implementing the PGD attack on YOLOv3 object detection involves generating adversarial perturbations that cause the model to misdetect or entirely miss objects within an image. To apply PGD to YOLOv3, we begin by computing the gradient of the loss function with respect to the input image. In each iteration, a small perturbation step is applied in the direction of this gradient to maximize the attack's effectiveness, specifically by adding a scaled fraction of the gradient to the original input. This iterative process continues for a predetermined number of steps or until the desired adversarial effect is achieved. In our experiments, with pixel values normalized between 0 and 1, we perform five perturbation steps, each with a step size of 0.02, while maintaining an overall $\varepsilon$-bound of 0.05. This approach ensures that the perturbations remain imperceptible to the human eye while sufficiently degrading the model's accuracy. 
+
+An example of a PGD attack on the COCO dataset is illustrated in Fig. \ref{fig:dog1}. The left image shows the original image with object annotations from the dataset, featuring three distinct objects. The middle image demonstrates the performance of YOLOv3 model on the original image without adversarial training, correctly identifying two out of the three objects. In contrast, the right image presents the same model applied to an adversarially perturbed version of the image generated using a PGD attack. Here, only the dog is correctly identified, while many other objects are incorrectly detected.
+
+
+\begin{figure}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.0\linewidth]{figures/dog1.jpg}
+    \caption{COCO dataset image 22192: Annotated original image (left), original YOLOv3 on original image (middle), original YOLOv3 on adversarial perturbated image (right) }
+    \label{fig:dog1}
+\end{figure}
 
 \subsection{Implementing Unstructured and Structured Pruning}
 In addition to the unstructured pruning techniques utilized in the original HYDRA method, we implemented structured pruning for a comparative analysis between the two approaches. As it can lead to more substantial reductions in model size and computational complexity while preserving the overall architecture of the network. This was inspired by the HYDRA authors' previous work where they demonstrated the effectiveness of employing both structured and unstructured pruning strategies \cite{beforehydra}. This comparison allows for a deeper understanding of the trade-offs associated with each pruning strategy, particularly in terms of model accuracy, robustness, and efficiency.
@@ -462,7 +465,7 @@ Futhermore, it is obvious from Fig. \ref{fig:mAP1} and \ref{fig:mAP2} that the m
 Interestingly in Fig. \ref{fig:time1} and \ref{fig:time2}, the average inference time curve that connects different pruning ratios shows an "S" shape. The curve starts with a gentle decline, followed by a steeper drop in the middle stages, and then a plateau or slower reduction at high pruning rates. In the early stages of pruning, inference time may decrease relatively slowly. This is because removing a few parameters doesn't significantly reduce the computation time or memory usage. As pruning increases, the network becomes smaller, and inference time tends to decrease more significantly, especially when a substantial portion of the network is pruned. Beyond a certain threshold, aggressive pruning can introduce sparsity that makes it harder to compute efficiently. At this stage, the inference time may be mostly affected from hardware bottlenecks such as memory access.
 
 % object detection harder than classification
-Lastly, in the HYDRA paper, the authors focused more on the models' pruned performance at pruning rates of 90\%, 95\%, and 99\%. However, in adapting the HYDRA pruning method from image classification to object detection, the performance drop at higher pruning rates (beyond 60\%) is more pronounced because object detection is inherently a more complex task. Specifically, the higher pruning rates severely limit the model's capacity to retain the fine-grained spatial and contextual information needed to accurately detect and localize multiple objects within an image. This sensitivity to pruning stems from the fact that object detection models rely on detailed feature extraction to differentiate and locate objects across varied scales and positions, a demand that image classification models do not face to the same extent. 
+Lastly, in the HYDRA paper, the authors focused more on the models' pruned performance at pruning rates of 90\%, 95\%, and 99\%. However, in adapting the HYDRA pruning method from image classification to object detection, the performance drop at higher pruning rates (beyond 60\%) is more pronounced because object detection is inherently a more complex task. Specifically, the higher pruning rates severely limit the model's capacity to retain the fine-grained spatial and contextual information needed to accurately detect and localize multiple objects within an image. This sensitivity to pruning stems from the fact that object detection models rely on detailed feature extraction to differentiate and locate objects across varied scales and positions, a demand that image classification models do not face to the same extent. A more detailed mAP performance plot of the 85\% to 99\% pruning region is shown in Fig. \ref{fig:mAP1zoom} of Appendix \ref{appendix:figures}, where the mAP values are low and all the different methods have very similar performance.
 
 \subsection{DeepLIFT vs Scaled Initialization}
 \label{sec1}
@@ -482,9 +485,11 @@ Lastly, in the HYDRA paper, the authors focused more on the models' pruned perfo
       \caption{Inference time}
       \label{fig:time1}
     \end{subfigure}
-    \caption{Comparison of DeepLIFT versus HYDRA initialized models with both unstructured and structured pruning, through different pruning ratios}
+    \caption{Comparison of DeepLIFT versus HYDRA initialized models with both unstructured and structured pruning, through different pruning ratios. A detailed view of high ratio region of mAP is provided in Appendix \ref{appendix:figures}}
     \label{fig:result1}
 \end{figure}
+
+
 
 \begin{table}[htbp]
     \caption{p-values from ANOVA tests on mAP}
@@ -614,8 +619,6 @@ When considering the inference time performance, it can be observed from Fig. \r
 
 \subsection{Sample Images}
 
-Taking the same image from Fig. \ref{fig:dog1}, 
-
 \begin{figure}
     \centering
     \captionsetup{justification=centering}
@@ -625,27 +628,16 @@ Taking the same image from Fig. \ref{fig:dog1},
     \label{fig:attackAll}
 \end{figure}
 
+
+We used the same COCO image as Fig. \ref{fig:dog1}, applied adversarial perturbations with PGD attack with a bound of 0.05, and performed inference across every variation of experiment configuartion and pruning rate. As shown in Fig. \ref{fig:attackAll}, the results include 45 images derived from combinations of 9 pruning rates (from top to bottom: 0\%, 25\%, 50\%, 65\%, 75\%, 85\%, 90\%, 95\%, 99\%) and 5 different experiment configurations (Unstructured DeepLIFT, Unstructured HYDRA, Structured DeepLIFT, Structured HYDRA, Greyscale Unstructured DeepLIFT). For each variation, a random model was chosen from the 10 experiment runs that were conducted.
+
+From visual inspection of the images, it is evident that models pruned on greyscale images perform worse than others in terms of the number of correctly detected objects, aligning with the mAP results. At low pruning rates, such as 0\% and 25\%, two of the three objects in the image (dog, handbag, bed) are often correctly detected. Conversely, at very high pruning rates (90\% to 99\%), no models correctly detect the objects, explaining the corresponding drop in mAP performance. At medium pruning rates, unstructured pruning with DeepLIFT initialization consistently outperforms other methods, frequently detecting more objects correctly and producing fewer misdetections. These qualitative observations strongly correlate with the mAP results discussed earlier, further demonstrating that initializing importance scores with DeepLIFT outperforms HYDRA's scaled initialization.
+
 \section{Conclusion}
 
 In conclusion, this study successfully adapted the HYDRA pruning framework to enhance both efficiency and robustness in object detection by implementing structured and unstructured pruning strategies on the YOLOv3 model. Through a comprehensive evaluation across different pruning levels, it was observed that unstructured pruning consistently outperformed structured pruning in maintaining higher mean Average Precision (mAP), particularly at moderate pruning ratios, which is crucial for retaining detection accuracy in complex environments. By leveraging DeepLIFT for importance scoring, the pruning process was made more precise, targeting weights with minimal contribution to the output. This refinement in importance scoring allowed for more efficient pruning without compromising the network's capacity to detect and localize objects accurately, making it suitable for applications that demand both speed and high performance, such as autonomous driving or real-time surveillance. Moreover, the integration of robust training objectives within the HYDRA framework provided resilience against adversarial attacks, enabling the pruned model to maintain robust accuracy even under adversarial conditions.
 
 For future work, several directions could further enhance robust object detection. First, exploring hybrid pruning techniques that combine the advantages of both structured and unstructured pruning might lead to more optimal trade-offs between performance and efficiency. Additionally, testing this pruning framework on other object detection models, such as Faster R-CNN or SSD, could provide insights into its generalizability across architectures. Another potential avenue is to refine robust training objectives further to better withstand a broader range of adversarial attacks, potentially integrating new defensive strategies that adapt dynamically based on attack characteristics. Lastly, extending this framework to multi-modal inputs, such as video data, could expand its applicability to areas like surveillance and autonomous driving, where real-time and robust object detection is critical.
-
-
-
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
 
 \newpage
 \printbibliography
@@ -935,6 +927,17 @@ For future work, several directions could further enhance robust object detectio
     \label{tab:a10}
 \end{table}
 
+\clearpage
+\section{Figures}
+\label{appendix:figures}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\linewidth]{figures/mAP1zoom.png}
+    \caption{Zoomed in high pruning ratio section of Fig. \ref{fig:mAP1}}
+    \label{fig:mAP1zoom}
+\end{figure}
 % you can choose not to have a title for an appendix
 % if you want by leaving the argument blank
 % \section{}

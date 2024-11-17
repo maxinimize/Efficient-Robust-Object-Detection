@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber bare_jrnl"] 1731733460.55653 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1731733939.81668 0
-  "bare_jrnl.bcf" 1731733939 112127 f5dc07095e2683a850a045649ea4d713 "pdflatex"
+["biber bare_jrnl"] 1731861677.61762 "bare_jrnl.bcf" "bare_jrnl.bbl" "bare_jrnl" 1731862504.35485 0
+  "bare_jrnl.bcf" 1731862504 112127 f5dc07095e2683a850a045649ea4d713 "pdflatex"
   "bibliography.bib" 1731461049 22890 75ea847da13b3456cee3361de22c6bce ""
   (generated)
   "bare_jrnl.bbl"
   "bare_jrnl.blg"
   (rewritten before read)
-["pdflatex"] 1731733936.80732 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1731733939.81739 0
-  "bare_jrnl.aux" 1731733939 14932 8df90e1dd91c4899a699401cc27acdac "pdflatex"
-  "bare_jrnl.bbl" 1731733463 100208 c951ed835d0998f610def535cc9d8734 "biber bare_jrnl"
-  "bare_jrnl.run.xml" 1731733939 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
-  "bare_jrnl.tex" 1731733935 89910 387a58b43b4fcf289c3b7df427439d0d ""
+["pdflatex"] 1731862500.90097 "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1731862504.35565 0
+  "bare_jrnl.aux" 1731862504 15378 8e9a04be537a68f03c775286c90c46ca "pdflatex"
+  "bare_jrnl.bbl" 1731861680 100208 c951ed835d0998f610def535cc9d8734 "biber bare_jrnl"
+  "bare_jrnl.run.xml" 1731862504 2439 3fb2a241068d5ff058ee83de3e075d17 "pdflatex"
+  "bare_jrnl.tex" 1731862497 92198 70e39331bc2176cb9795ba70c83247d4 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1728012155 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728012567 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1728011854 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -72,6 +72,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty" 1728011497 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1728012295 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1728012342 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "c:/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1728012530 6749 16d2656a1984957e674b149555f1ea1d ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1728012780 1224 978390e9c2234eab29404bc21b268d1e ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def" 1728012781 19440 9da9dcbb27470349a580fca7372d454b ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty" 1728012778 18363 b79c83eab17bf475b508f05e9807e605 ""
@@ -95,11 +96,12 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728016353 5520490 7d379628d5de7a14652a9db62d1e107c ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728016593 3326035 2e8b838c882755c99b544344ced5b25b ""
   "c:/texlive/2024/texmf.cnf" 1728016329 713 e69b156964470283e0530f5060668171 ""
-  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1731733935 89910 387a58b43b4fcf289c3b7df427439d0d ""
+  "d:/Western/project/TinyYoloV2/Paper/bare_jrnl.tex" 1731862497 92198 70e39331bc2176cb9795ba70c83247d4 ""
   "figures/attackALLcrop.jpg" 1731732688 7979338 b957360032e239792b5d6bc8c5aa8b69 ""
   "figures/dog1.jpg" 1731731296 669737 487f42904fed8e00c31096d09dd67a18 ""
   "figures/label.PNG" 1731460252 138577 869d132c5ae37d58c9d936101d1ff76a ""
   "figures/mAP1.png" 1731363895 75238 fed37ff3cb2aa65cd66dca6a443cf3e8 ""
+  "figures/mAP1zoom.png" 1731861284 64746 54df33f13bfb66bad4e4f8eda20a7d06 ""
   "figures/mAP2.png" 1731363923 51731 4f91e447ff83d41fced8c70e1e1f447a ""
   "figures/pruning.png" 1731460937 207936 6bfd2bdb919e718e61e613f325373879 ""
   "figures/time1.png" 1731363993 60412 d462603b029af4b3cc3f2c0c2b743e8b ""
