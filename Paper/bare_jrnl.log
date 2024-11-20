@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  17 NOV 2024 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  19 NOV 2024 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,117 +590,154 @@ Package pdftex.def Info: figures/attackALLcrop.jpg  used on input line 625.
 
 [16]
 
-[17 <./figures/attackALLcrop.jpg>]
+[17]
 
-[18]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 643.
+[18 <./figures/attackALLcrop.jpg>]
+
+[19]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 645.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (6.07649pt too wide) in paragraph at lines 644--644
+Overfull \hbox (6.07649pt too wide) in paragraph at lines 646--646
 \OT1/ptm/m/n/12 fu-ture scope,'' \OT1/ptm/m/it/12 Elec-tron-ics\OT1/ptm/m/n/12 , vol. 10, no. 20, 2021, \OT1/ptm/m/sc/12 issn\OT1/ptm/m/n/12 : 2079-9292. \OT1/ptm/m/sc/12 doi\OT1/ptm/m/n/12 : $10 . 3390 / electronics10202470$.
  []
 
 
-Overfull \hbox (25.26398pt too wide) in paragraph at lines 644--644
+Overfull \hbox (25.26398pt too wide) in paragraph at lines 646--646
 \OT1/ptm/m/n/12 ware ac-cel-er-a-tion,'' \OT1/ptm/m/it/12 Elec-tron-ics\OT1/ptm/m/n/12 , vol. 11, no. 6, 2022, \OT1/ptm/m/sc/12 issn\OT1/ptm/m/n/12 : 2079-9292. \OT1/ptm/m/sc/12 doi\OT1/ptm/m/n/12 : $10 . 3390 / electronics11060945$.
  []
 
 
 
-[19]
-Overfull \hbox (5.0201pt too wide) in paragraph at lines 644--644
+[20]
+Overfull \hbox (5.0201pt too wide) in paragraph at lines 646--646
 []\OT1/ptm/m/n/12 J. Red-mon and A. Farhadi, \OT1/ptm/m/it/12 Yolov3: An in-cre-men-tal im-prove-ment\OT1/ptm/m/n/12 , 2018. arXiv: $1804 . 02767$ \OT1/pcr/m/n/12 [cs.CV]\OT1/ptm/m/n/12 .
  []
 
 
 
-[20]
-
 [21]
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 811--811
+
+[22]
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--813
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 811--812
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 813--814
 []\OT1/ptm/m/n/9 2.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 839--839
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
 []\OT1/ptm/m/n/9 1.1e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 839--839
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 839--839
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--841
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 839--840
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 841--842
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 867--867
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 869--869
 []\OT1/ptm/m/n/9 1.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 867--867
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 869--869
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 867--868
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 869--870
 []\OT1/ptm/m/n/9 2.0e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 895--895
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 897--897
 []\OT1/ptm/m/n/9 1.2e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 923--923
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 925--925
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 923--923
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 925--925
 []\OT1/ptm/m/n/9 1.3e+00| 
  []
 
 
-Overfull \hbox (0.8691pt too wide) in paragraph at lines 923--924
+Overfull \hbox (0.8691pt too wide) in paragraph at lines 925--926
 []\OT1/ptm/m/n/9 2.6e+00| 
  []
 
 
-
-[22]
 
 [23]
 
 [24]
 
 [25]
-<figures/mAP1zoom.png, id=105, 416.2752pt x 435.0654pt>
+
+[26]
+<figures/mAP1zoom.png, id=108, 416.2752pt x 435.0654pt>
 File: figures/mAP1zoom.png Graphic file (type png)
 <use figures/mAP1zoom.png>
-Package pdftex.def Info: figures/mAP1zoom.png  used on input line 937.
+Package pdftex.def Info: figures/mAP1zoom.png  used on input line 939.
 (pdftex.def)             Requested size: 258.0pt x 269.65808pt.
+<figures/17627.jpg, id=109, 2087.8pt x 2854.665pt>
+File: figures/17627.jpg Graphic file (type jpg)
+<use figures/17627.jpg>
+Package pdftex.def Info: figures/17627.jpg  used on input line 947.
+(pdftex.def)             Requested size: 490.19843pt x 670.23656pt.
 
 
-[26
+LaTeX Warning: Float too large for page by 20.17265pt on input line 951.
 
- <./figures/mAP1zoom.png>] (./bare_jrnl.aux)
+<figures/19221.jpg, id=110, 2087.8pt x 2854.665pt>
+File: figures/19221.jpg Graphic file (type jpg)
+<use figures/19221.jpg>
+Package pdftex.def Info: figures/19221.jpg  used on input line 956.
+(pdftex.def)             Requested size: 490.19843pt x 670.23656pt.
+
+LaTeX Warning: Float too large for page by 20.17265pt on input line 960.
+
+<figures/71711.jpg, id=111, 2087.8pt x 2493.315pt>
+File: figures/71711.jpg Graphic file (type jpg)
+<use figures/71711.jpg>
+Package pdftex.def Info: figures/71711.jpg  used on input line 965.
+(pdftex.def)             Requested size: 490.19843pt x 585.39648pt.
+<figures/174482.jpg, id=112, 2087.8pt x 2302.6025pt>
+File: figures/174482.jpg Graphic file (type jpg)
+<use figures/174482.jpg>
+Package pdftex.def Info: figures/174482.jpg  used on input line 974.
+(pdftex.def)             Requested size: 490.19843pt x 540.61978pt.
+
+
+[27
+
+ <./figures/mAP1zoom.png>]
+
+[28 <./figures/17627.jpg>]
+
+[29 <./figures/19221.jpg>]
+
+[30 <./figures/71711.jpg>]
+
+[31 <./figures/174482.jpg>] (./bare_jrnl.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
@@ -710,18 +747,18 @@ Package logreq Info: Writing requests to 'bare_jrnl.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12225 strings out of 473578
- 241395 string characters out of 5732236
- 1248341 words of memory out of 5000000
- 35025 multiletter control sequences out of 15000+600000
+ 12260 strings out of 473578
+ 242236 string characters out of 5732236
+ 1248446 words of memory out of 5000000
+ 35060 multiletter control sequences out of 15000+600000
  593080 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,10n,81p,1637b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,10n,81p,1652b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (26 pages, 10300085 bytes).
+Output written on bare_jrnl.pdf (31 pages, 44524787 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 162 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

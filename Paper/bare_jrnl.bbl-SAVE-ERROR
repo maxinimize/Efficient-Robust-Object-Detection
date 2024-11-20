@@ -665,6 +665,39 @@
       \verb https://towardsdatascience.com/neural-network-pruning-101-af816aaea61
       \endverb
     \endentry
+    \entry{iou}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=be19dd034d32e46b77204ecf73279330}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{fullhash}{be19dd034d32e46b77204ecf73279330}
+      \strng{fullhashraw}{be19dd034d32e46b77204ecf73279330}
+      \strng{bibnamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authorbibnamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authornamehash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authorfullhash}{be19dd034d32e46b77204ecf73279330}
+      \strng{authorfullhashraw}{be19dd034d32e46b77204ecf73279330}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mean Average Precision (mAP) Using the COCO Evaluator}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pyimagesearch.com/2022/05/02/mean-average-precision-map-using-the-coco-evaluator/
+      \endverb
+      \verb{url}
+      \verb https://pyimagesearch.com/2022/05/02/mean-average-precision-map-using-the-coco-evaluator/
+      \endverb
+    \endentry
     \entry{8627998}{article}{}{}
       \name{author}{4}{}{%
         {{hash=dd8a99db4576468b122bf3d2c834a631}{%
@@ -821,8 +854,8 @@
       \strng{editornamehash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhash}{47417fb0f059134143a5ef79cd2425e5}
       \strng{editorfullhashraw}{47417fb0f059134143a5ef79cd2425e5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Computer Vision}
@@ -1418,8 +1451,8 @@
       \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authorfullhash}{c8c3e9b8f095d055ce92294b35ff475c}
       \strng{authorfullhashraw}{c8c3e9b8f095d055ce92294b35ff475c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1894,8 +1927,8 @@
       \strng{editornamehash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhash}{1d3c0ab4852f55d437c70781fafa6673}
       \strng{editorfullhashraw}{1d3c0ab4852f55d437c70781fafa6673}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of Thirty Fifth Conference on Learning Theory}
