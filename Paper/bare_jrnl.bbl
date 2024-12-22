@@ -1133,6 +1133,55 @@
       \verb http://dx.doi.org/10.1007/978-3-319-46448-0_2
       \endverb
     \endentry
+    \entry{yolov1}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=99bced2e56a5253f3fe98a5f04e6d9b2}{%
+           family={Redmon},
+           familyi={R\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=05ca9f19da9ecbd2def4e5514f8043c8}{%
+           family={Divvala},
+           familyi={D\bibinitperiod},
+           given={Santosh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=396c6ddedb6f986906fc3e4994d19974}{%
+           family={Farhadi},
+           familyi={F\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{fullhash}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{fullhashraw}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{bibnamehash}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{authorbibnamehash}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{authornamehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{authorfullhashraw}{b5530443e433a4da53dbe3cf155225b4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1506.02640
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1506.02640
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1506.02640
+      \endverb
+    \endentry
     \entry{redmon2018yolov3incrementalimprovement}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=99bced2e56a5253f3fe98a5f04e6d9b2}{%
@@ -1329,8 +1378,8 @@
       \strng{authornamehash}{0bb793696ef1a57975993aee617c0c1d}
       \strng{authorfullhash}{7695557d3a19e89ce0dd3f420a1afb83}
       \strng{authorfullhashraw}{7695557d3a19e89ce0dd3f420a1afb83}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1382,8 +1431,8 @@
       \strng{authorfullhash}{67c6c03d4d5d6a695e98b36f4d3c0760}
       \strng{authorfullhashraw}{67c6c03d4d5d6a695e98b36f4d3c0760}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1537-2731}
@@ -1760,8 +1809,8 @@
       \strng{authornamehash}{85f43ffeee586b85cf04939336ac5208}
       \strng{authorfullhash}{18732ef00ec996ab7a37d3d92506c5bc}
       \strng{authorfullhashraw}{18732ef00ec996ab7a37d3d92506c5bc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1819,8 +1868,8 @@
       \strng{authornamehash}{22d2d48b978648f15ad1479d2057d7c9}
       \strng{authorfullhash}{27161795aa33201d9a36689c3d3c2c51}
       \strng{authorfullhashraw}{27161795aa33201d9a36689c3d3c2c51}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -1869,8 +1918,8 @@
       \strng{authorfullhash}{382091a56cadf71179ec58fd3ae9be51}
       \strng{authorfullhashraw}{382091a56cadf71179ec58fd3ae9be51}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -2245,6 +2294,45 @@
       \verb https://arxiv.org/abs/1906.06316
       \endverb
     \endentry
+    \entry{autoattack}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=4aa1c6d22c8d3aad56c30c5c0d361b7a}{%
+           family={Croce},
+           familyi={C\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9e3f4c60354fda4d9127485afba87230}{%
+           family={Hein},
+           familyi={H\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{fullhash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{fullhashraw}{08672dd56414ce5a5812f13b4902537b}
+      \strng{bibnamehash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{authorbibnamehash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{authornamehash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{authorfullhash}{08672dd56414ce5a5812f13b4902537b}
+      \strng{authorfullhashraw}{08672dd56414ce5a5812f13b4902537b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2003.01690
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2003.01690
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2003.01690
+      \endverb
+    \endentry
     \entry{architecture}{online}{}{}
       \name{author}{1}{}{%
         {{hash=188371f00b861613c9c37876c7df5da1}{%
@@ -2352,8 +2440,8 @@
       \strng{editornamehash}{b604f8027e828ef890cc6ec8bb4de88f}
       \strng{editorfullhash}{4dcb8cf8722b0af72c860736a80bb60a}
       \strng{editorfullhashraw}{4dcb8cf8722b0af72c860736a80bb60a}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Seventh Symposium on Novel Photoelectronic Detection Technology and Applications}
