@@ -212,12 +212,12 @@ In \cite{hydra}, the HYDRA authors focused on pruned performance at 90\%+ prunin
       \caption{Inference time}
       \label{fig:time1}
     \end{subfigure}
-    \caption{Comparison of DeepLIFT versus HYDRA initialized models with both unstructured and structured pruning, through different pruning ratios. A detailed view of the high ratio region is provided in Appendix B  \cite{MyAppendix}.}
+    \caption{Comparison of DeepLIFT versus HYDRA initialized models with both unstructured and structured pruning, through different pruning ratios.}
     \label{fig:result1}
 \end{figure}
 
 % deeplift better
-Figure \ref{fig:mAP1} compares mAP performance between models pruned using DeepLIFT versus scaled initialization, DeepLIFT consistently outperforms scaled initialization within the 50\%-85\% pruning ratio range for both pruning methods. This is statistically validated by one-way ANOVA tests, all yielding p-values below the 0.05 threshold, as shown in Appendix B, Table 1 \cite{MyAppendix}. DeepLIFT is more effective than scaled initialization for pruning as it directly calculates each weight's contribution to the final output, unlike scaled initialization, which infers importance partially from weight magnitude.
+Figure \ref{fig:mAP1} compares mAP performance between models pruned using DeepLIFT versus scaled initialization, DeepLIFT consistently outperforms scaled initialization within the 50\%-85\% pruning ratio range for both pruning methods. This is statistically validated by one-way ANOVA tests, all yielding p-values below the 0.05 threshold, as shown in Appendix A, Table 1 \cite{MyAppendix}. DeepLIFT is more effective than scaled initialization for pruning as it directly calculates each weight's contribution to the final output, unlike scaled initialization, which infers importance partially from weight magnitude.
 
 Scaled initialization overlooks the non-linear relationships between weights and predictions, where large weights may not always be crucial. DeepLIFT, by contrast, provides an attribution score that measures each weight's actual impact on the output, offering a more precise method than size-based importance. DeepLIFT targets weights that truly influence the model, ensuring that the most important components are preserved during pruning. This leads to a more efficient pruned model with higher performance, particularly in a complex task like object detection, where feature and spatial relationships are crucial.
 
