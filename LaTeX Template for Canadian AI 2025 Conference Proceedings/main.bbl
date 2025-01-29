@@ -1,0 +1,1428 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global/global}
+  \entry{zhao2019objectdetectiondeeplearning}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=ZZQ}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Zhong-Qiu},
+         giveni={Z\bibinithyphendelim Q\bibinitperiod},
+      }}%
+      {{hash=ZP}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=tXS}{%
+         prefix={tao},
+         prefixi={t\bibinitperiod},
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Shou},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Xindong},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZQZPXStWX1}
+    \strng{fullhash}{ZZQZPXStWX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1807.05511
+    \endverb
+    \field{title}{Object Detection with Deep Learning: A Review}
+    \verb{url}
+    \verb https://arxiv.org/abs/1807.05511
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
+  \endentry
+
+  \entry{zou2023object}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=ZZ}{%
+         family={Zou},
+         familyi={Z\bibinitperiod},
+         given={Zhengxia},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Keyan},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SZ}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Zhenwei},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Yuhong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Jieping},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZCKSZGYYJ1}
+    \strng{fullhash}{ZZCKSZGYYJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1905.05055
+    \endverb
+    \field{title}{Object Detection in 20 Years: A Survey}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{electronics10202470}{article}{}{}
+    \name{author}{8}{}{%
+      {{hash=BD}{%
+         family={Bhatt},
+         familyi={B\bibinitperiod},
+         given={Dulari},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Chirag},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TH}{%
+         family={Talsania},
+         familyi={T\bibinitperiod},
+         given={Hardik},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Jigar},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Vaghela},
+         familyi={V\bibinitperiod},
+         given={Rasmika},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pandya},
+         familyi={P\bibinitperiod},
+         given={Sharnil},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Modi},
+         familyi={M\bibinitperiod},
+         given={Kirit},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Ghayvat},
+         familyi={G\bibinitperiod},
+         given={Hemant},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BDPCTHPJVRPSMKGH1}
+    \strng{fullhash}{BDPCTHPJVRPSMKGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{20}
+    \field{title}{CNN Variants for Computer Vision: History, Architecture, Application, Challenges and Future Scope}
+    \field{volume}{10}
+    \field{journaltitle}{Electronics}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Kohli_2019}{inbook}{}{}
+    \name{author}{2}{}{%
+      {{hash=KP}{%
+         family={Kohli},
+         familyi={K\bibinitperiod},
+         given={Puneet},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chadha},
+         familyi={C\bibinitperiod},
+         given={Anjali},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer International Publishing}%
+    }
+    \strng{namehash}{KPCA1}
+    \strng{fullhash}{KPCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Advances in Information and Communication}
+    \field{pages}{261–279}
+    \field{title}{Enabling Pedestrian Safety Using Computer Vision Techniques: A Case Study of the 2018 Uber Inc. Self-driving Car Crash}
+    \field{year}{2019}
+  \endentry
+
+  \entry{zhang2019adversarially}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=ZH}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Haichao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jianyu},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZHWJ1}
+    \strng{fullhash}{ZHWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1907.10310
+    \endverb
+    \field{title}{Towards Adversarially Robust Object Detection}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
+  \endentry
+
+  \entry{costa2023deep}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=CJC}{%
+         family={Costa},
+         familyi={C\bibinitperiod},
+         given={Joana\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=RT}{%
+         family={Roxo},
+         familyi={R\bibinitperiod},
+         given={Tiago},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PH}{%
+         family={Proença},
+         familyi={P\bibinitperiod},
+         given={Hugo},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=IPRM}{%
+         family={Inácio},
+         familyi={I\bibinitperiod},
+         given={Pedro R.\bibnamedelima M.},
+         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJCRTPHIPRM1}
+    \strng{fullhash}{CJCRTPHIPRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2305.10862
+    \endverb
+    \field{title}{How Deep Learning Sees the World: A Survey on Adversarial Attacks \& Defenses}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{electronics11060945}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=GD}{%
+         family={Ghimire},
+         familyi={G\bibinitperiod},
+         given={Deepak},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kil},
+         familyi={K\bibinitperiod},
+         given={Dayoung},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KSh}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Seong-heum},
+         giveni={S\bibinithyphendelim h\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GDKDKSh1}
+    \strng{fullhash}{GDKDKSh1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{title}{A Survey on Efficient Convolutional Neural Networks and Hardware Acceleration}
+    \field{volume}{11}
+    \field{journaltitle}{Electronics}
+    \field{year}{2022}
+  \endentry
+
+  \entry{HABIB20224244}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=HG}{%
+         family={Habib},
+         familyi={H\bibinitperiod},
+         given={Gousia},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=QS}{%
+         family={Qureshi},
+         familyi={Q\bibinitperiod},
+         given={Shaima},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{SGD, ReLu, HyPar, ADAM, NADAM}
+    \strng{namehash}{HGQS1}
+    \strng{fullhash}{HGQS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7}
+    \field{pages}{4244\bibrangedash 4268}
+    \field{title}{Optimization and acceleration of convolutional neural networks: A survey}
+    \field{volume}{34}
+    \field{journaltitle}{Journal of King Saud University - Computer and Information Sciences}
+    \field{year}{2022}
+  \endentry
+
+  \entry{beforehydra}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=SV}{%
+         family={Sehwag},
+         familyi={S\bibinitperiod},
+         given={Vikash},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mittal},
+         familyi={M\bibinitperiod},
+         given={Prateek},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JS}{%
+         family={Jana},
+         familyi={J\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SVWSMPJS1}
+    \strng{fullhash}{SVWSMPJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1906.06110
+    \endverb
+    \field{title}{Towards Compact and Robust Deep Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1906.06110
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2019}
+  \endentry
+
+  \entry{hydra}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=SV}{%
+         family={Sehwag},
+         familyi={S\bibinitperiod},
+         given={Vikash},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mittal},
+         familyi={M\bibinitperiod},
+         given={Prateek},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JS}{%
+         family={Jana},
+         familyi={J\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SVWSMPJS1}
+    \strng{fullhash}{SVWSMPJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2002.10509
+    \endverb
+    \field{title}{HYDRA: Pruning Adversarially Robust Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/2002.10509
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2020}
+  \endentry
+
+  \entry{redmon2018yolov3incrementalimprovement}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=RJ}{%
+         family={Redmon},
+         familyi={R\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Farhadi},
+         familyi={F\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJFA1}
+    \strng{fullhash}{RJFA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1804.02767
+    \endverb
+    \field{title}{YOLOv3: An Incremental Improvement}
+    \verb{url}
+    \verb https://arxiv.org/abs/1804.02767
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2018}
+  \endentry
+
+  \entry{iou}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=SA}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SA1}
+    \strng{fullhash}{SA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Mean Average Precision (mAP) Using the COCO Evaluator}
+    \verb{url}
+    \verb https://pyimagesearch.com/2022/05/02/mean-average-precision-map-using
+    \verb -the-coco-evaluator/
+    \endverb
+    \field{year}{2022}
+    \field{urlday}{22}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{8627998}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=ZZQ}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Zhong-Qiu},
+         giveni={Z\bibinithyphendelim Q\bibinitperiod},
+      }}%
+      {{hash=ZP}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=XST}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Shou-Tao},
+         giveni={S\bibinithyphendelim T\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Xindong},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZQZPXSTWX1}
+    \strng{fullhash}{ZZQZPXSTWX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{11}
+    \field{pages}{3212\bibrangedash 3232}
+    \field{title}{Object Detection With Deep Learning: A Review}
+    \field{volume}{30}
+    \field{journaltitle}{IEEE Trans on NN and Learning Systems}
+    \field{year}{2019}
+  \endentry
+
+  \entry{10099639}{inproceedings}{}{}
+    \name{author}{2}{}{%
+      {{hash=SBR}{%
+         family={Solunke},
+         familyi={S\bibinitperiod},
+         given={Babruvan\bibnamedelima R.},
+         giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=GSR}{%
+         family={Gengaje},
+         familyi={G\bibinitperiod},
+         given={Sachin\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SBRGSR1}
+    \strng{fullhash}{SBRGSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2023 International Conference on Emerging Smart Computing and Informatics (ESCI)}
+    \field{pages}{1\bibrangedash 7}
+    \field{title}{A Review on Traditional and Deep Learning based Object Detection Methods}
+    \field{year}{2023}
+  \endentry
+
+  \entry{cnnvstrad}{inproceedings}{}{}
+    \name{author}{8}{}{%
+      {{hash=ON}{%
+         family={O'Mahony},
+         familyi={O\bibinitperiod},
+         given={Niall},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Campbell},
+         familyi={C\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Carvalho},
+         familyi={C\bibinitperiod},
+         given={Anderson},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Harapanahalli},
+         familyi={H\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HGV}{%
+         family={Hernandez},
+         familyi={H\bibinitperiod},
+         given={Gustavo\bibnamedelima Velasco},
+         giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KL}{%
+         family={Krpalkova},
+         familyi={K\bibinitperiod},
+         given={Lenka},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Riordan},
+         familyi={R\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Walsh},
+         familyi={W\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=AK}{%
+         family={Arai},
+         familyi={A\bibinitperiod},
+         given={Kohei},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kapoor},
+         familyi={K\bibinitperiod},
+         given={Supriya},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ONCSCAHSHGVKLRDWJ1}
+    \strng{fullhash}{ONCSCAHSHGVKLRDWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Advances in Computer Vision}
+    \field{pages}{128\bibrangedash 144}
+    \field{title}{Deep Learning vs. Traditional Computer Vision}
+    \field{year}{2020}
+  \endentry
+
+  \entry{ren2016fasterrcnnrealtimeobject}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=RS}{%
+         family={Ren},
+         familyi={R\bibinitperiod},
+         given={Shaoqing},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Kaiming},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Girshick},
+         familyi={G\bibinitperiod},
+         given={Ross},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RSHKGRSJ1}
+    \strng{fullhash}{RSHKGRSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1506.01497
+    \endverb
+    \field{title}{Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1506.01497
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2016}
+  \endentry
+
+  \entry{zaidi2021survey}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=ZSSA}{%
+         family={Zaidi},
+         familyi={Z\bibinitperiod},
+         given={Syed Sahil\bibnamedelima Abbas},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AMS}{%
+         family={Ansari},
+         familyi={A\bibinitperiod},
+         given={Mohammad\bibnamedelima Samar},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Aslam},
+         familyi={A\bibinitperiod},
+         given={Asra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KN}{%
+         family={Kanwal},
+         familyi={K\bibinitperiod},
+         given={Nadia},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Asghar},
+         familyi={A\bibinitperiod},
+         given={Mamoona},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZSSAAMSAAKNAMLB1}
+    \strng{fullhash}{ZSSAAMSAAKNAMLB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2104.11892
+    \endverb
+    \field{title}{A Survey of Modern Deep Learning based Object Detection Models}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2021}
+  \endentry
+
+  \entry{lin2015microsoft}{misc}{}{}
+    \name{author}{10}{}{%
+      {{hash=LTY}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Tsung-Yi},
+         giveni={T\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Maire},
+         familyi={M\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Belongie},
+         familyi={B\bibinitperiod},
+         given={Serge},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Bourdev},
+         familyi={B\bibinitperiod},
+         given={Lubomir},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Girshick},
+         familyi={G\bibinitperiod},
+         given={Ross},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hays},
+         familyi={H\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Perona},
+         familyi={P\bibinitperiod},
+         given={Pietro},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Ramanan},
+         familyi={R\bibinitperiod},
+         given={Deva},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZCL}{%
+         family={Zitnick},
+         familyi={Z\bibinitperiod},
+         given={C.\bibnamedelima Lawrence},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dollár},
+         familyi={D\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LTYMMBSBLGRHJPPRDZCLDP1}
+    \strng{fullhash}{LTYMMBSBLGRHJPPRDZCLDP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1405.0312
+    \endverb
+    \field{title}{Microsoft COCO: Common Objects in Context}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2015}
+  \endentry
+
+  \entry{map}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=ZE}{%
+         family={Zimmermann},
+         familyi={Z\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Szeto},
+         familyi={S\bibinitperiod},
+         given={Justin},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Pasquero},
+         familyi={P\bibinitperiod},
+         given={Jerome},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RF}{%
+         family={Ratle},
+         familyi={R\bibinitperiod},
+         given={Frederic},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZESJPJRF1}
+    \strng{fullhash}{ZESJPJRF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2311.02709
+    \endverb
+    \field{title}{Benchmarking a Benchmark: How Reliable is MS-COCO?}
+    \verb{url}
+    \verb https://arxiv.org/abs/2311.02709
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Li_2022}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Minhao},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HCJ}{%
+         family={Hsieh},
+         familyi={H\bibinitperiod},
+         given={Cho-Jui},
+         giveni={C\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=LTCM}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Thomas C.\bibnamedelima M.},
+         giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Informa UK Limited}%
+    }
+    \strng{namehash}{LYCMHCJLTCM1}
+    \strng{fullhash}{LYCMHCJLTCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{329–345}
+    \field{title}{A Review of Adversarial Attack and Defense for Classification Methods}
+    \field{volume}{76}
+    \field{journaltitle}{The American Statistician}
+    \field{month}{01}
+    \field{year}{2022}
+  \endentry
+
+  \entry{goodfellow2015explainingharnessingadversarialexamples}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=GIJ}{%
+         family={Goodfellow},
+         familyi={G\bibinitperiod},
+         given={Ian\bibnamedelima J.},
+         giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shlens},
+         familyi={S\bibinitperiod},
+         given={Jonathon},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Szegedy},
+         familyi={S\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GIJSJSC1}
+    \strng{fullhash}{GIJSJSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1412.6572
+    \endverb
+    \field{title}{Explaining and Harnessing Adversarial Examples}
+    \verb{url}
+    \verb https://arxiv.org/abs/1412.6572
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{stat.ML}
+    \field{year}{2015}
+  \endentry
+
+  \entry{madry2019deeplearningmodelsresistant}{misc}{}{}
+    \name{author}{5}{}{%
+      {{hash=MA}{%
+         family={Madry},
+         familyi={M\bibinitperiod},
+         given={Aleksander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Makelov},
+         familyi={M\bibinitperiod},
+         given={Aleksandar},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={Ludwig},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Tsipras},
+         familyi={T\bibinitperiod},
+         given={Dimitris},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vladu},
+         familyi={V\bibinitperiod},
+         given={Adrian},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MAMASLTDVA1}
+    \strng{fullhash}{MAMASLTDVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1706.06083
+    \endverb
+    \field{title}{Towards Deep Learning Models Resistant to Adversarial Attacks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1706.06083
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{stat.ML}
+    \field{year}{2019}
+  \endentry
+
+  \entry{carlini2017evaluatingrobustnessneuralnetworks}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=CN}{%
+         family={Carlini},
+         familyi={C\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wagner},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CNWD1}
+    \strng{fullhash}{CNWD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1608.04644
+    \endverb
+    \field{title}{Towards Evaluating the Robustness of Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1608.04644
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CR}
+    \field{year}{2017}
+  \endentry
+
+  \entry{EAR1}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=VS}{%
+         family={Vaddadi},
+         familyi={V\bibinitperiod},
+         given={Srinivas},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=eVSPS}{%
+         prefix={e},
+         prefixi={e},
+         family={Vadakkethil Somanathan\bibnamedelima Pillai},
+         familyi={V\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim P\bibinitperiod},
+         given={Sanjaikanth},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ASR}{%
+         family={Addula},
+         familyi={A\bibinitperiod},
+         given={Santosh\bibnamedelima Reddy},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Vallabhaneni},
+         familyi={V\bibinitperiod},
+         given={Rohith},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Ananthan},
+         familyi={A\bibinitperiod},
+         given={Bhuvanesh},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VSVSPSeASRVRAB1}
+    \strng{fullhash}{VSVSPSeASRVRAB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1769\bibrangedash 1777}
+    \field{title}{An efficient convolutional neural network for adversarial training against adversarial attack}
+    \field{volume}{36}
+    \field{journaltitle}{Indonesian Journal of Electrical Engineering and Computer Science}
+    \field{year}{2024}
+  \endentry
+
+  \entry{EAR2}{inproceedings}{}{}
+    \name{author}{4}{}{%
+      {{hash=WAW}{%
+         family={Wijayanto},
+         familyi={W\bibinitperiod},
+         given={Arie\bibnamedelima Wahyu},
+         giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=CJJ}{%
+         family={Choong},
+         familyi={C\bibinitperiod},
+         given={Jun\bibnamedelima Jin},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Madhawa},
+         familyi={M\bibinitperiod},
+         given={Kaushalya},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Murata},
+         familyi={M\bibinitperiod},
+         given={Tsuyoshi},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{Quantization (signal);Training;Robustness;Computational modeling;Hardware;Convolutional neural networks;deep learning;compression;robustness}
+    \strng{namehash}{WAWCJJMKMT1}
+    \strng{fullhash}{WAWCJJMKMT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2019 IEEE International Conference on Big Data and Smart Computing (BigComp)}
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{Towards Robust Compressed Convolutional Neural Networks}
+    \field{year}{2019}
+  \endentry
+
+  \entry{EAR3}{misc}{}{}
+    \name{author}{9}{}{%
+      {{hash=YS}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Shaokai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=XK}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Kaidi},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Sijia},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LJH}{%
+         family={Lambrechts},
+         familyi={L\bibinitperiod},
+         given={Jan-Henrik},
+         giveni={J\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Huan},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZA}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Aojun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Kaisheng},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yanzhi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Xue},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YSXKLSLJHZHZAMKWYLX1}
+    \strng{fullhash}{YSXKLSLJHZHZAMKWYLX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1903.12561
+    \endverb
+    \field{title}{Adversarial Robustness vs Model Compression, or Both?}
+    \verb{url}
+    \verb https://arxiv.org/abs/1903.12561
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2021}
+  \endentry
+
+  \entry{EAR4}{misc}{}{}
+    \name{author}{6}{}{%
+      {{hash=GS}{%
+         family={Gui},
+         familyi={G\bibinitperiod},
+         given={Shupeng},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Haotao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Haichuan},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhangyang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ji},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GSWHYCYHWZLJ1}
+    \strng{fullhash}{GSWHYCYHWZLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1902.03538
+    \endverb
+    \field{title}{Model Compression with Adversarial Robustness: A Unified Optimization Framework}
+    \verb{url}
+    \verb https://arxiv.org/abs/1902.03538
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2019}
+  \endentry
+
+  \entry{mixtrain}{misc}{}{}
+    \name{author}{4}{}{%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shiqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yizheng},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Abdou},
+         familyi={A\bibinitperiod},
+         given={Ahmed},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JS}{%
+         family={Jana},
+         familyi={J\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WSCYAAJS1}
+    \strng{fullhash}{WSCYAAJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1811.02625
+    \endverb
+    \field{title}{MixTrain: Scalable Training of Verifiably Robust Neural Networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/1811.02625
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2018}
+  \endentry
+
+  \entry{autoattack}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=CF}{%
+         family={Croce},
+         familyi={C\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hein},
+         familyi={H\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CFHM1}
+    \strng{fullhash}{CFHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2003.01690
+    \endverb
+    \field{title}{Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks}
+    \verb{url}
+    \verb https://arxiv.org/abs/2003.01690
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2020}
+  \endentry
+
+  \entry{nms}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=HJ}{%
+         family={Hosang},
+         familyi={H\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Benenson},
+         familyi={B\bibinitperiod},
+         given={Rodrigo},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Schiele},
+         familyi={S\bibinitperiod},
+         given={Bernt},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJBRSB1}
+    \strng{fullhash}{HJBRSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1705.02950
+    \endverb
+    \field{title}{Learning non-maximum suppression}
+    \verb{url}
+    \verb https://arxiv.org/abs/1705.02950
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2017}
+  \endentry
+
+  \entry{deeplift}{misc}{}{}
+    \name{author}{3}{}{%
+      {{hash=SA}{%
+         family={Shrikumar},
+         familyi={S\bibinitperiod},
+         given={Avanti},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Greenside},
+         familyi={G\bibinitperiod},
+         given={Peyton},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kundaje},
+         familyi={K\bibinitperiod},
+         given={Anshul},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SAGPKA1}
+    \strng{fullhash}{SAGPKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 1704.02685
+    \endverb
+    \field{title}{Learning Important Features Through Propagating Activation Differences}
+    \verb{url}
+    \verb https://arxiv.org/abs/1704.02685
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{year}{2019}
+  \endentry
+
+  \entry{captum}{misc}{}{}
+    \name{author}{11}{}{%
+      {{hash=KN}{%
+         family={Kokhlikyan},
+         familyi={K\bibinitperiod},
+         given={Narine},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Miglani},
+         familyi={M\bibinitperiod},
+         given={Vivek},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Martin},
+         familyi={M\bibinitperiod},
+         given={Miguel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WE}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Edward},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Alsallakh},
+         familyi={A\bibinitperiod},
+         given={Bilal},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Reynolds},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Melnikov},
+         familyi={M\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KN}{%
+         family={Kliushkina},
+         familyi={K\bibinitperiod},
+         given={Natalia},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=AC}{%
+         family={Araya},
+         familyi={A\bibinitperiod},
+         given={Carlos},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Siqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RRO}{%
+         family={Reblitz-Richardson},
+         familyi={R\bibinithyphendelim R\bibinitperiod},
+         given={Orion},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KNMVMMWEABRJMAKNACYSRRO1}
+    \strng{fullhash}{KNMVMMWEABRJMAKNACYSRRO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2009.07896
+    \endverb
+    \field{title}{Captum: A unified and generic model interpretability library for PyTorch}
+    \verb{url}
+    \verb https://arxiv.org/abs/2009.07896
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput
