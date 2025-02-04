@@ -20,21 +20,22 @@
 % Add Authors and Affiliations in the camera ready
 % for the double blind review, please leave this section as is 
 \begin{tabular}{cc}
-    Anton Liu\upstairs{\affilone,*}, Roberto Solis-Oba\upstairs{\affilone}
+First Author\upstairs{\affilone,*}, Second Author\upstairs{\affilone}, Third Author\upstairs{\affilthree}
 \\[0.25ex]
-{\small \upstairs{\affilone} Dept. of Computer Science, Western University} \\
+{\small \upstairs{\affilone} Affiliation One} \\
+{\small \upstairs{\affiltwo} Affiliation Two} \\
+{\small \upstairs{\affilthree} Affiliation Three} \\
 \end{tabular}
-  
+    
 % Replace with corresponding author email address
 \emails{
-  \upstairs{*}aliu467@uwo.ca 
+    \upstairs{*}corresponding\_author@example.ca 
 }
+
 \vspace*{0.2in}
 \end{center}
 
 \begin{abstract}
-% This work introduces a novel adaptation of the HYDRA pruning framework to the YOLOv3 object detection model, enhancing both efficiency and adversarial robustness. Deep learning models in safety-critical applications, like autonomous driving, require both computational efficiency and resilience against attacks. We compared structured and unstructured pruning and used DeepLIFT for importance score initialization to assist the pruning. Experimental results show that DeepLIFT-guided unstructured pruning consistently outperforms structured pruning in preserving mean Average Precision (mAP) across pruning levels. This selective pruning maintains robust detection capabilities at high pruning ratios while enhancing real-time processing efficiency.
-
 This work introduces a novel approach to object detection that achieves high efficiency and adversarial robustness by adapting the HYDRA pruning framework to the YOLOv3 model. Object detection deep learning models, particularly in safety-critical applications such as autonomous driving and surveillance, require high computational efficiency and resilience against adversarial attacks. We investigate both structured and unstructured pruning techniques to assess their impact on model size, accuracy, and inference time. By using DeepLIFT for importance scoring we achieve targeted pruning that strikes a balance between model compactness and inference performance. Experimental results show that, when guided by DeepLIFT scoring, unstructured pruning consistently outperforms structured pruning in preserving higher mean Average Precision (mAP) across various pruning levels. DeepLIFT-based importance scoring enables precise pruning, allowing the YOLOv3 model to maintain robust detection performance even at high pruning ratios. This selective pruning method not only reduces computational demands, improving real-time processing capabilities, but also ensures the preservation of critical high detection performance.
 \end{abstract}
 
