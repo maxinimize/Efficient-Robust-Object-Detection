@@ -1424,5 +1424,33 @@
     \field{eprintclass}{cs.LG}
     \field{year}{2020}
   \endentry
+
+  \entry{MyAppendix}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=LA}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Anton},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SOR}{%
+         family={Solis-Oba},
+         familyi={S\bibinithyphendelim O\bibinitperiod},
+         given={Roberto},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LASOR1}
+    \strng{fullhash}{LASOR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{Online}
+    \field{title}{Appendix for "Efficient and Adversarially Robust Object Detection"}
+    \verb{url}
+    \verb https://github.com/liuantonliu/Efficient-Robust-Object-Detection/blob
+    \verb /master/CAI2025/Appendix.pdf
+    \endverb
+    \field{year}{2025}
+  \endentry
 \enddatalist
 \endinput

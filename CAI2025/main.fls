@@ -1,8 +1,8 @@
-PWD d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings
+PWD d:/Western/project/TinyYoloV2/CAI2025
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings/main.tex
+INPUT d:/Western/project/TinyYoloV2/CAI2025/main.tex
 OUTPUT main.log
 INPUT ./cai.cls
 INPUT cai.cls

@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1738122964.76666 "main.aux" "main.bbl" "main" 1738122970.17566 0
-  "./main-blx.bib" 1738122968 345 33e8febcc3383e71ebd6183eb68e3133 ""
-  "./references.bib" 1737522600 21967 c20fcf38e0cc529b6130cf84522d3a07 ""
+["bibtex main"] 1738637277.04429 "main.aux" "main.bbl" "main" 1738637991.69437 0
+  "./main-blx.bib" 1738637989 345 33e8febcc3383e71ebd6183eb68e3133 ""
+  "./references.bib" 1738123895 22267 1a17edb3a19270b9f022f931b002194d ""
   "c:/texlive/2024/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1728011280 65510 b1f696b0241395385f422f67543c37fd ""
-  "main.aux" 1738122968 15219 3265534f218094bed56b334671346504 "pdflatex"
+  "main.aux" 1738637989 15737 ac57b790aa48fcb60478def84766ff66 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1738122965.2647 "d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings/main.tex" "main.pdf" "main" 1738122970.17655 0
+["pdflatex"] 1738637986.73776 "d:/Western/project/TinyYoloV2/CAI2025/main.tex" "main.pdf" "main" 1738637991.69535 0
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1728011675 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1728011675 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728012567 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -254,7 +254,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728016593 3326035 2e8b838c882755c99b544344ced5b25b ""
   "c:/texlive/2024/texmf.cnf" 1728016329 713 e69b156964470283e0530f5060668171 ""
   "cai.cls" 1736731604 4991 2b6ca26f04e69f4f070e6c864f148ac1 ""
-  "d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings/main.tex" 1738122958 46688 f3d43004fec3e3d64b5e7a619f956ce9 ""
+  "d:/Western/project/TinyYoloV2/CAI2025/main.tex" 1738637985 46645 77ef4ddbe2396d94d0dd6e38917956dd ""
   "figs/22192select.jpg" 1737686102 2568223 e91b094e1d2975e049cc3922318ceaf3 ""
   "figs/canai2025-logo.png" 1728532512 44266 2df9032bc43279632d9bf037d79b418b ""
   "figs/dog1.jpg" 1731731296 669737 487f42904fed8e00c31096d09dd67a18 ""
@@ -263,11 +263,11 @@
   "figs/mAP2.png" 1731363923 51731 4f91e447ff83d41fced8c70e1e1f447a ""
   "figs/time1.png" 1731363993 60412 d462603b029af4b3cc3f2c0c2b743e8b ""
   "figs/time2.png" 1731364003 41576 11dcca138d9c6eec1fde022fd7eecc07 ""
-  "main.aux" 1738122968 15219 3265534f218094bed56b334671346504 "pdflatex"
-  "main.bbl" 1738122965 38828 763d0a91b716453f55fa0df30879e2f0 "bibtex main"
-  "main.out" 1738122968 3578 9677dec542cf020533bdd652e7aece50 "pdflatex"
-  "main.run.xml" 1738122968 2561 8e6b55f1ff16166891e471b6dfb0d7cf "pdflatex"
-  "main.tex" 1738122958 46688 f3d43004fec3e3d64b5e7a619f956ce9 ""
+  "main.aux" 1738637989 15737 ac57b790aa48fcb60478def84766ff66 "pdflatex"
+  "main.bbl" 1738637277 39646 c99fc7d082dcf5b0410007ed1abfeb57 "bibtex main"
+  "main.out" 1738637989 3578 9677dec542cf020533bdd652e7aece50 "pdflatex"
+  "main.run.xml" 1738637989 2561 8e6b55f1ff16166891e471b6dfb0d7cf "pdflatex"
+  "main.tex" 1738637985 46645 77ef4ddbe2396d94d0dd6e38917956dd ""
   (generated)
   "main-blx.bib"
   "main.aux"

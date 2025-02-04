@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  28 JAN 2025 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.4)  3 FEB 2025 21:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings/main.tex"
-(d:/Western/project/TinyYoloV2/LaTeX Template for Canadian AI 2025 Conference Proceedings/main.tex
+**d:/Western/project/TinyYoloV2/CAI2025/main.tex
+(d:/Western/project/TinyYoloV2/CAI2025/main.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
 (./cai.cls
@@ -1450,28 +1450,23 @@ Package pdftex.def Info: figs/dog1.jpg  used on input line 157.
 [6]
 
 [7]
-
-LaTeX Warning: Reference `appendix:figures' on page 8 undefined on input line 195.
-
-
-LaTeX Warning: Reference `fig:mAP1zoom' on page 8 undefined on input line 195.
-
-<figs/mAP1.PNG, id=249, 416.2752pt x 435.0654pt>
+<figs/mAP1.PNG, id=251, 416.2752pt x 435.0654pt>
 File: figs/mAP1.PNG Graphic file (type png)
 <use figs/mAP1.PNG>
 Package pdftex.def Info: figs/mAP1.PNG  used on input line 205.
 (pdftex.def)             Requested size: 178.86703pt x 186.9417pt.
 
-Package caption Warning: Cannot determine current font size.
-(caption)                Try setting it with `size=' explicitly on input line 206.
-See the caption package documentation for explanation.
-
 
 Package caption Warning: Cannot determine current font size.
 (caption)                Try setting it with `size=' explicitly on input line 206.
 See the caption package documentation for explanation.
 
-<figs/time1.PNG, id=250, 412.6617pt x 435.0654pt>
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 206.
+See the caption package documentation for explanation.
+
+<figs/time1.PNG, id=252, 412.6617pt x 435.0654pt>
 File: figs/time1.PNG Graphic file (type png)
 <use figs/time1.PNG>
 Package pdftex.def Info: figs/time1.PNG  used on input line 211.
@@ -1487,48 +1482,25 @@ Package caption Warning: Cannot determine current font size.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `appendix:figures' on page 8 undefined on input line 215.
-
-
-LaTeX Warning: Reference `appendix:figures' on page 8 undefined on input line 215.
-
-
-LaTeX Warning: Reference `appendix:anova' on page 8 undefined on input line 220.
-
-
-LaTeX Warning: Reference `tab:p-mAP' on page 8 undefined on input line 220.
-
-
-LaTeX Warning: Reference `tab:p-time' on page 8 undefined on input line 225.
-
-
 
 [8 <./figs/mAP1.png> <./figs/time1.png>]
-
-LaTeX Warning: Reference `appendix:anova' on page 9 undefined on input line 232.
-
-
-LaTeX Warning: Reference `tab:p-mAP' on page 9 undefined on input line 232.
-
-
-LaTeX Warning: Reference `tab:p-time' on page 9 undefined on input line 234.
-
-<figs/mAP2.PNG, id=261, 416.2752pt x 435.0654pt>
+<figs/mAP2.PNG, id=268, 416.2752pt x 435.0654pt>
 File: figs/mAP2.PNG Graphic file (type png)
 <use figs/mAP2.PNG>
 Package pdftex.def Info: figs/mAP2.PNG  used on input line 243.
 (pdftex.def)             Requested size: 178.86703pt x 186.9417pt.
 
-Package caption Warning: Cannot determine current font size.
-(caption)                Try setting it with `size=' explicitly on input line 244.
-See the caption package documentation for explanation.
-
 
 Package caption Warning: Cannot determine current font size.
 (caption)                Try setting it with `size=' explicitly on input line 244.
 See the caption package documentation for explanation.
 
-<figs/time2.PNG, id=262, 412.6617pt x 435.0654pt>
+
+Package caption Warning: Cannot determine current font size.
+(caption)                Try setting it with `size=' explicitly on input line 244.
+See the caption package documentation for explanation.
+
+<figs/time2.PNG, id=269, 412.6617pt x 435.0654pt>
 File: figs/time2.PNG Graphic file (type png)
 <use figs/time2.PNG>
 Package pdftex.def Info: figs/time2.PNG  used on input line 249.
@@ -1546,14 +1518,13 @@ See the caption package documentation for explanation.
 
 
 [9 <./figs/mAP2.png> <./figs/time2.png>]
-<figs/22192select.jpg, id=270, 2087.8pt x 831.105pt>
+<figs/22192select.jpg, id=277, 2087.8pt x 831.105pt>
 File: figs/22192select.jpg Graphic file (type jpg)
 <use figs/22192select.jpg>
 Package pdftex.def Info: figs/22192select.jpg  used on input line 266.
-(pdftex.def)             Requested size: 317.98921pt x 126.57529pt.
+(pdftex.def)             Requested size: 397.485pt x 158.22862pt.
 
-
-LaTeX Warning: Reference `appendix:figures' on page 10 undefined on input line 271.
+Underfull \vbox (badness 4726) has occurred while \output is active []
 
 
 
@@ -1591,17 +1562,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  38271 strings out of 473578
- 764750 string characters out of 5732236
- 1552722 words of memory out of 5000000
- 60360 multiletter control sequences out of 15000+600000
+ 764712 string characters out of 5732236
+ 1552692 words of memory out of 5000000
+ 60359 multiletter control sequences out of 15000+600000
  575796 words of font info for 80 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 132i,10n,135p,1974b,1990s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,10n,135p,1921b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrb1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on main.pdf (12 pages, 4340216 bytes).
+Output written on main.pdf (12 pages, 4342657 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 462 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
