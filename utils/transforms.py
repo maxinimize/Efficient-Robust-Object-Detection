@@ -13,14 +13,14 @@ class ImgAug(object):
     def __init__(self, augmentations=[]):
         self.augmentations = augmentations
 
-    def __call__(self, img, boxes):
+    def __call__(self, data):
         
         # np.set_printoptions(linewidth=500)
         # np.set_printoptions(suppress=True)
         # print("before padsquare", boxes.shape)
         # for box in boxes: print(box)
         
-        
+        img, boxes = data
         if boxes.size != 0:
             if boxes.ndim > 2: 
                 boxes = boxes.squeeze()
@@ -30,14 +30,15 @@ class ImgAug(object):
             
             # Convert xywh to xyxy
             boxes = np.array(boxes)
-            image_size = boxes[:, 6:]
-            category_labels = boxes[:, 1:2]
+            # image_size = boxes[:, 6:]
+            # category_labels = boxes[:, 1:2]
+            img_id = boxes[0, 0]
             boxes[:, 2:6] = xywh2xyxy_np(boxes[:, 2:6])
             # print("1", boxes.shape)
         
             # Convert bounding boxes to imgaug
             bounding_boxes = BoundingBoxesOnImage(
-                [BoundingBox(*box[2:6], label=box[0:1]) for box in boxes],
+                [BoundingBox(*box[2:6], label=box[1]) for box in boxes],
                 shape=img.shape)
 
             # Apply augmentations
@@ -59,15 +60,16 @@ class ImgAug(object):
                 y2 = box.y2
 
                 # Returns (x, y, w, h)
-                boxes[box_idx, 0:1] = box.label
+                boxes[box_idx, 1] = box.label
                 boxes[box_idx, 2] = ((x1 + x2) / 2)
                 boxes[box_idx, 3] = ((y1 + y2) / 2)
                 boxes[box_idx, 4] = (x2 - x1)
                 boxes[box_idx, 5] = (y2 - y1)
                 
-            # print(image_ids.shape, boxes.shape)    
-            boxes = np.hstack((boxes, image_size)) # append the image size back on
-            boxes[:, 1:2] = category_labels
+            # print(image_ids.shape, boxes.shape)
+            # boxes = np.hstack((boxes, image_size)) # append the image size back on
+            # boxes[:, 1] = category_labels
+            boxes[:, 0] = img_id
             if boxes.shape[0] == 0: boxes = boxes[:, 0]
         return img, boxes
 
@@ -76,7 +78,8 @@ class RelativeLabels(object):
     def __init__(self, ):
         pass
 
-    def __call__(self, img, boxes):
+    def __call__(self, data):
+        img, boxes = data
         if boxes.shape[0] == 0: return img, boxes
         _, h, w = img.shape # torch.Size([3, 640, 640])
         if boxes.ndim > 2: 
@@ -113,7 +116,8 @@ class ToTensor(object):
     def __init__(self, ):
         pass
 
-    def __call__(self, img, boxes):
+    def __call__(self, data):
+        img, boxes = data
         img = transforms.ToTensor()(img)
         boxes = torch.tensor(boxes)
         return img, boxes

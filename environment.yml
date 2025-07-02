@@ -1,0 +1,30 @@
+name: yoloenv
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - tensorboard
+  - pyyaml
+  - easydict
+  - scipy
+  - pillow
+  - jupyter
+  - matplotlib
+  - scikit-image
+  - opencv
+  - ipykernel
+  - pandas
+  - tqdm
+  - terminaltables
+  - pip:
+      - pycocotools
+      - imgaug
+      - torchsummary

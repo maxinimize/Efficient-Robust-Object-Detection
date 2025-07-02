@@ -56,7 +56,7 @@ class ImageFolder(Dataset): # only used in detect for some reason and not others
 
 
 class ListDataset(Dataset):
-    def __init__(self, list_path, img_size=416, multiscale=True, transform=None):
+    def __init__(self, list_path, img_size=416, multiscale=True, transform=None, label_cols=None):
         with open(list_path, "r") as file:
             self.img_files = file.readlines()
 
@@ -69,6 +69,20 @@ class ListDataset(Dataset):
             label_file = os.path.join(label_dir, os.path.basename(path))
             label_file = os.path.splitext(label_file)[0] + '.txt'
             self.label_files.append(label_file)
+
+        # handle different label file formats
+        if label_cols is None:
+            try:
+                with open(self.label_files[0], 'r') as f:
+                    first_line = f.readline()
+                    if first_line:
+                        self.label_cols = len(first_line.split())
+                    else:
+                        self.label_cols = 5
+            except Exception:
+                self.label_cols = 5
+        else:
+            self.label_cols = label_cols
 
         self.img_size = img_size
         self.max_objects = 100
@@ -101,7 +115,8 @@ class ListDataset(Dataset):
             # Ignore warning if file is empty
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")
-                boxes = np.loadtxt(label_path).reshape(-1, 5)
+                boxes = np.loadtxt(label_path).reshape(-1, self.label_cols)
+                # boxes = np.atleast_2d(np.loadtxt(label_path).reshape(-1, self.label_cols))
         except Exception:
             print(f"Could not read label '{label_path}'.")
             return
@@ -136,7 +151,10 @@ class ListDataset(Dataset):
 
         # Add sample index to targets
         for i, boxes in enumerate(bb_targets):
-            boxes[:, 0] = i
+            if boxes.dim() == 1:
+                boxes = boxes.unsqueeze(0)
+            if boxes.shape[1] > 0:
+                boxes[:, 0] = i
         bb_targets = torch.cat(bb_targets, 0)
 
         return paths, imgs, bb_targets
