@@ -127,7 +127,8 @@ class Resize(object):
     def __init__(self, size):
         self.size = size
 
-    def __call__(self, img, boxes):
+    def __call__(self, data):
+        img, boxes = data
         img = F.interpolate(img.unsqueeze(0), size=self.size, mode="nearest").squeeze(0)
         return img, boxes
 
@@ -233,7 +234,8 @@ class ConvertToArrays():
     def __init__(self, ):
         pass
     
-    def __call__(self, img, boxes):
+    def __call__(self, data):
+        img, boxes = data
         transformed_samples = []
         width, height = img.size
         for box in boxes:

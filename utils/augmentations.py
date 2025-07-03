@@ -39,8 +39,10 @@ class MyCompose(object):
         self.transforms = transforms
 
     def __call__(self, img, tar):
+        data = (img, tar)
         for t in self.transforms:
-            img, tar = t(img, tar)
+            data = t(data)
+        img, tar = data
         return img, tar
     
 TRANSFORM_TRAIN = MyCompose([
