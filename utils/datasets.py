@@ -151,10 +151,10 @@ class ListDataset(Dataset):
 
         # Add sample index to targets
         for i, boxes in enumerate(bb_targets):
-            if boxes.dim() == 1:
-                boxes = boxes.unsqueeze(0)
-            if boxes.shape[1] > 0:
-                boxes[:, 0] = i
+            # if boxes.dim() == 1:
+            #     boxes = boxes.unsqueeze(0)
+            # if boxes.shape[1] > 0:
+            boxes[:, 0] = i
         bb_targets = torch.cat(bb_targets, 0)
 
         return paths, imgs, bb_targets

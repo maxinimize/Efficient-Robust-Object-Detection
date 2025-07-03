@@ -70,7 +70,7 @@ class ImgAug(object):
             # boxes = np.hstack((boxes, image_size)) # append the image size back on
             # boxes[:, 1] = category_labels
             boxes[:, 0] = img_id
-            if boxes.shape[0] == 0: boxes = boxes[:, 0]
+            # if boxes.shape[0] == 0: boxes = boxes[:, 0]
         return img, boxes
 
 
