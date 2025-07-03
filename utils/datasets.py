@@ -116,7 +116,6 @@ class ListDataset(Dataset):
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")
                 boxes = np.loadtxt(label_path).reshape(-1, self.label_cols)
-                # boxes = np.atleast_2d(np.loadtxt(label_path).reshape(-1, self.label_cols))
         except Exception:
             print(f"Could not read label '{label_path}'.")
             return
@@ -151,10 +150,16 @@ class ListDataset(Dataset):
 
         # Add sample index to targets
         for i, boxes in enumerate(bb_targets):
-            # if boxes.dim() == 1:
-            #     boxes = boxes.unsqueeze(0)
-            # if boxes.shape[1] > 0:
-            boxes[:, 0] = i
+            # check if boxes has 6 columns
+            if boxes.size(1) > 5:
+                boxes[:, 0] = i
+            else:
+                if boxes.size(0) > 0:  # Has boxes
+                    sample_indices = torch.full((boxes.size(0), 1), i, dtype=boxes.dtype)
+                    boxes = torch.cat([sample_indices, boxes], dim=1)
+                else:  # No boxes - create empty tensor with correct shape
+                    boxes = torch.zeros((0, boxes.size(1) + 1), dtype=boxes.dtype)
+                bb_targets[i] = boxes
         bb_targets = torch.cat(bb_targets, 0)
 
         return paths, imgs, bb_targets
