@@ -17,3 +17,7 @@ torch
 torchvision 
 torchtext 
 torchaudio
+imgaug
+typing_extensions
+sympy
+tqdm

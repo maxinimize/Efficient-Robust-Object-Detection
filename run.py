@@ -12,26 +12,28 @@ def in_venv():
 
 def ensure_venv(path='ENV'):
     if in_venv():
-        print("🟢 Already inside a virtual environment.")
+        print("Already inside a virtual environment.")
         return
 
     if not os.path.isdir(path) or not os.path.isfile(os.path.join(path, 'pyvenv.cfg')):
-        print(f"Creating virtual environment at ./{path} …")
+        print(f"Creating virtual environment at ./{path}")
         subprocess.run([sys.executable, '-m', 'venv', path], check=True)
-        print(f"Loading opencv NOTE: it will give you a warning, so far it has not caused any problems though.")
-        subprocess.run("module load gcc cuda opencv/4.11.0", shell=True)
+        print(f"Loading opencv NOTE: it may give you a warning, so far it has not caused any problems though.")
+        subprocess.run("module load gcc cuda opencv/4.11.0 && . ENV/bin/activate && pip install --upgrade pip && pip install --no-index -r requirements-sharc.txt", shell=True)
         requirements_path = "requirements-sharc.txt"
         try:
-            print(f"Installing dependencies from {requirements_path}...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "-r",requirements_path, "--no-index"])
-            print("All packages installed successfully.")
+          venv_pip = os.path.join(path, 'bin', 'pip')
+          print("Installing dependencies…")
+          #subprocess.run(". ENV/bin/activate", shell=True)
+          #subprocess.run([venv_pip, 'install', '--no-index', '-r', 'requirements-sharc.txt'], check=True)
+          #print("Installed dependencies via venv pip.")
         except subprocess.CalledProcessError:
-            print("Failed to install one or more packages.")
-            sys.exit(1)
+          print("Failed to install one or more packages.")
+          sys.exit(1)
             
     else:
         print(f"Found existing virtual environment in ./{path}.")
-    print(f"Start up venv using . ENV/bin/activate!")
+    print(f"Start up venv using . ENV/bin/activate. NOTE: if you have an issue with import cv2 then, while outside of venv (enter >deactivate to exit) use >module load opencv cuda")
 
 
 
