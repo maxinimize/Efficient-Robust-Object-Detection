@@ -1,7 +1,7 @@
 data/COCO2017/annotations/
 content/
 __pycache__/
-env/
+ENV/
 weights/
 output/
 logs/

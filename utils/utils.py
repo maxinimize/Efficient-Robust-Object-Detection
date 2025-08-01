@@ -93,7 +93,7 @@ def xywh2xyxy(x):
 
 
 def xywh2xyxy_np(x):
-    y = np.zeros_like(x)
+    y = x.copy().astype(np.float32)
     y[..., 0] = x[..., 0] - x[..., 2] / 2
     y[..., 1] = x[..., 1] - x[..., 3] / 2
     y[..., 2] = x[..., 0] + x[..., 2] / 2
