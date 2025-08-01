@@ -1,4 +1,5 @@
 data/COCO2017/annotations/
+data/COCO2017/images/
 content/
 __pycache__/
 ENV/

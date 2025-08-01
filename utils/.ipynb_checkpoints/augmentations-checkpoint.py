@@ -47,10 +47,12 @@ class MyCompose(object):
     
 TRANSFORM_TRAIN = MyCompose([
     ConvertToArrays(),
-    DefaultAug(),
+    # DefaultAug(),
+    StrongAug(),
     PadSquare(),
     ToTensor(),
     RelativeLabels(),
+    Resize(416),
 ])
 
 TRANSFORM_VAL = MyCompose([

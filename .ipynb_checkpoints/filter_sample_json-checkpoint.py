@@ -17,7 +17,7 @@ val_output_json_path = 'data/COCO2017/annotations/instances_val2017_modified_sam
 train_json_path = 'data/COCO2017/annotations/instances_train2017.json' # <-- Please replace this with the path to your JSON file
 
 # Path to the folder containing the training images you want to keep
-train_image_dir = 'data/COCO2017/images/train_sample'
+train_image_dir = 'data/COCO2017/images/1000'
 
 # Path to save the new generated training JSON file
 train_output_json_path = 'data/COCO2017/annotations/instances_train2017_modified_sample.json'
