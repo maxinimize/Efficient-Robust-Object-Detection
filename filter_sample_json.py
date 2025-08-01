@@ -1,26 +1,32 @@
 import json
 import os
+from pathlib import Path
+import sys
+
+if len(sys.argv) < 5:
+    print("Usage: python filter_sample_json.py val/image/dir val/output/json/path train/image/dir train/output/json/path")
+    sys.exit(1)
 
 # --- Configuration ---
 # -- Validation --
 # Path to the original validation JSON annotation file
-val_json_path = 'data/COCO2017/annotations/instances_val2017.json' # <-- Please replace this with the path to your JSON file
+val_json_path = Path("data/COCO2017/annotations/instances_val2017.json") # <-- path to your JSON file
 
 # Path to the folder containing the validation images you want to keep
-val_image_dir = 'data/COCO2017/images/valid_sample'
+val_image_dir = Path(sys.argv[1]) # <-- path to your image directory
 
 # Path to save the new generated validation JSON file
-val_output_json_path = 'data/COCO2017/annotations/instances_val2017_modified_sample.json'
+val_output_json_path = Path(sys.argv[2]) # <-- path to your output JSON file
 
 # -- Training --
 # Path to the original training JSON annotation file
-train_json_path = 'data/COCO2017/annotations/instances_train2017.json' # <-- Please replace this with the path to your JSON file
+train_json_path = Path("data/COCO2017/annotations/instances_train2017.json") # <--  path to your JSON file
 
 # Path to the folder containing the training images you want to keep
-train_image_dir = 'data/COCO2017/images/1000'
+train_image_dir = Path(sys.argv[3]) # <-- path to your image directory
 
 # Path to save the new generated training JSON file
-train_output_json_path = 'data/COCO2017/annotations/instances_train2017_modified_sample.json'
+train_output_json_path = Path(sys.argv[4]) # <-- path to your output JSON file
 
 # --- JSON filter function ---
 def json_filter(original_json_path, image_dir, output_json_path):
