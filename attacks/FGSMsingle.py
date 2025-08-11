@@ -17,11 +17,11 @@ class FGSM(Attacker):
         :return adversarial image
         """
         with torch.enable_grad():
-            self.model.module.train()
+            self.model.train()
             x_adv = x.clone().detach()
-            self.model.module.zero_grad()
+            self.model.zero_grad()
             x_adv.requires_grad = True
-            logits = self.model.module(x_adv) #f(T((x))
+            logits = self.model(x_adv) #f(T((x))
             loss, loss_components = compute_loss(logits, y, self.model)
             loss.backward()                      
             grad = x_adv.grad.detach()

@@ -96,10 +96,7 @@ def compute_loss(predictions, targets, model):
             # Calculate CIoU or GIoU for each target with the predicted box for its cell + anchor
             iou = bbox_iou(pbox.T, tbox[layer_index], x1y1x2y2=False, CIoU=True)
             # We want to minimize our loss so we and the best possible IoU is 1 so we take 1 - IoU and reduce it with a mean
-            
-            lbox = lbox + (1.0 - iou).mean()
-
-
+            lbox += (1.0 - iou).mean()  # iou loss
 
             # Classification of the objectness
             # Fill our empty object target tensor with the IoU we just calculated for each target at the targets position
@@ -112,11 +109,11 @@ def compute_loss(predictions, targets, model):
                 t = torch.zeros_like(ps[:, 5:], device=device)  # targets
                 t[range(num_targets), tcls[layer_index]] = 1
                 # Use the tensor to calculate the BCE loss
-                lcls = lcls + BCEcls(ps[:, 5:], t)  # BCE
+                lcls += BCEcls(ps[:, 5:], t)  # BCE
 
         # Classification of the objectness the sequel
         # Calculate the BCE loss between the on the fly generated target and the network prediction
-        lobj = lobj + BCEobj(layer_predictions[..., 4], tobj) # obj loss
+        lobj += BCEobj(layer_predictions[..., 4], tobj) # obj loss
 
     lbox *= 0.05
     lobj *= 1.0
@@ -138,7 +135,7 @@ def build_targets(p, targets, model):
     # Copy target boxes anchor size times and append an anchor index to each copy the anchor index is also expressed by the new first dimension
     targets = torch.cat((targets.repeat(na, 1, 1), ai[:, :, None]), 2)
 
-    for i, yolo_layer in enumerate(model.module.yolo_layers):
+    for i, yolo_layer in enumerate(model.yolo_layers):
         # * COCO to yolo size
         # Scale anchors by the yolo grid cell size so that an anchor with the size of the cell would result in 1
         anchors = yolo_layer.anchors / yolo_layer.stride

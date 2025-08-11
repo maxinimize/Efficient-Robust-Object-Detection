@@ -22,12 +22,12 @@ class CW(Attacker):
         """
         
         with torch.enable_grad():
-            self.model.module.train()
+            self.model.train()
             x_adv = x.clone().detach()
             for _ in range(self.epoch):
-                self.model.module.zero_grad()
+                self.model.zero_grad()
                 x_adv.requires_grad = True
-                logits = self.model.module(x_adv)
+                logits = self.model(x_adv)
                 target_loss, loss_components = compute_loss(logits, y, self.model) # loss
                 l2_norm = torch.sum(torch.square(x_adv - x))  # Perturbation  L2 norm
                 loss = target_loss + self.c * l2_norm # C&W loss function

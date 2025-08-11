@@ -21,12 +21,12 @@ class PGD(Attacker):
         """
         
         with torch.enable_grad():
-            self.model.module.train()
+            self.model.train()
             x_adv = x.clone().detach()
             for _ in range(self.epoch):
-                self.model.module.zero_grad()
+                self.model.zero_grad()
                 x_adv.requires_grad = True
-                logits = self.model.module(x_adv) #f(T((x))
+                logits = self.model(x_adv) #f(T((x))
                 loss, loss_components = compute_loss(logits, y, self.model)
                 loss.backward()   
                                    
@@ -38,5 +38,5 @@ class PGD(Attacker):
                 x_adv = x + torch.clamp(x_adv - x, min=-self.epsilon, max=self.epsilon)
                 x_adv = x_adv.detach()
                 x_adv = torch.clamp(x_adv, 0, 1)
-                self.model.module.zero_grad()
+                self.model.zero_grad()
             return x_adv
