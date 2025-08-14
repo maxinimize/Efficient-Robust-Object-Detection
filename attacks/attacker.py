@@ -19,6 +19,16 @@ class Attacker(ABC):
         x = torch.clamp(x,*self.clamp)
         return x
 
+    @abstractmethod
+    def forward(self, x, y):
+        """
+        Abstract method that all attackers must implement
+        :param x: Input images to perturb
+        :param y: Ground-truth labels/targets
+        :return: Adversarial examples
+        """
+        pass
+        
     def __call__(self, x,y):
         x_adv = self.forward(x,y)
         return x_adv
