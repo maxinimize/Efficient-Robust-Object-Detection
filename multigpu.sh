@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:h100:4           # request 4 H100 GPUs
 #SBATCH --cpus-per-task=16          # 16 CPUs per task (4 per GPU)
 #SBATCH --mem=50G                   # 50GB RAM
-#SBATCH --time=0-1:00               # 1 hour
+#SBATCH --time=0-17:00               # 17 hours
 #SBATCH --output=%N-%j.out          # output file
 
 set -euo pipefail

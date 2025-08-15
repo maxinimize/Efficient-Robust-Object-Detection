@@ -254,18 +254,9 @@ def evaluate_model(model, dataloader, attacker=None, device=None):
     
     return clean_loss, adv_loss, metrics
 
-
 # In[ ]:
-
-
-parser = argparse.ArgumentParser(description='cifar10 classification models, distributed data parallel test')
-
-
-# In[ ]:
-
 
 import argparse
-
 
 parser = argparse.ArgumentParser(description='cifar10 classification models, distributed data parallel test')
 parser.add_argument("--lr",           type=float, default=0.1)  # Used: not directly, but can be passed to optimizer
