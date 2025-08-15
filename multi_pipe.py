@@ -620,53 +620,60 @@ for epoch in range(start_epoch, epochs+1):
             continue
 
     if lossesEpoch:
-        losses_avg = np.average(lossesEpoch)
-        print(f"Epoch {epoch} average loss: {losses_avg}")
-        losses.append(losses_avg)
-        
-        # Run validation if on rank 0
-        if rank == 0 and epoch % validation_interval == 0:  # Validate every validation_interval epochs
-            print(f"Running validation after epoch {epoch}...")
-            clean_loss, adv_loss, metrics = evaluate_model(
-                model=model, 
-                dataloader=val_loader, 
-                attacker=attacker, 
-                device=current_device
-            )
-            print(f"Validation results - Clean loss: {clean_loss:.4f}, Adv loss: {adv_loss:.4f}")
-            print(f"Clean detection rate: {metrics.get('clean_detection_rate', 0):.4f}")
-            print(f"Adversarial detection rate: {metrics.get('adv_detection_rate', 0):.4f}")
-            print(f"Detection drop: {metrics.get('detection_drop', 0):.4f}")
-        
-        # Sync min_loss across all processes
+        # Compute local sum and count, then reduce across ranks to get the global average
+        local_sum = float(np.sum(lossesEpoch))
+        local_count = float(len(lossesEpoch))
+        stats = torch.tensor([local_sum, local_count], device=current_device, dtype=torch.float64)
+
         if dist.is_available() and dist.is_initialized():
-            global_min_loss = torch.tensor([min_loss], device=current_device)
-            dist.all_reduce(global_min_loss, op=dist.ReduceOp.MIN)
-            min_loss = global_min_loss.item()
+            # Sum the per-rank sums and counts to compute the global average
+            dist.all_reduce(stats, op=dist.ReduceOp.SUM)
+
+        global_sum = float(stats[0].item())
+        global_count = int(stats[1].item())
+        losses_avg = global_sum / global_count if global_count > 0 else float('inf')
+        if rank == 0:
+            print(f"Epoch {epoch} average loss (global): {losses_avg}")
+            losses.append(losses_avg)
             
-        if losses_avg < min_loss and rank == 0:  # only save the best model on rank 0
-            checkpoint_path = f"./data/results/checkpoints/yolov3_ckpt_best.pth"
-            print(f"---- Saving new best checkpoint to: '{checkpoint_path}' ----")
-            print(f"---- Previous best: {min_loss:.5f}, New best: {losses_avg:.5f} ----")
-            os.makedirs("./data/results/checkpoints", exist_ok=True)
-            
-            # Save checkpoint with comprehensive metadata
-            checkpoint = {
-                'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'loss': losses_avg,
-                'epoch': epoch,
-                'date_saved': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                'validation_metrics': metrics if 'metrics' in locals() else {},
-                'hyperparams': {
-                    'lr': args.lr,
-                    'batch_size': args.batch_size,
-                    'gradient_accumulation_steps': gradient_accumulation_steps,
-                    'eps': eps  # adversarial training epsilon
+            # Run validation if on rank 0
+            if epoch % validation_interval == 0:  # Validate every validation_interval epochs
+                print(f"Running validation after epoch {epoch}...")
+                clean_loss, adv_loss, metrics = evaluate_model(
+                    model=model, 
+                    dataloader=val_loader, 
+                    attacker=attacker, 
+                    device=current_device
+                )
+                print(f"Validation results - Clean loss: {clean_loss:.4f}, Adv loss: {adv_loss:.4f}")
+                print(f"Clean detection rate: {metrics.get('clean_detection_rate', 0):.4f}")
+                print(f"Adversarial detection rate: {metrics.get('adv_detection_rate', 0):.4f}")
+                print(f"Detection drop: {metrics.get('detection_drop', 0):.4f}")
+
+            # Compare global epoch loss against best and save on rank 0 if improved
+            if losses_avg < min_loss:
+                checkpoint_path = f"./data/results/checkpoints/yolov3_ckpt_best.pth"
+                print(f"---- Saving new best checkpoint to: '{checkpoint_path}' ----")
+                print(f"---- Previous best: {min_loss:.5f}, New best: {losses_avg:.5f} ----")
+                os.makedirs("./data/results/checkpoints", exist_ok=True)
+                
+                # Save checkpoint with comprehensive metadata
+                checkpoint = {
+                    'model_state_dict': model.state_dict(),
+                    'optimizer_state_dict': optimizer.state_dict(),
+                    'loss': losses_avg,
+                    'epoch': epoch,
+                    'date_saved': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    'validation_metrics': metrics if 'metrics' in locals() else {},
+                    'hyperparams': {
+                        'lr': args.lr,
+                        'batch_size': args.batch_size,
+                        'gradient_accumulation_steps': gradient_accumulation_steps,
+                        'eps': eps  # adversarial training epsilon
+                    }
                 }
-            }
-            torch.save(checkpoint, checkpoint_path)
-            min_loss = losses_avg
+                torch.save(checkpoint, checkpoint_path)
+                min_loss = losses_avg
 
     if epoch % checkpoint_interval == 0 and rank == 0:  # save checkpoint every checkpoint_interval epochs on rank 0
         checkpoint_path = f"./data/results/checkpoints/yolov3_ckpt_{epoch}.pth"
